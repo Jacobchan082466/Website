@@ -58,127 +58,116 @@
     </div>
   </section>
 
-  <!-- Founding Chairman Feature Section -->
-  <section id="founding-chairman" style="background: var(--color-bg-secondary);">
-    <div class="container">
-      <div class="chairman-card" data-animate="blur-in">
-        <div class="chairman-card__avatar" style="padding: 0; overflow: hidden; background: none; border-radius: 50%;">
-          <img src="pictures/Professor CHIU Wai Yan Philip.webp" alt="Prof. Philip Chiu" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%; display: block;">
+  <!-- Founding Chairman Hero -->
+  <section id="founding-chairman" class="chairman-hero">
+    <div class="chairman-hero__inner">
+      <div class="chairman-hero__photo" data-animate="fade-in">
+        <img src="pictures/Professor CHIU Wai Yan Philip.webp" alt="Prof. Philip Chiu">
+      </div>
+      <div class="chairman-hero__content" data-animate="blur-in" data-delay="100">
+        <p class="eyebrow" style="color: var(--color-accent); margin-bottom: var(--space-sm);" data-i18n="team.chairman.eyebrow">Founding Chairman</p>
+        <h2 class="chairman-hero__name">Prof. Wai Yan Philip Chiu <span class="name-zh" data-i18n="team.chairman.name.zh"></span></h2>
+        <div class="chairman-hero__titles">
+          <p data-i18n="team.chairman.t1">Surgeon Endoscopist</p>
+          <p data-i18n="team.chairman.t2">Dean, Faculty of Medicine, The Chinese University of Hong Kong</p>
+          <p data-i18n="team.chairman.t3">Director, Multi-Scale Medical Robotics Center</p>
+          <p data-i18n="team.chairman.t4">First in the world to perform flexible Robotic ESD</p>
         </div>
-        <div class="chairman-card__content">
-          <div class="chairman-card__header">
-            <div>
-              <p class="eyebrow" style="margin-bottom: 0.4rem;" data-i18n="team.chairman.eyebrow">Founding Chairman</p>
-              <h2 class="chairman-card__name">Prof. Wai Yan Philip Chiu <span style="font-size: var(--fs-h4); font-weight: var(--fw-regular); color: var(--color-text-secondary);">趙偉仁教授</span></h2>
-              <p class="chairman-card__affil" data-i18n="team.chairman.affil">
-                Surgeon Endoscopist<br>
-                Dean, Faculty of Medicine, The Chinese University of Hong Kong<br>
-                Shun Hing Education &amp; Charity Fund Professor of Robotic Surgery<br>
-                Director, Multi-Scale Medical Robotics Center<br>
-                First in the world to perform flexible Robotic ESD
-              </p>
-            </div>
-          </div>
-          <div class="chairman-card__expertise">
-            <p class="chairman-card__awards-label" data-i18n="team.chairman.expertise.label">Areas of Expertise</p>
-            <ul class="chairman-card__expertise-list">
-              <li data-i18n="team.chairman.e1">Upper Gastrointestinal Surgery</li>
-              <li data-i18n="team.chairman.e2">Minimally Invasive and Robotic Surgery</li>
-              <li data-i18n="team.chairman.e3">Endoscopic Surgery</li>
-            </ul>
-          </div>
-          <div class="chairman-card__awards">
-            <p class="chairman-card__awards-label" data-i18n="team.chairman.awards.label">Awards &amp; Honours</p>
-            <ul class="chairman-card__awards-list">
-              <li data-i18n="team.chairman.a1">Karl-Storz Harold Hopkins Golden Telescope Award, The Hamlyn Symposium on Medical Robotics, Imperial College London (2023)</li>
-              <li data-i18n="team.chairman.a2">Honorary Member, European Association for Endoscopic Surgery and other Interventional Techniques (EAES) (2023)</li>
-              <li data-i18n="team.chairman.a3">Gold Medal with Congratulations of the Jury, Gold Medal and 2 Silver Medals, International Exhibition of Inventions of Geneva (2023)</li>
-              <li data-i18n="team.chairman.a4">International Honorary Member, Japan Society of Endoscopic Surgery (JSES) (2021)</li>
-              <li data-i18n="team.chairman.a5">Outstanding Team Award (PWH Endoscopy), Hospital Authority, Hong Kong (2021)</li>
-              <li data-i18n="team.chairman.a6">Bronze Medal, International Exhibition of Inventions of Geneva (2021)</li>
-              <li data-i18n="team.chairman.a7">Spirit of Hong Kong Award on Innovation (2020)</li>
-              <li data-i18n="team.chairman.a8">Gold Medal with Congratulations of the Jury, 47th International Exhibition of Inventions of Geneva (2019)</li>
-              <li data-i18n="team.chairman.a9">JGH Emerging Leader Lectureship Award, Asia Pacific Digestive Week (2016)</li>
-              <li data-i18n="team.chairman.a10">Global Chinese Outstanding Youth Award (2016)</li>
-              <li data-i18n="team.chairman.a11">Outstanding Contribution Award, Chinese Society of Digestive Endoscopy (2015)</li>
-              <li data-i18n="team.chairman.a12">Champion of the World Cup of Endoscopy, American Society for Gastrointestinal Endoscopy (2012)</li>
-              <li data-i18n="team.chairman.a13">Higher Education Outstanding Scientific Research Output Award — Second-class Award in Technological Advancement, Ministry of Education of PRC (2011)</li>
-              <li data-i18n="team.chairman.a14">Research Abstract awarded Best of Digestive Disease Week, United States (2011)</li>
-              <li data-i18n="team.chairman.a15">State Scientific &amp; Technological Progress Award, State Council of PRC (2007)</li>
-            </ul>
-          </div>
+        <div class="chairman-hero__tags">
+          <span class="case-card__tag" data-i18n="team.chairman.e1">Upper Gastrointestinal Surgery</span>
+          <span class="case-card__tag" data-i18n="team.chairman.e2">Minimally Invasive &amp; Robotic Surgery</span>
+          <span class="case-card__tag" data-i18n="team.chairman.e3">Endoscopic Surgery</span>
+        </div>
+        <!-- Awards -->
+        <div class="chairman-hero__accordion">
+          <p class="chairman-hero__awards-heading" data-i18n="team.chairman.awards.label">Awards &amp; Honours</p>
+          <ul class="chairman-hero__awards-list is-open">
+            <li data-i18n="team.chairman.a1">Karl-Storz Harold Hopkins Golden Telescope Award, The Hamlyn Symposium on Medical Robotics, Imperial College London (2023)</li>
+            <li data-i18n="team.chairman.a2">Honorary Member, European Association for Endoscopic Surgery and other Interventional Techniques (EAES) (2023)</li>
+            <li data-i18n="team.chairman.a3">Gold Medal with Congratulations of the Jury, Gold Medal and 2 Silver Medals, International Exhibition of Inventions of Geneva (2023)</li>
+            <li data-i18n="team.chairman.a4">International Honorary Member, Japan Society of Endoscopic Surgery (JSES) (2021)</li>
+            <li data-i18n="team.chairman.a5">Outstanding Team Award (PWH Endoscopy), Hospital Authority, Hong Kong (2021)</li>
+            <li data-i18n="team.chairman.a6">Bronze Medal, International Exhibition of Inventions of Geneva (2021)</li>
+            <li data-i18n="team.chairman.a7">Spirit of Hong Kong Award on Innovation (2020)</li>
+            <li data-i18n="team.chairman.a8">Gold Medal with Congratulations of the Jury, 47th International Exhibition of Inventions of Geneva (2019)</li>
+            <li data-i18n="team.chairman.a9">JGH Emerging Leader Lectureship Award, Asia Pacific Digestive Week (2016)</li>
+            <li data-i18n="team.chairman.a10">Global Chinese Outstanding Youth Award (2016)</li>
+            <li data-i18n="team.chairman.a11">Outstanding Contribution Award, Chinese Society of Digestive Endoscopy (2015)</li>
+            <li data-i18n="team.chairman.a12">Champion of the World Cup of Endoscopy, American Society for Gastrointestinal Endoscopy (2012)</li>
+            <li data-i18n="team.chairman.a13">Higher Education Outstanding Scientific Research Output Award — Second-class Award in Technological Advancement, Ministry of Education of PRC (2011)</li>
+            <li data-i18n="team.chairman.a14">Research Abstract awarded Best of Digestive Disease Week, United States (2011)</li>
+            <li data-i18n="team.chairman.a15">State Scientific &amp; Technological Progress Award, State Council of PRC (2007)</li>
+          </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Founders / Co-founders -->
-  <section id="founders">
+  <!-- EndoR Team -->
+  <section id="endor-team">
     <div class="container">
       <div class="text-center" style="margin-bottom: var(--space-3xl);">
-        <p class="eyebrow" data-animate="fade-in" data-i18n="team.founders.eyebrow">Founding Team</p>
-        <h2 data-animate="slide-up" data-i18n="team.founders.title">The <span class="text-gradient">Founders</span></h2>
+        <p class="eyebrow" data-animate="fade-in" data-i18n="team.endorteam.eyebrow">EndoR Team</p>
+        <h2 data-animate="slide-up" data-i18n="team.endorteam.title">The <span class="text-gradient">EndoR Team</span></h2>
       </div>
-      <div class="grid grid--3">
+      <div class="grid grid--4">
         <div class="card team-card" data-animate="slide-up" data-delay="100">
+          <div class="team-card__avatar" aria-hidden="true">C</div>
+          <h3 class="team-card__name">Prof. Wilton Chau</h3>
+          <p class="team-card__role" data-i18n="team.chau.role">Honorary Advisor (Finance)</p>
+        </div>
+        <div class="card team-card" data-animate="slide-up" data-delay="150">
+          <div class="team-card__avatar" aria-hidden="true">C</div>
+          <h3 class="team-card__name">Mr Luke Chiu</h3>
+          <p class="team-card__role" data-i18n="team.lukechiu.role">Honorary Advisor (Investment)</p>
+        </div>
+        <div class="card team-card" data-animate="slide-up" data-delay="200">
           <div class="team-card__avatar" style="padding: 0; overflow: hidden; background: none;" aria-hidden="true">
             <img src="pictures/9_1632715388_1632715431_1632715548.webp" alt="Prof. Yeung Yam" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%; display: block;">
           </div>
-          <h3 class="team-card__name">Prof. Yeung Yam <span style="font-weight: var(--fw-regular); color: var(--color-text-secondary);">任揚教授</span></h3>
-          <p class="team-card__role" data-i18n="team.yam.role">Co-founder · Mechanical Engineering, Robotics &amp; Automation</p>
-          <p class="team-card__bio">Professor, Dept. of Mechanical &amp; Automation Engineering, CUHK</p>
+          <h3 class="team-card__name">Prof. Yeung Yam <span class="name-zh" data-i18n="team.yam.name.zh"></span></h3>
+          <p class="team-card__role" data-i18n="team.yam.role">Mechanical Engineering, Robotics &amp; Automation</p>
         </div>
-        <div class="card team-card" data-animate="slide-up" data-delay="200">
-          <div class="team-card__avatar" style="padding: 0; overflow: hidden; background: none;" aria-hidden="true">
-            <img src="pictures/15_1632976271.webp" alt="Dr. K.C. Lau" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%; display: block;">
-          </div>
-          <h3 class="team-card__name">Dr. K.C. Lau <span style="font-weight: var(--fw-regular); color: var(--color-text-secondary);">劉家駿博士</span></h3>
-          <p class="team-card__role" data-i18n="team.lau.role">Co-founder · Lead Engineer</p>
-          <p class="team-card__bio">Mechanical Engineer, Multi-Scale Medical Robotics Center; Research Associate, Dept. of Mechanical &amp; Automation Engineering, CUHK</p>
-        </div>
-        <div class="card team-card" data-animate="slide-up" data-delay="300">
-          <div class="team-card__avatar" aria-hidden="true">葉</div>
-          <h3 class="team-card__name">Dr. Hon Chi Yip <span style="font-weight: var(--fw-regular); color: var(--color-text-secondary);">葉瀚智博士</span></h3>
-          <p class="team-card__role" data-i18n="team.yip.role">Co-founder · Clinical Specialist (Surgeon Endoscopist)</p>
-          <p class="team-card__bio">Assistant Professor, Division of Upper GI &amp; Metabolic Surgery, Dept. of Surgery, Faculty of Medicine, CUHK. Deputy Director of Endoscopy, Prince of Wales Hospital</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Management Team -->
-  <section id="management" style="background: var(--color-bg-secondary);">
-    <div class="container">
-      <div class="text-center" style="margin-bottom: var(--space-3xl);">
-        <p class="eyebrow" data-animate="fade-in" data-i18n="team.mgmt.eyebrow">Management</p>
-        <h2 data-animate="slide-up" data-i18n="team.mgmt.title">The <span class="text-gradient">Management Team</span></h2>
-      </div>
-      <div class="grid grid--3">
-        <div class="card team-card" data-animate="slide-up" data-delay="100">
+        <div class="card team-card" data-animate="slide-up" data-delay="250">
           <div class="team-card__avatar" aria-hidden="true">W</div>
           <h3 class="team-card__name">Ir David Wong</h3>
           <p class="team-card__role" data-i18n="team.wong.role">CEO</p>
-        </div>
-        <div class="card team-card" data-animate="slide-up" data-delay="200">
-          <div class="team-card__avatar" aria-hidden="true">H</div>
-          <h3 class="team-card__name">Amanda Hu</h3>
-          <p class="team-card__role" data-i18n="team.hu.role">General Manager</p>
         </div>
         <div class="card team-card" data-animate="slide-up" data-delay="300">
           <div class="team-card__avatar" aria-hidden="true">B</div>
           <h3 class="team-card__name">Barry Weitzner</h3>
           <p class="team-card__role" data-i18n="team.barry.role">Lead R&amp;D &amp; Engineering</p>
         </div>
+        <div class="card team-card" data-animate="slide-up" data-delay="350">
+          <div class="team-card__avatar" aria-hidden="true">Y</div>
+          <h3 class="team-card__name">Dr. Hon Chi Yip <span class="name-zh" data-i18n="team.yip.name.zh"></span></h3>
+          <p class="team-card__role" data-i18n="team.yip.role">Clinical Specialist (Surgeon Endoscopist)</p>
+        </div>
         <div class="card team-card" data-animate="slide-up" data-delay="400">
-          <div class="team-card__avatar" aria-hidden="true">L</div>
-          <h3 class="team-card__name">Mr Luke Chiu</h3>
-          <p class="team-card__role" data-i18n="team.lukechiu.role">Honorary Advisor (Investment)</p>
+          <div class="team-card__avatar" style="padding: 0; overflow: hidden; background: none;" aria-hidden="true">
+            <img src="pictures/15_1632976271.webp" alt="Dr. K.C. Lau" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%; display: block;">
+          </div>
+          <h3 class="team-card__name">Dr. K.C. Lau <span class="name-zh" data-i18n="team.lau.name.zh"></span></h3>
+          <p class="team-card__role" data-i18n="team.lau.role">Lead Engineer</p>
         </div>
-        <div class="card team-card" data-animate="slide-up" data-delay="500">
-          <div class="team-card__avatar" aria-hidden="true">W</div>
-          <h3 class="team-card__name">Prof. Wilton Chau</h3>
-          <p class="team-card__role" data-i18n="team.chau.role">Honorary Advisor (Finance)</p>
+        <div class="card team-card" data-animate="slide-up" data-delay="450">
+          <div class="team-card__avatar" aria-hidden="true">H</div>
+          <h3 class="team-card__name">Amanda Hu</h3>
+          <p class="team-card__role" data-i18n="team.hu.role">General Manager</p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Regulatory & Engineering -->
+  <section id="reg-eng" style="background: var(--color-bg-secondary);">
+    <div class="container">
+      <div class="text-center" style="margin-bottom: var(--space-3xl);">
+        <p class="eyebrow" data-animate="fade-in" data-i18n="team.regeng.eyebrow">Regulatory &amp; Engineering</p>
+        <h2 data-animate="slide-up" data-i18n="team.regeng.title">Regulatory &amp; <span class="text-gradient">Engineering Team</span></h2>
+      </div>
+      <div class="grid grid--4">
+        <!-- members to be added -->
       </div>
     </div>
   </section>

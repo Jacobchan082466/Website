@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8">
@@ -65,7 +65,9 @@
     </div>
   </header>
 
-  <section style="padding-top: 0;">
+  <section style="background: var(--color-bg-secondary);">
+
+
     <div class="container">
       <div class="text-center" style="margin-bottom: var(--space-xl);">
         <p class="eyebrow" data-animate="fade-in" data-i18n="cases.stats.eyebrow">World-First Trial</p>
@@ -96,8 +98,8 @@
           <p class="stat__source" data-i18n="cases.stats.src">EndoR · Chiu PW et al. Endoscopy 2024</p>
         </div>
         <div class="stat" data-animate="scale-in" data-delay="400">
-          <div class="stat__number text-gradient">
-            <span data-counter="170" data-suffix=" mm²/min">0</span>
+          <div class="stat__number text-gradient" style="line-height: 1;">
+            <span data-counter="170" data-suffix=""></span><span style="font-size: 0.6em; font-weight: inherit; white-space: nowrap;"> mm²/min</span>
           </div>
           <p class="stat__label" data-i18n="cases.stats.speed">Robotic Dissection Speed</p>
           <p class="stat__source" data-i18n="cases.stats.speed.src">Literature mean · Kim et al. 2024</p>
@@ -107,7 +109,7 @@
   </section>
 
   <!-- Dissection Speed Comparison -->
-  <section style="background: var(--color-bg-secondary);">
+  <section>
     <div class="container">
       <div class="text-center" style="margin-bottom: var(--space-2xl);">
         <p class="eyebrow" data-animate="fade-in" data-i18n="cases.speed.eyebrow">Performance Benchmark</p>
@@ -149,14 +151,17 @@
     </div>
   </section>
 
-  <!-- World-First Clinical Trial -->
-  <section>
+  <!-- World-First Clinical Trial — Publication + Demo -->
+  <section style="background: var(--color-bg-secondary);">
+
+
     <div class="container">
       <div class="text-center" style="margin-bottom: var(--space-2xl);">
         <p class="eyebrow" data-animate="fade-in" data-i18n="cases.trial.eyebrow">Published Clinical Trial</p>
         <h2 data-animate="slide-up" data-delay="100" data-i18n="cases.trial.title">World's First Robotic<span class="text-gradient"> Colorectal ESD Trial</span></h2>
       </div>
-      <div class="grid grid--2" style="align-items: start;">
+      <!-- Row 1: Publication + Live Demo -->
+      <div class="grid grid--2" style="align-items: start; margin-bottom: var(--space-2xl);">
         <div data-animate="slide-right" data-delay="100">
           <div class="card" style="border: 1px solid var(--color-accent);">
             <p class="eyebrow" style="margin-bottom: var(--space-sm);" data-i18n="cases.trial.pub">Publication</p>
@@ -191,12 +196,48 @@
             <h3 class="card__title" data-i18n="cases.trial.demo.title">Hong Kong Live Endoscopy — December 2024</h3>
             <p class="card__text" data-i18n="cases.trial.demo.text">The EndoR Surgical System was demonstrated live to an international audience of endoscopists at Hong Kong Live Endoscopy, December 2024 — marking a major public milestone for the platform.</p>
           </div>
-          <div class="card">
-            <p class="eyebrow" style="margin-bottom: var(--space-sm);" data-i18n="cases.trial.preclinical">Pre-clinical Validation</p>
-            <h3 class="card__title" data-i18n="cases.trial.preclinical.title">25+ Porcine Model Experiments</h3>
-            <p class="card__text" data-i18n="cases.trial.preclinical.text">25+ porcine model experiments for robotic colonic ESD completed using the 2025 version of the EndoR Surgical System — validating safety, consistency and instrument performance prior to human trials.</p>
+          <div class="demo-photos" data-animate="fade-in" data-delay="150">
+            <figure class="demo-photos__item">
+              <img src="pictures/图片_20260411155751_11_42.jpg" alt="EndoR Surgical System at Hong Kong Live Endoscopy 2024" loading="lazy">
+              <figcaption data-i18n="cases.demo.photo1">Robotic arm &amp; endoscopy tower — live demonstration setup</figcaption>
+            </figure>
+            <figure class="demo-photos__item">
+              <img src="pictures/图片_20260411155753_13_42.jpg" alt="EndoR robotic arm endoscope insertion close-up" loading="lazy">
+              <figcaption data-i18n="cases.demo.photo2">Robotic arm inserting flexible endoscope</figcaption>
+            </figure>
           </div>
         </div>
+      </div>
+
+      <!-- Row 2: Pre-clinical -->
+      <div style="margin-bottom: var(--space-2xl);" data-animate="fade-in" data-delay="100">
+        <div class="card" style="margin-bottom: var(--space-md);">
+          <p class="eyebrow" style="margin-bottom: var(--space-sm);" data-i18n="cases.trial.preclinical">Pre-clinical Validation</p>
+          <h3 class="card__title" data-i18n="cases.trial.preclinical.title">25+ Porcine Model Experiments</h3>
+          <p class="card__text" data-i18n="cases.trial.preclinical.text">25+ porcine model experiments for robotic colonic ESD completed using the 2025 version of the EndoR Surgical System — validating safety, consistency and instrument performance prior to human trials.</p>
+        </div>
+        <div class="preclinical-photos" data-animate="fade-in" data-delay="150">
+          <figure class="preclinical-photos__item">
+            <img src="pictures/图片_20260411155752_12_42.jpg" alt="EndoR robotic ESD on porcine model — full setup" loading="lazy">
+            <figcaption data-i18n="cases.preclinical.photo1">Robotic ESD setup — porcine colonic model</figcaption>
+          </figure>
+          <figure class="preclinical-photos__item">
+              <img src="pictures/图片_20260411155746_5_42.jpg" alt="EndoR robotic arm performing ESD on ex-vivo porcine colon" loading="lazy">
+            <figcaption data-i18n="cases.preclinical.photo2">Robotic arm performing ESD on ex-vivo porcine colon</figcaption>
+          </figure>
+          <figure class="preclinical-photos__item">
+            <img src="pictures/图片_20260411155745_4_42.jpg" alt="Ex-vivo porcine colonic specimen with EndoR endoscope" loading="lazy">
+            <figcaption data-i18n="cases.preclinical.photo3">Ex-vivo porcine colonic specimen — pre-clinical validation</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <!-- Row 3: MRC Lab photo full-width -->
+      <div data-animate="fade-in" data-delay="200">
+        <figure class="lab-photo">
+          <img src="pictures/图片_20260411155749_9_42.jpg" alt="EndoR Surgical System in the Multi-Scale Medical Robotics Center" loading="lazy">
+          <figcaption data-i18n="cases.trial.labphoto">EndoR Surgical System at the Multi-Scale Medical Robotics Center (MRC), Hong Kong Science Park</figcaption>
+        </figure>
       </div>
     </div>
   </section>
