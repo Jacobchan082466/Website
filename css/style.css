@@ -746,8 +746,7 @@ section {
 .hero__photo-img {
   width: 100%;
   display: block;
-  /* natural 2:1 ratio from the 1400×700 source */
-  aspect-ratio: 2 / 1;
+  height: calc(100vh - var(--nav-height));
   object-fit: cover;
   object-position: center top;
 }
@@ -830,7 +829,7 @@ section {
 
 @media (max-width: 768px) {
   .hero__photo-img {
-    aspect-ratio: 4 / 3;
+    height: calc(100vh - var(--nav-height));
     object-position: 35% top;
   }
   .hero__photo-vignette {
@@ -1724,15 +1723,24 @@ select.form-input option {
 
 .partner-img {
   display: block;
-  height: 28px;
+  height: 34px;
   width: auto;
+  max-width: 150px;
   object-fit: contain;
   filter: opacity(0.75);
   transition: filter 0.25s ease;
 }
 
-.partner-img--wide  { height: 22px; }
-.partner-img--emblem { height: 32px; }
+/* Wordmark logos — standard height */
+.partner-img--wide        { height: 34px; max-width: 150px; }
+/* Square / emblem logos — slightly taller to balance visual weight */
+.partner-img--emblem      { height: 38px; max-width: 80px; }
+/* CU Medicine — slightly taller, wider cap */
+.partner-img--wide-lg     { height: 38px; max-width: 160px; }
+/* CUHK wordmark is very wide (5.6:1) — cap width to stay proportionate */
+.partner-img--wide.partner-img--multiply { max-width: 160px; }
+/* White-background logos — blend into page background */
+.partner-img--multiply    { mix-blend-mode: multiply; }
 
 .partner-logo--img:hover .partner-img {
   filter: opacity(1);
