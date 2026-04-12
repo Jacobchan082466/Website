@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us — EndoR Surgical System</title>
+  <meta name="description" content="EndoR Surgical System — born from a decade of research at CUHK and the Multi-Scale Medical Robotics Center. Our story, milestones and vision.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">
+        <span class="nav__logo-icon">E</span>
+        EndoR
+      </a>
+      <div class="nav__links">
+        <a href="index.html" class="nav__link" data-i18n="nav.home">Home</a>
+        <a href="about.html" class="nav__link active" data-i18n="nav.about">About</a>
+        <a href="services.html" class="nav__link" data-i18n="nav.services">Services</a>
+        <a href="cases.html" class="nav__link" data-i18n="nav.cases">Cases</a>
+        <a href="team.html" class="nav__link" data-i18n="nav.team">Team</a>
+        <a href="contact.html" class="nav__link" data-i18n="nav.contact">Contact</a>
+      </div>
+      <div class="nav__controls">
+      <div class="lang-switcher">
+        <button class="lang-btn" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="zh-Hant">繁</button>
+        <button class="lang-btn" data-lang="zh-Hans">简</button>
+      </div>
+      <button class="theme-toggle" aria-label="Toggle theme" title="Toggle light/dark mode">
+        <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+      </div>
+      <button class="nav__hamburger" data-i18n-aria="nav.menu" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav__mobile">
+      <a href="index.html" data-i18n="nav.home">Home</a>
+      <a href="about.html" data-i18n="nav.about">About</a>
+      <a href="services.html" data-i18n="nav.services">Services</a>
+      <a href="cases.html" data-i18n="nav.cases">Cases</a>
+      <a href="team.html" data-i18n="nav.team">Team</a>
+      <a href="contact.html" data-i18n="nav.contact">Contact</a>
+    </div>
+  </nav>
+
+  <section class="page-hero" style="min-height: 72vh; display: flex; align-items: center; justify-content: center;">
+    <div class="page-hero__bg" data-parallax="0.22" aria-hidden="true"></div>
+    <div class="container text-center" style="position: relative; z-index: 1;">
+      <h1 class="text-hero" style="margin-top: var(--space-md);" data-animate="slide-up" data-delay="100" data-i18n="about.hero.title">
+        A Decade of Research,<br><span class="text-gradient">Now Ready for Patients</span>
+      </h1>
+      <p class="text-secondary" style="font-size: var(--fs-body-lg); max-width: 640px; margin: var(--space-lg) auto 0; line-height: var(--lh-relaxed);" data-animate="blur-in" data-delay="200" data-i18n="about.hero.subtitle">
+        EndoR Surgical System is the commercial translation of over ten years of endoluminal robotics research at The Chinese University of Hong Kong — led by the world's foremost surgeon endoscopists and robotics engineers.
+      </p>
+    </div>
+  </section>
+
+  <section id="story">
+    <div class="container container--narrow">
+      <div class="text-center" style="margin-bottom: var(--space-xl);">
+        <p class="eyebrow" data-animate="fade-in" data-i18n="about.story.eyebrow">Our Story</p>
+        <h2 data-animate="reveal" data-delay="100" data-i18n="about.story.title">From the Lab to<span class="text-gradient"> the Operating Room</span></h2>
+      </div>
+      <p class="text-secondary text-balance" style="font-size: var(--fs-body-lg); line-height: var(--lh-relaxed); margin-bottom: var(--space-md);" data-animate="slide-up" data-delay="200" data-i18n="about.story.p1">
+        Gastrointestinal cancer is one of the world's greatest health challenges — combined, stomach, colorectal and esophageal cancers account for 3.4 million new cases every year. When caught early, the prognosis is excellent. But the gold-standard curative procedure, Endoscopic Submucosal Dissection (ESD), is technically demanding, slow, and limited to a small number of expert endoscopists worldwide.
+      </p>
+      <p class="text-secondary text-balance" style="font-size: var(--fs-body-lg); line-height: var(--lh-relaxed); margin-bottom: var(--space-md);" data-animate="slide-up" data-delay="300" data-i18n="about.story.p2">
+        EndoR Surgical System was built to change that. Starting in 2015 with a CUHK CU Medicine &amp; Engineering ITF grant of HKD 14M, and accelerated through the Multi-Scale Medical Robotics Center (MRC) programme (HKD 20M, 2020–2024), our founders developed a dual-arm fully robotized flexible endoscopic platform that directly addresses the three core challenges of ESD: vision, traction, and dissection. Today, we are preparing for our first-in-human clinical trial — the next step in bringing expert-level ESD to every patient who needs it.
+      </p>
+    </div>
+  </section>
+
+  <!-- MRC Heritage Section -->
+  <section style="background: var(--color-bg-secondary);">
+    <div class="container">
+      <div class="text-center" style="margin-bottom: var(--space-3xl);">
+        <p class="eyebrow" data-animate="fade-in" data-i18n="about.mrc.eyebrow">Research Heritage</p>
+        <h2 data-animate="slide-up" data-delay="100" data-i18n="about.mrc.title">
+          Born from<span class="text-gradient"> World-Class Research</span>
+        </h2>
+      </div>
+      <div class="grid grid--3" style="margin-bottom: var(--space-3xl);">
+        <div class="card" data-animate="slide-up" data-delay="100">
+          <div class="card__icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="color: var(--color-accent);"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+          </div>
+          <h3 class="card__title" data-i18n="about.mrc.r1.title">Endoluminal Robotic Platforms</h3>
+        </div>
+        <div class="card" data-animate="slide-up" data-delay="250">
+          <div class="card__icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="color: var(--color-accent);"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+          </div>
+          <h3 class="card__title" data-i18n="about.mrc.r2.title">Magnetic-Guided Systems</h3>
+        </div>
+        <div class="card" data-animate="slide-up" data-delay="400">
+          <div class="card__icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="color: var(--color-accent);"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+          </div>
+          <h3 class="card__title" data-i18n="about.mrc.r3.title">Image-Guided Interventions</h3>
+        </div>
+      </div>
+
+      <!-- Partner institutions -->
+      <div class="text-center" style="margin-bottom: var(--space-xl);">
+        <p class="eyebrow" style="margin-bottom: var(--space-lg);" data-i18n="about.mrc.collab">Founding Research Partners</p>
+      </div>
+      <div class="partners-bar" style="margin-bottom: var(--space-md);">
+        <span class="partner-logo" title="The Chinese University of Hong Kong">
+          <svg width="28" height="28" viewBox="0 0 48 48" fill="none" aria-hidden="true"><circle cx="24" cy="24" r="22" stroke="currentColor" stroke-width="2"/><path d="M24 8v32M8 24h32" stroke="currentColor" stroke-width="2"/><circle cx="24" cy="24" r="8" stroke="currentColor" stroke-width="2"/></svg>
+          <span>CUHK</span>
+        </span>
+        <span class="partner-sep" aria-hidden="true"></span>
+        <span class="partner-logo" title="ETH Zurich">
+          <svg width="28" height="28" viewBox="0 0 48 48" fill="none" aria-hidden="true"><rect x="4" y="4" width="40" height="40" rx="4" stroke="currentColor" stroke-width="2"/><path d="M14 14h20M14 24h14M14 34h20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          <span>ETH Zurich</span>
+        </span>
+        <span class="partner-sep" aria-hidden="true"></span>
+        <span class="partner-logo" title="Imperial College London">
+          <svg width="28" height="28" viewBox="0 0 48 48" fill="none" aria-hidden="true"><path d="M24 4L4 18v26h40V18L24 4z" stroke="currentColor" stroke-width="2"/><rect x="18" y="28" width="12" height="16" stroke="currentColor" stroke-width="2"/></svg>
+          <span>Imperial College</span>
+        </span>
+        <span class="partner-sep" aria-hidden="true"></span>
+        <span class="partner-logo" title="Johns Hopkins University">
+          <svg width="28" height="28" viewBox="0 0 48 48" fill="none" aria-hidden="true"><ellipse cx="24" cy="24" rx="20" ry="12" stroke="currentColor" stroke-width="2"/><ellipse cx="24" cy="24" rx="20" ry="12" stroke="currentColor" stroke-width="2" transform="rotate(60 24 24)"/><ellipse cx="24" cy="24" rx="20" ry="12" stroke="currentColor" stroke-width="2" transform="rotate(120 24 24)"/></svg>
+          <span>Johns Hopkins</span>
+        </span>
+        <span class="partner-sep" aria-hidden="true"></span>
+        <span class="partner-logo" title="Technical University of Munich">
+          <svg width="28" height="28" viewBox="0 0 48 48" fill="none" aria-hidden="true"><path d="M4 40L24 8l20 32H4z" stroke="currentColor" stroke-width="2"/><path d="M16 40V28h16v12" stroke="currentColor" stroke-width="2"/></svg>
+          <span>TU Munich</span>
+        </span>
+      </div>
+      <p class="text-center text-tertiary" style="font-size: var(--fs-caption);" data-i18n="about.mrc.note">EndoR is the commercial translation of research conducted at the Multi-Scale Medical Robotics Center (MRC), Hong Kong Science Park.</p>
+    </div>
+  </section>
+
+  <section style="background: var(--color-bg-secondary);">
+    <div class="container">
+      <div class="text-center" style="margin-bottom: var(--space-3xl);">
+        <p class="eyebrow" data-animate="fade-in" data-i18n="about.milestone.eyebrow">Milestones</p>
+        <h2 data-animate="slide-down" data-delay="100" data-i18n="about.milestone.title">A Decade of Pioneering<span class="text-gradient"> Endoluminal Robotics</span></h2>
+      </div>
+      <div class="timeline">
+        <div class="timeline__item" data-animate="slide-right" data-delay="100">
+          <span class="timeline__dot" aria-hidden="true"></span>
+          <div class="timeline__year">2015</div>
+          <p class="timeline__text" data-i18n="about.tm2015">CUHK CU Medicine &amp; Engineering ITF grant (HKD 14M) awarded; endoluminal robotics R&amp;D begins.</p>
+        </div>
+        <div class="timeline__item" data-animate="slide-left" data-delay="200">
+          <span class="timeline__dot" aria-hidden="true"></span>
+          <div class="timeline__year">2019</div>
+          <p class="timeline__text" data-i18n="about.tm2019">First prototype of dual-arm flexible endoscopic robotic system completed. US patent US10,111,722 granted.</p>
+        </div>
+        <div class="timeline__item" data-animate="slide-right" data-delay="300">
+          <span class="timeline__dot" aria-hidden="true"></span>
+          <div class="timeline__year">2020</div>
+          <p class="timeline__text" data-i18n="about.tm2020">Multi-Scale Medical Robotics Center (MRC) Programme 1.1 — Endoluminal Robotics funded (HKD 20M, 2020–2024).</p>
+        </div>
+        <div class="timeline__item" data-animate="slide-left" data-delay="400">
+          <span class="timeline__dot" aria-hidden="true"></span>
+          <div class="timeline__year">2022</div>
+          <p class="timeline__text" data-i18n="about.tm2022">7 provisional patents filed; major system refinements in robotic arms, ESD knife and actuation mechanism.</p>
+        </div>
+        <div class="timeline__item" data-animate="slide-right" data-delay="500">
+          <span class="timeline__dot" aria-hidden="true"></span>
+          <div class="timeline__year">2023</div>
+          <p class="timeline__text" data-i18n="about.tm2023">World-first clinical trial of robotic colorectal ESD (43 patients) completed at Prince of Wales Hospital, CUHK. Published in Endoscopy 2024.</p>
+        </div>
+        <div class="timeline__item" data-animate="slide-left" data-delay="600">
+          <span class="timeline__dot" aria-hidden="true"></span>
+          <div class="timeline__year">2024</div>
+          <p class="timeline__text" data-i18n="about.tm2024">2025 Version of EndoR Surgical System unveiled. Live robotic ESD demonstrated at Hong Kong Live Endoscopy Dec 2024. 25+ porcine model experiments for colonic ESD completed.</p>
+        </div>
+        <div class="timeline__item" data-animate="slide-right" data-delay="700">
+          <span class="timeline__dot" aria-hidden="true"></span>
+          <div class="timeline__year">2025</div>
+          <p class="timeline__text" data-i18n="about.tm2025">Company incorporated. RAISe+ Stage II application (HKD 76.2M total: HKD 36.2M government + HKD 40M investors). Seed round launched (target USD 10M).</p>
+        </div>
+        <div class="timeline__item" data-animate="scale-in" data-delay="800">
+          <span class="timeline__dot" aria-hidden="true"></span>
+          <div class="timeline__year">2026</div>
+          <p class="timeline__text" data-i18n="about.tm2026">First-in-human clinical trial (Q1 2026). Robotic platform refinement and manufacturing partner engagement.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="vision">
+    <div class="container">
+      <div class="text-center" style="margin-bottom: var(--space-2xl);">
+        <p class="eyebrow" data-animate="fade-in" data-i18n="about.vision.eyebrow">Vision & Mission</p>
+        <h2 data-animate="slide-up" data-delay="100" style="margin-bottom: var(--space-md);" data-i18n="about.vision.title">
+          Making Expert-Level ESD<span class="text-gradient"> Accessible to Every Patient</span>
+        </h2>
+      </div>
+      <div class="grid grid--3">
+        <div class="card" data-animate="slide-up" data-delay="100">
+          <div class="card__icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="color: var(--color-accent);">
+              <circle cx="12" cy="12" r="10"/>
+              <circle cx="12" cy="12" r="3"/>
+            </svg>
+          </div>
+          <h3 class="card__title" data-i18n="about.v1.title">Democratisation</h3>
+        </div>
+        <div class="card" data-animate="slide-up" data-delay="300">
+          <div class="card__icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="color: var(--color-accent);">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+          </div>
+          <h3 class="card__title" data-i18n="about.v2.title">Safety</h3>
+        </div>
+        <div class="card" data-animate="slide-up" data-delay="500">
+          <div class="card__icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="color: var(--color-accent);">
+              <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
+            </svg>
+          </div>
+          <h3 class="card__title" data-i18n="about.v3.title">Speed</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <div class="nav__logo">
+            <span class="nav__logo-icon">E</span>
+            EndoR
+          </div>
+          <p data-i18n="footer.tagline">Advancing endoluminal surgery to the next horizon through flexible robotics — born from CUHK &amp; MRC research.</p>
+        </div>
+        <div>
+          <h4 class="footer__heading" data-i18n="footer.products">Products</h4>
+          <ul class="footer__links">
+            <li><a href="services.html" data-i18n="footer.system">EndoR Surgical System</a></li>
+            <li><a href="services.html" data-i18n="footer.esd">ESD Technology</a></li>
+            <li><a href="cases.html" data-i18n="footer.clinical">Clinical Evidence</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer__heading" data-i18n="footer.company">Company</h4>
+          <ul class="footer__links">
+            <li><a href="about.html" data-i18n="footer.about">About Us</a></li>
+            <li><a href="team.html" data-i18n="footer.team">Team</a></li>
+            <li><a href="cases.html" data-i18n="footer.cases">Cases</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer__heading" data-i18n="footer.contact">Contact</h4>
+          <ul class="footer__links">
+            <li><a href="contact.html" data-i18n="footer.contactus">Contact Us</a></li>
+            <li style="color: var(--color-text-tertiary); font-style: italic;">TBC</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span data-i18n="footer.copyright">&copy; 2026 EndoR. All rights reserved.</span>
+        <span><span data-i18n="footer.privacy">Privacy Policy</span> &middot; <span data-i18n="footer.terms">Terms of Use</span></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/translations.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/scroll.js"></script>
+</body>
+</html>
+

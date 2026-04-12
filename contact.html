@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us — EndoR</title>
+  <meta name="description" content="Contact EndoR: product enquiries, technical partnerships and clinical trial discussions.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo"><span class="nav__logo-icon">E</span>EndoR</a>
+      <div class="nav__links">
+        <a href="index.html" class="nav__link" data-i18n="nav.home">Home</a>
+        <a href="about.html" class="nav__link" data-i18n="nav.about">About</a>
+        <a href="services.html" class="nav__link" data-i18n="nav.services">Services</a>
+        <a href="cases.html" class="nav__link" data-i18n="nav.cases">Cases</a>
+        <a href="team.html" class="nav__link" data-i18n="nav.team">Team</a>
+        <a href="contact.html" class="nav__link active" data-i18n="nav.contact">Contact</a>
+      </div>
+      <div class="nav__controls">
+      <div class="lang-switcher">
+        <button class="lang-btn" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="zh-Hant">繁</button>
+        <button class="lang-btn" data-lang="zh-Hans">简</button>
+      </div>
+      <button class="theme-toggle" aria-label="Toggle theme" title="Toggle light/dark mode">
+        <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+      </div>
+      <button class="nav__hamburger" data-i18n-aria="nav.menu" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+    <div class="nav__mobile">
+      <a href="index.html" data-i18n="nav.home">Home</a>
+      <a href="about.html" data-i18n="nav.about">About</a>
+      <a href="services.html" data-i18n="nav.services">Services</a>
+      <a href="cases.html" data-i18n="nav.cases">Cases</a>
+      <a href="team.html" data-i18n="nav.team">Team</a>
+      <a href="contact.html" data-i18n="nav.contact">Contact</a>
+    </div>
+  </nav>
+
+  <section class="page-hero">
+    <div class="page-hero__bg"></div>
+    <div class="container text-center" style="position: relative; z-index: 1;">
+      <p class="eyebrow" data-animate="fade-in" data-i18n="contact.hero.eyebrow">Get in Touch</p>
+      <h1 class="text-gradient" data-animate="slide-up" data-delay="100" style="font-size: var(--fs-h1); margin-bottom: var(--space-md);" data-i18n="contact.hero.title">Contact Us</h1>
+    </div>
+  </section>
+
+  <section id="contact-main">
+    <div class="container">
+      <div class="grid grid--2" style="align-items: start; gap: var(--space-2xl);">
+        <div data-animate="slide-up" data-delay="100">
+          <h2 style="font-size: var(--fs-h3); margin-bottom: var(--space-lg);" data-i18n="contact.form.title">Send a Message</h2>
+          <form action="#" method="post">
+            <div class="form-group">
+              <label class="form-label" for="contact-name" data-i18n="contact.form.name">Name</label>
+              <input class="form-input" type="text" id="contact-name" name="name" required autocomplete="name"
+                data-i18n-placeholder="contact.form.name.ph" placeholder="Your name">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="contact-email" data-i18n="contact.form.email">Email</label>
+              <input class="form-input" type="email" id="contact-email" name="email" required autocomplete="email"
+                data-i18n-placeholder="contact.form.email.ph" placeholder="name@example.com">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="contact-org" data-i18n="contact.form.org">Company / Hospital</label>
+              <input class="form-input" type="text" id="contact-org" name="organization" autocomplete="organization"
+                data-i18n-placeholder="contact.form.org.ph" placeholder="Institution name">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="contact-subject" data-i18n="contact.form.subject">Subject</label>
+              <select class="form-input" id="contact-subject" name="subject" required>
+                <option value="" disabled selected data-i18n="contact.form.subject.ph">Select a subject</option>
+                <option value="investment" data-i18n="contact.form.s1">Investment Enquiry</option>
+                <option value="clinical" data-i18n="contact.form.s2">Clinical Partnership / Trial</option>
+                <option value="tech" data-i18n="contact.form.s3">Technology Enquiry</option>
+                <option value="media" data-i18n="contact.form.s4">Media Relations</option>
+                <option value="other" data-i18n="contact.form.s5">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="contact-message" data-i18n="contact.form.message">Message</label>
+              <textarea class="form-input" id="contact-message" name="message" required
+                data-i18n-placeholder="contact.form.message.ph" placeholder="Describe your needs or questions…"></textarea>
+            </div>
+            <button type="submit" class="btn btn--primary" style="width: 100%;" data-i18n="contact.form.submit">Send Message</button>
+          </form>
+        </div>
+
+        <div class="contact-info-card" data-animate="slide-up" data-delay="200">
+          <h2 style="font-size: var(--fs-h3); margin-bottom: var(--space-md);" data-i18n="contact.info.title">Contact Information</h2>
+
+          <div class="contact-info-item">
+            <div class="contact-info-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                <circle cx="12" cy="10" r="3"/>
+              </svg>
+            </div>
+            <div>
+              <p class="contact-info-label" data-i18n="contact.info.addr.label">Address</p>
+              <p class="contact-info-value" data-i18n="contact.info.addr.value" style="color: var(--color-text-tertiary); font-style: italic;">TBC</p>
+            </div>
+          </div>
+
+          <div class="contact-info-item">
+            <div class="contact-info-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+              </svg>
+            </div>
+            <div>
+              <p class="contact-info-label" data-i18n="contact.info.phone.label">Phone</p>
+              <p class="contact-info-value" style="color: var(--color-text-tertiary); font-style: italic;">TBC</p>
+            </div>
+          </div>
+
+          <div class="contact-info-item">
+            <div class="contact-info-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                <polyline points="22,6 12,13 2,6"/>
+              </svg>
+            </div>
+            <div>
+              <p class="contact-info-label" data-i18n="contact.info.email.label">Email</p>
+              <p class="contact-info-value" style="color: var(--color-text-tertiary); font-style: italic;">TBC</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <div class="nav__logo">
+            <span class="nav__logo-icon">E</span>
+            EndoR
+          </div>
+          <p data-i18n="footer.tagline">Advancing endoluminal surgery to the next horizon through flexible robotics — born from CUHK &amp; MRC research.</p>
+        </div>
+        <div>
+          <h4 class="footer__heading" data-i18n="footer.products">Products</h4>
+          <ul class="footer__links">
+            <li><a href="services.html" data-i18n="footer.system">EndoR Surgical System</a></li>
+            <li><a href="services.html" data-i18n="footer.esd">ESD Technology</a></li>
+            <li><a href="cases.html" data-i18n="footer.clinical">Clinical Evidence</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer__heading" data-i18n="footer.company">Company</h4>
+          <ul class="footer__links">
+            <li><a href="about.html" data-i18n="footer.about">About Us</a></li>
+            <li><a href="team.html" data-i18n="footer.team">Team</a></li>
+            <li><a href="cases.html" data-i18n="footer.cases">Cases</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer__heading" data-i18n="footer.contact">Contact</h4>
+          <ul class="footer__links">
+            <li><a href="contact.html" data-i18n="footer.contactus">Contact Us</a></li>
+            <li style="color: var(--color-text-tertiary); font-style: italic;">TBC</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span data-i18n="footer.copyright">&copy; 2026 EndoR. All rights reserved.</span>
+        <span><span data-i18n="footer.privacy">Privacy Policy</span> &middot; <span data-i18n="footer.terms">Terms of Use</span></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/translations.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/scroll.js"></script>
+</body>
+</html>

@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EndoR Surgical System — Advancing Endoluminal Surgery through Flexible Robotics</title>
+  <meta name="description" content="EndoR Surgical System is a dual-arm fully robotized flexible endoscopic platform for Endoscopic Submucosal Dissection (ESD) of early GI cancers. Developed at CUHK.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">
+        <span class="nav__logo-icon">E</span>
+        EndoR
+      </a>
+      <div class="nav__links">
+        <a href="index.html" class="nav__link active" data-i18n="nav.home">Home</a>
+        <a href="about.html" class="nav__link" data-i18n="nav.about">About</a>
+        <a href="services.html" class="nav__link" data-i18n="nav.services">Services</a>
+        <a href="cases.html" class="nav__link" data-i18n="nav.cases">Cases</a>
+        <a href="team.html" class="nav__link" data-i18n="nav.team">Team</a>
+        <a href="contact.html" class="nav__link" data-i18n="nav.contact">Contact</a>
+      </div>
+      <div class="nav__controls">
+      <div class="lang-switcher">
+        <button class="lang-btn active" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="zh-Hant">繁</button>
+        <button class="lang-btn" data-lang="zh-Hans">简</button>
+      </div>
+      <button class="theme-toggle" aria-label="Toggle theme" title="Toggle light/dark mode">
+        <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+      </div>
+      <button class="nav__hamburger" data-i18n-aria="nav.menu" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav__mobile">
+      <a href="index.html" data-i18n="nav.home">Home</a>
+      <a href="about.html" data-i18n="nav.about">About</a>
+      <a href="services.html" data-i18n="nav.services">Services</a>
+      <a href="cases.html" data-i18n="nav.cases">Cases</a>
+      <a href="team.html" data-i18n="nav.team">Team</a>
+      <a href="contact.html" data-i18n="nav.contact">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero hero--photo" id="hero">
+    <!-- Full photo -->
+    <div class="hero__photo-wrap">
+      <img src="pictures/F1_1400x700-main.jpg" alt="Prof. Philip Chiu with the EndoR Surgical System" class="hero__photo-img">
+      <!-- Gradient vignette bottom-right for text readability -->
+      <div class="hero__photo-vignette" aria-hidden="true"></div>
+      <!-- Overlaid text — bottom right -->
+      <div class="hero__photo-caption">
+        <h1 class="hero__photo-brand">EndoR Surgical System</h1>
+        <p class="hero__photo-title" data-i18n="home.hero.title">
+          Advancing the Endoluminal Surgery to the Next Horizon<br><span class="text-gradient">through Flexible Robotics</span>
+        </p>
+        <p class="hero__photo-sub" data-i18n="home.hero.subtitle">
+          A dual-arm fully robotized flexible endoscopic platform — enabling any endoscopist to perform ESD with expert-level speed and precision.
+        </p>
+        <div class="hero__photo-cta">
+          <a href="services.html" class="btn btn--primary" data-i18n="home.hero.cta1">Explore the System</a>
+          <a href="cases.html" class="btn btn--ghost-white" data-i18n="home.hero.cta2">Clinical Evidence</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mission Sticky Section -->
+  <div class="sticky-section" style="height: 300vh;">
+    <div class="sticky-section__sticky">
+      <div class="sticky-section__content">
+        <p class="eyebrow" style="margin-bottom: var(--space-xl);" data-i18n="home.mission.eyebrow">Our Mission</p>
+        <h2 style="font-size: var(--fs-h2);">
+          <span class="sticky-text-line" data-i18n="home.mission.line1">Early GI cancer is curable —</span>
+          <span class="sticky-text-line" data-i18n="home.mission.line2">if caught and treated in time.</span>
+          <span class="sticky-text-line" data-i18n="home.mission.line3">We make expert-level ESD</span>
+          <span class="sticky-text-line" data-i18n="home.mission.line4"><span class="text-gradient">accessible to every patient.</span></span>
+        </h2>
+      </div>
+    </div>
+  </div>
+
+  <!-- Core Tech Section -->
+  <section id="tech">
+    <div class="container">
+      <div class="text-center" style="margin-bottom: var(--space-3xl);">
+        <p class="eyebrow" data-animate="fade-in" data-i18n="home.tech.eyebrow">System Design</p>
+        <h2 data-animate="slide-up" data-delay="100" data-i18n="home.tech.title">
+          Three Key Innovations,<br><span class="text-gradient">One Integrated Platform</span>
+        </h2>
+      </div>
+      <div class="grid grid--3">
+        <div class="card card-3d glow" data-animate="slide-up" data-delay="100">
+          <div class="card-3d__inner">
+            <div class="card__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="color: var(--color-accent);">
+                <circle cx="12" cy="12" r="2"/><path d="M12 2v3M12 19v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M2 12h3M19 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12"/>
+              </svg>
+            </div>
+            <h3 class="card__title" data-i18n="home.tech.vision.title">Enhanced Vision</h3>
+            <p class="card__text" data-i18n="home.tech.vision.text">Bird's-eye all-in-one camera provides a clear, stable view of the surgical field — eliminating the visual limitations of conventional single-channel endoscopy during ESD.</p>
+          </div>
+        </div>
+        <div class="card card-3d glow" data-animate="slide-up" data-delay="300">
+          <div class="card-3d__inner">
+            <div class="card__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="color: var(--color-accent);">
+                <path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2V9M9 21H5a2 2 0 0 1-2-2V9m0 0h18"/>
+              </svg>
+            </div>
+            <h3 class="card__title" data-i18n="home.tech.traction.title">Robotic Traction</h3>
+            <p class="card__text" data-i18n="home.tech.traction.text">A dedicated robotic Lifter arm provides precise, adjustable tissue traction — the critical missing element that slows ESD and causes perforation risk.</p>
+          </div>
+        </div>
+        <div class="card card-3d glow" data-animate="slide-up" data-delay="500">
+          <div class="card-3d__inner">
+            <div class="card__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="color: var(--color-accent);">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              </svg>
+            </div>
+            <h3 class="card__title" data-i18n="home.tech.dissect.title">Precise Dissection</h3>
+            <p class="card__text" data-i18n="home.tech.dissect.text">A multi-functional Dissector arm with a novel ESD knife executes clean, controlled submucosal dissection — reducing procedure time and complication risk.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Partners / Backed By Section -->
+  <section style="background: var(--color-bg-secondary); padding: var(--space-xl) 0;">
+    <div class="container">
+      <p class="text-center eyebrow" style="margin-bottom: var(--space-lg);" data-i18n="home.partners.eyebrow">Built on World-Class Research</p>
+      <div class="partners-bar">
+        <span class="partner-logo partner-logo--img" title="The Chinese University of Hong Kong">
+          <img src="img/logos/cuhk.svg" alt="CUHK" class="partner-img partner-img--emblem">
+        </span>
+        <span class="partner-sep" aria-hidden="true"></span>
+        <span class="partner-logo partner-logo--img" title="ETH Zurich">
+          <img src="img/logos/eth.svg" alt="ETH Zurich" class="partner-img partner-img--wide">
+        </span>
+        <span class="partner-sep" aria-hidden="true"></span>
+        <span class="partner-logo partner-logo--img" title="Imperial College London">
+          <img src="img/logos/imperial.svg" alt="Imperial College London" class="partner-img partner-img--wide">
+        </span>
+        <span class="partner-sep" aria-hidden="true"></span>
+        <span class="partner-logo partner-logo--img" title="Johns Hopkins University">
+          <img src="img/logos/jhu.png" alt="Johns Hopkins University" class="partner-img partner-img--wide">
+        </span>
+        <span class="partner-sep" aria-hidden="true"></span>
+        <span class="partner-logo partner-logo--img" title="Technical University of Munich">
+          <img src="img/logos/tum.svg" alt="TU Munich" class="partner-img partner-img--emblem">
+        </span>
+      </div>
+      <p class="text-center text-tertiary" style="font-size: var(--fs-caption); margin-top: var(--space-md);" data-i18n="home.partners.note">EndoR's technology originated from the Multi-Scale Medical Robotics Center (MRC), a joint research initiative by these institutions.</p>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section style="background: var(--color-bg-secondary); padding-top: 0;">
+    <div class="container">
+      <div class="grid grid--4" style="text-align: center;">
+        <div class="stat" data-animate="scale-in" data-delay="100">
+          <div class="stat__number stat__number--context">
+            <span data-counter="3" data-suffix=".4M">0</span>
+          </div>
+          <p class="stat__label" data-i18n="home.stats.cases">New GI Cancer Cases / Year</p>
+          <p class="stat__source" data-i18n="home.stats.cases.src">Globocan 2020</p>
+        </div>
+        <div class="stat" data-animate="scale-in" data-delay="200">
+          <div class="stat__number text-gradient">
+            <span data-counter="25" data-suffix="+">0</span>
+          </div>
+          <p class="stat__label" data-i18n="home.stats.preclinical">Pre-clinical Experiments</p>
+          <p class="stat__source" data-i18n="home.stats.preclinical.src">EndoR · Porcine model, 2024</p>
+        </div>
+        <div class="stat" data-animate="scale-in" data-delay="300">
+          <div class="stat__number text-gradient">
+            <span data-counter="9" data-suffix="">0</span>
+          </div>
+          <p class="stat__label" data-i18n="home.stats.patents">Patents (Filed &amp; Granted)</p>
+          <p class="stat__source" data-i18n="home.stats.patents.src">EndoR · USPTO / CNIPA</p>
+        </div>
+        <div class="stat" data-animate="scale-in" data-delay="400">
+          <div class="stat__number text-gradient">
+            <span data-counter="43" data-suffix="">0</span>
+          </div>
+          <p class="stat__label" data-i18n="home.stats.patients">Patients in World-First Clinical Trial</p>
+          <p class="stat__source" data-i18n="home.stats.patients.src">EndoR · Chiu PW et al. Endoscopy 2024</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How it Works - Sticky -->
+  <div class="sticky-section" style="height: 400vh;">
+    <div class="sticky-section__sticky">
+      <div class="container">
+        <div class="text-center" style="margin-bottom: var(--space-2xl);">
+          <p class="eyebrow" data-i18n="home.steps.eyebrow">How It Works</p>
+          <h2 data-i18n="home.steps.title">Solving the Three Core<span class="text-gradient"> Challenges of ESD</span></h2>
+        </div>
+        <div class="steps-display">
+          <div class="step-item" data-sticky-item>
+            <div class="step-number">01</div>
+            <h3 data-i18n="home.steps.s1.title">Vision</h3>
+            <p class="text-secondary" data-i18n="home.steps.s1.text">The all-in-one 14mm endoscopic platform provides a bird's-eye view of the operative field. The camera is decoupled from the instruments — delivering stable, unobstructed intraoperative vision throughout the procedure.</p>
+          </div>
+          <div class="step-item" data-sticky-item>
+            <div class="step-number">02</div>
+            <h3 data-i18n="home.steps.s2.title">Traction</h3>
+            <p class="text-secondary" data-i18n="home.steps.s2.text">The robotic Lifter arm grips and elevates the tissue flap with consistent, adjustable tension — creating the submucosal working space that ESD demands without requiring an assistant or clip-and-line techniques.</p>
+          </div>
+          <div class="step-item" data-sticky-item>
+            <div class="step-number">03</div>
+            <h3 data-i18n="home.steps.s3.title">Dissection</h3>
+            <p class="text-secondary" data-i18n="home.steps.s3.text">The Dissector arm, equipped with a patented multi-functional ESD knife, performs the submucosal dissection with smooth, tremor-free movements — achieving dissection speeds matching those of expert endoscopists (~170 mm²/min).</p>
+          </div>
+          <div class="step-item" data-sticky-item>
+            <div class="step-number">04</div>
+            <h3 data-i18n="home.steps.s4.title">Master Console Control</h3>
+            <p class="text-secondary" data-i18n="home.steps.s4.text">The surgeon operates both robotic arms simultaneously from an ergonomic master console — maintaining full control and reducing the physical and cognitive load of conventional ESD.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Founding Chairman Quote -->
+  <section style="background: var(--color-bg-secondary);">
+    <div class="container">
+      <div class="chairman-quote" data-animate="blur-in">
+        <div class="chairman-quote__avatar" style="padding: 0; overflow: hidden; background: none;">
+          <img src="pictures/Professor CHIU Wai Yan Philip.webp" alt="Prof. Philip Chiu" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%; display: block;">
+        </div>
+        <div class="chairman-quote__content">
+          <p class="chairman-quote__name">Prof. Wai Yan Philip Chiu 趙偉仁教授</p>
+          <p class="chairman-quote__title" data-i18n="home.quote.title">Founding Chairman · Surgeon Endoscopist · Dean, Faculty of Medicine, CUHK</p>
+          <div class="chairman-tags" style="margin-top: var(--space-md); display: flex; flex-wrap: wrap; gap: 0.5rem;">
+            <span class="case-card__tag" data-i18n="home.quote.tag1">Director, MRC-CUHK</span>
+            <span class="case-card__tag" data-i18n="home.quote.tag2">World's First Flexible Robotic ESD</span>
+            <span class="case-card__tag" data-i18n="home.quote.tag3">43-Patient World-First Clinical Trial PI</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Roadmap / Funding Section -->
+  <section style="background: var(--color-bg);">
+    <div class="container">
+      <div class="text-center" style="margin-bottom: var(--space-3xl);">
+        <p class="eyebrow" data-animate="fade-in" data-i18n="home.roadmap.eyebrow">Development Roadmap</p>
+        <h2 data-animate="slide-up" data-delay="100" data-i18n="home.roadmap.title">
+          From Prototype to<br><span class="text-gradient">Global Market</span>
+        </h2>
+      </div>
+      <div class="grid grid--3">
+        <div class="card" data-animate="slide-up" data-delay="100">
+          <div class="card__icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="color: var(--color-accent);"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <p class="eyebrow" style="margin-bottom:0.25rem;">2026 Q1 · Seed</p>
+          <h3 class="card__title" data-i18n="home.roadmap.r1.title">First-in-Human Clinical Trial</h3>
+          <p class="card__text" data-i18n="home.roadmap.r1.text">Prototype completion and first-in-human clinical trial at Prince of Wales Hospital, CUHK. Target funding: USD 10M. Valuation: USD 40–60M.</p>
+        </div>
+        <div class="card" data-animate="slide-up" data-delay="250">
+          <div class="card__icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="color: var(--color-accent);"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+          </div>
+          <p class="eyebrow" style="margin-bottom:0.25rem;">2027–2028 · Series A</p>
+          <h3 class="card__title" data-i18n="home.roadmap.r2.title">Design Freeze &amp; Multi-centre Trial</h3>
+          <p class="card__text" data-i18n="home.roadmap.r2.text">Final hardware design, pre-clinical validation, and multi-centre clinical trial for NMPA/FDA/CE regulatory approval. Target funding: USD 20M.</p>
+        </div>
+        <div class="card" data-animate="slide-up" data-delay="400">
+          <div class="card__icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="color: var(--color-accent);"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          </div>
+          <p class="eyebrow" style="margin-bottom:0.25rem;">2029–2030 · Series B</p>
+          <h3 class="card__title" data-i18n="home.roadmap.r3.title">Regulatory Approval &amp; Launch</h3>
+          <p class="card__text" data-i18n="home.roadmap.r3.text">NMPA approval and commercial launch in China — the world's largest ESD market. Projected 5% China market share by 2030. Target funding: USD 30M.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section--full" style="background: radial-gradient(ellipse at center, rgba(0,212,255,0.08) 0%, transparent 70%);">
+    <div class="container text-center">
+      <h2 data-animate="blur-in" style="margin-bottom: var(--space-md);" data-i18n="home.cta.title">
+        Interested in<br><span class="text-gradient">Investing or Partnering?</span>
+      </h2>
+      <div data-animate="blur-in" data-delay="400" style="display:flex; gap: var(--space-md); justify-content:center; flex-wrap:wrap;">
+        <a href="contact.html" class="btn btn--primary" style="padding: 1rem 3rem; font-size: 1rem;" data-i18n="home.cta.btn">Get in Touch</a>
+        <a href="cases.html" class="btn btn--ghost" style="padding: 1rem 3rem; font-size: 1rem;" data-i18n="home.cta.btn2">View Clinical Data</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <div class="nav__logo">
+            <span class="nav__logo-icon">E</span>
+            EndoR
+          </div>
+          <p data-i18n="footer.tagline">Advancing endoluminal surgery to the next horizon through flexible robotics — born from CUHK &amp; MRC research.</p>
+        </div>
+        <div>
+          <h4 class="footer__heading" data-i18n="footer.products">Products</h4>
+          <ul class="footer__links">
+            <li><a href="services.html" data-i18n="footer.system">EndoR Surgical System</a></li>
+            <li><a href="services.html" data-i18n="footer.esd">ESD Technology</a></li>
+            <li><a href="cases.html" data-i18n="footer.clinical">Clinical Evidence</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer__heading" data-i18n="footer.company">Company</h4>
+          <ul class="footer__links">
+            <li><a href="about.html" data-i18n="footer.about">About Us</a></li>
+            <li><a href="team.html" data-i18n="footer.team">Team</a></li>
+            <li><a href="cases.html" data-i18n="footer.cases">Cases</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer__heading" data-i18n="footer.contact">Contact</h4>
+          <ul class="footer__links">
+            <li><a href="contact.html" data-i18n="footer.contactus">Contact Us</a></li>
+            <li style="color: var(--color-text-tertiary); font-style: italic;">TBC</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span data-i18n="footer.copyright">&copy; 2026 EndoR. All rights reserved.</span>
+        <span><span data-i18n="footer.privacy">Privacy Policy</span> &middot; <span data-i18n="footer.terms">Terms of Use</span></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/translations.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/scroll.js"></script>
+</body>
+</html>
+

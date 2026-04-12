@@ -1,0 +1,362 @@
+/* ============================================
+   MedAI Surgery — Animation System
+   ============================================ */
+
+/* --- Base states for animated elements --- */
+[data-animate] {
+  opacity: 0;
+  will-change: opacity, transform;
+}
+
+[data-animate].is-visible {
+  opacity: 1;
+}
+
+/* --- Fade In --- */
+[data-animate="fade-in"] {
+  transition: opacity var(--duration-slow) var(--ease-out-expo);
+}
+
+/* --- Slide Up --- */
+[data-animate="slide-up"] {
+  transform: translateY(60px);
+  transition: opacity var(--duration-slow) var(--ease-out-expo),
+              transform var(--duration-slow) var(--ease-out-expo);
+}
+
+[data-animate="slide-up"].is-visible {
+  transform: translateY(0);
+}
+
+/* --- Slide Down --- */
+[data-animate="slide-down"] {
+  transform: translateY(-60px);
+  transition: opacity var(--duration-slow) var(--ease-out-expo),
+              transform var(--duration-slow) var(--ease-out-expo);
+}
+
+[data-animate="slide-down"].is-visible {
+  transform: translateY(0);
+}
+
+/* --- Slide Left --- */
+[data-animate="slide-left"] {
+  transform: translateX(60px);
+  transition: opacity var(--duration-slow) var(--ease-out-expo),
+              transform var(--duration-slow) var(--ease-out-expo);
+}
+
+[data-animate="slide-left"].is-visible {
+  transform: translateX(0);
+}
+
+/* --- Slide Right --- */
+[data-animate="slide-right"] {
+  transform: translateX(-60px);
+  transition: opacity var(--duration-slow) var(--ease-out-expo),
+              transform var(--duration-slow) var(--ease-out-expo);
+}
+
+[data-animate="slide-right"].is-visible {
+  transform: translateX(0);
+}
+
+/* --- Scale In --- */
+[data-animate="scale-in"] {
+  transform: scale(0.85);
+  transition: opacity var(--duration-slow) var(--ease-out-expo),
+              transform var(--duration-slow) var(--ease-out-expo);
+}
+
+[data-animate="scale-in"].is-visible {
+  transform: scale(1);
+}
+
+/* --- Scale Up (from smaller) --- */
+[data-animate="scale-up"] {
+  transform: scale(0.5);
+  transition: opacity var(--duration-slower) var(--ease-out-expo),
+              transform var(--duration-slower) var(--ease-out-expo);
+}
+
+[data-animate="scale-up"].is-visible {
+  transform: scale(1);
+}
+
+/* --- Reveal (clip-path) --- */
+[data-animate="reveal"] {
+  clip-path: inset(0 0 100% 0);
+  transition: clip-path var(--duration-slower) var(--ease-out-expo),
+              opacity var(--duration-slow) var(--ease-out-expo);
+}
+
+[data-animate="reveal"].is-visible {
+  clip-path: inset(0 0 0% 0);
+  opacity: 1;
+}
+
+/* --- Reveal Horizontal --- */
+[data-animate="reveal-x"] {
+  clip-path: inset(0 100% 0 0);
+  transition: clip-path var(--duration-slower) var(--ease-out-expo),
+              opacity var(--duration-slow) var(--ease-out-expo);
+}
+
+[data-animate="reveal-x"].is-visible {
+  clip-path: inset(0 0% 0 0);
+  opacity: 1;
+}
+
+/* --- Blur In --- */
+[data-animate="blur-in"] {
+  filter: blur(20px);
+  transform: translateY(20px);
+  transition: opacity var(--duration-slow) var(--ease-out-expo),
+              filter var(--duration-slow) var(--ease-out-expo),
+              transform var(--duration-slow) var(--ease-out-expo);
+}
+
+[data-animate="blur-in"].is-visible {
+  filter: blur(0);
+  transform: translateY(0);
+}
+
+/* --- Stagger delay support via data-delay --- */
+[data-delay="100"] { transition-delay: 0.1s; }
+[data-delay="200"] { transition-delay: 0.2s; }
+[data-delay="300"] { transition-delay: 0.3s; }
+[data-delay="400"] { transition-delay: 0.4s; }
+[data-delay="500"] { transition-delay: 0.5s; }
+[data-delay="600"] { transition-delay: 0.6s; }
+[data-delay="700"] { transition-delay: 0.7s; }
+[data-delay="800"] { transition-delay: 0.8s; }
+
+/* --- Hero Animations --- */
+@keyframes heroFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes heroPulse {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 1; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes typewriter {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+@keyframes particleFloat {
+  0% {
+    transform: translateY(0) translateX(0);
+    opacity: 0;
+  }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% {
+    transform: translateY(-100vh) translateX(50px);
+    opacity: 0;
+  }
+}
+
+.hero__title {
+  animation: heroFadeUp 1s var(--ease-out-expo) 0.2s both;
+}
+
+.hero__subtitle {
+  animation: heroFadeUp 1s var(--ease-out-expo) 0.5s both;
+}
+
+.hero__cta {
+  animation: heroFadeUp 1s var(--ease-out-expo) 0.8s both;
+}
+
+/* --- Particle Background --- */
+.particles {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.particle {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: var(--color-accent);
+  border-radius: 50%;
+  animation: particleFloat linear infinite;
+  opacity: 0;
+}
+
+/* --- Sticky Section --- */
+.sticky-section {
+  position: relative;
+}
+
+.sticky-section__sticky {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.sticky-section__content {
+  text-align: center;
+  max-width: var(--container-narrow);
+  padding: 0 var(--container-padding);
+}
+
+.sticky-text-line {
+  transition: opacity 0.6s var(--ease-out-expo),
+              transform 0.6s var(--ease-out-expo);
+  opacity: 0.15;
+  transform: translateY(10px);
+}
+
+.sticky-text-line.is-active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* --- Parallax --- */
+.parallax-bg {
+  position: absolute;
+  inset: -20% 0;
+  z-index: -1;
+  will-change: transform;
+}
+
+/* --- 3D Card Tilt --- */
+.card-3d {
+  perspective: 1000px;
+}
+
+.card-3d__inner {
+  transition: transform var(--duration-normal) var(--ease-out-expo);
+  transform-style: preserve-3d;
+}
+
+/* --- Card Flip --- */
+.card-flip {
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.card-flip__inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s var(--ease-out-expo);
+  transform-style: preserve-3d;
+}
+
+.card-flip:hover .card-flip__inner {
+  transform: rotateY(180deg);
+}
+
+.card-flip__front,
+.card-flip__back {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  border-radius: var(--radius-lg);
+}
+
+.card-flip__back {
+  transform: rotateY(180deg);
+}
+
+/* --- Counter Animation --- */
+.counter-number {
+  display: inline-block;
+  font-variant-numeric: tabular-nums;
+}
+
+/* --- Glow Effect --- */
+.glow {
+  position: relative;
+}
+
+.glow::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  background: linear-gradient(135deg, var(--color-gradient-start), var(--color-gradient-end));
+  opacity: 0;
+  transition: opacity var(--duration-normal) ease;
+  z-index: -1;
+  filter: blur(20px);
+}
+
+.glow:hover::before {
+  opacity: 0.4;
+}
+
+/* --- Line Reveal --- */
+.line-reveal {
+  position: relative;
+  overflow: hidden;
+}
+
+.line-reveal::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: var(--color-accent);
+  transition: width var(--duration-slow) var(--ease-out-expo);
+}
+
+.line-reveal.is-visible::after {
+  width: 100%;
+}
+
+/* --- SVG Draw Animation --- */
+.svg-draw path {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  transition: stroke-dashoffset 2s var(--ease-out-expo);
+}
+
+.svg-draw.is-visible path {
+  stroke-dashoffset: 0;
+}
+
+/* --- Responsive: reduce motion complexity on mobile --- */
+@media (max-width: 768px) {
+  [data-animate="slide-up"] { transform: translateY(30px); }
+  [data-animate="slide-down"] { transform: translateY(-30px); }
+  [data-animate="slide-left"] { transform: translateX(30px); }
+  [data-animate="slide-right"] { transform: translateX(-30px); }
+  [data-animate="scale-in"] { transform: scale(0.9); }
+}

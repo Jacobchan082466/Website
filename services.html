@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The EndoR Surgical System — Dual-Arm Flexible Endoluminal Robot</title>
+  <meta name="description" content="EndoR Surgical System: a dual-arm fully robotized flexible endoscopic platform for ESD. Lifter arm, Dissector arm, master console — 9 patents, 25+ pre-clinical experiments.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <style>
+    .service-card__tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: var(--space-md);
+    }
+    .service-card__stat {
+      font-size: var(--fs-h2);
+      font-weight: var(--fw-black);
+      margin-top: var(--space-md);
+      line-height: 1;
+    }
+    .architecture-wrap {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: var(--space-xl) 0;
+    }
+    .architecture-wrap svg {
+      width: 100%;
+      height: auto;
+    }
+    .arch-node {
+      fill: var(--color-bg-card);
+      stroke: url(#archStrokeGrad);
+      stroke-width: 2;
+    }
+    .arch-label {
+      fill: var(--color-text-primary);
+      font-size: 14px;
+      font-weight: 600;
+      font-family: var(--font-primary);
+    }
+    .arch-sublabel {
+      fill: var(--color-text-secondary);
+      font-size: 11px;
+      font-family: var(--font-primary);
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">
+        <span class="nav__logo-icon">E</span>
+        EndoR
+      </a>
+      <div class="nav__links">
+        <a href="index.html" class="nav__link" data-i18n="nav.home">Home</a>
+        <a href="about.html" class="nav__link" data-i18n="nav.about">About</a>
+        <a href="services.html" class="nav__link active" data-i18n="nav.services">Services</a>
+        <a href="cases.html" class="nav__link" data-i18n="nav.cases">Cases</a>
+        <a href="team.html" class="nav__link" data-i18n="nav.team">Team</a>
+        <a href="contact.html" class="nav__link" data-i18n="nav.contact">Contact</a>
+      </div>
+      <div class="nav__controls">
+      <div class="lang-switcher">
+        <button class="lang-btn" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="zh-Hant">繁</button>
+        <button class="lang-btn" data-lang="zh-Hans">简</button>
+      </div>
+      <button class="theme-toggle" aria-label="Toggle theme" title="Toggle light/dark mode">
+        <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+      </div>
+      <button class="nav__hamburger" data-i18n-aria="nav.menu" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav__mobile">
+      <a href="index.html" data-i18n="nav.home">Home</a>
+      <a href="about.html" data-i18n="nav.about">About</a>
+      <a href="services.html" data-i18n="nav.services">Services</a>
+      <a href="cases.html" data-i18n="nav.cases">Cases</a>
+      <a href="team.html" data-i18n="nav.team">Team</a>
+      <a href="contact.html" data-i18n="nav.contact">Contact</a>
+    </div>
+  </nav>
+
+  <header class="page-hero">
+    <div class="page-hero__bg" aria-hidden="true"></div>
+    <div class="container text-center" style="position: relative; z-index: 1;">
+      <p class="eyebrow" data-animate="fade-in" data-i18n="services.hero.eyebrow">The Surgical System</p>
+      <h1 class="text-hero" data-animate="slide-up" data-delay="100" style="margin-top: var(--space-md);" data-i18n="services.hero.title">
+        Dual-Arm Fully Robotized<br><span class="text-gradient">Flexible Endoscopic Platform</span>
+      </h1>
+      <p class="text-secondary" data-animate="slide-up" data-delay="200" style="font-size: var(--fs-body-lg); max-width: 640px; margin: var(--space-lg) auto 0; line-height: var(--lh-relaxed);" data-i18n="services.hero.subtitle">
+        EndoR addresses the three fundamental challenges of Endoscopic Submucosal Dissection — vision, traction, and dissection — in a single all-in-one 14mm endoscopic platform controlled from a master console.
+      </p>
+      <div style="margin-top: var(--space-xl);" data-animate="scale-in" data-delay="300">
+        <a href="#products" class="btn btn--primary" data-i18n="services.hero.cta1">Explore the System</a>
+        <a href="contact.html" class="btn btn--ghost" style="margin-left: var(--space-md);" data-i18n="services.hero.cta2">Request Information</a>
+      </div>
+    </div>
+  </header>
+
+  <section id="products">
+    <div class="container container--wide">
+      <div class="text-center" style="margin-bottom: var(--space-3xl);">
+        <p class="eyebrow" data-animate="fade-in" data-i18n="services.prod.eyebrow">System Components</p>
+        <h2 data-animate="reveal" data-delay="100" data-i18n="services.prod.title">
+          Three Components,<span class="text-gradient"> One Integrated Platform</span>
+        </h2>
+        <p class="text-secondary" style="max-width: 640px; margin: var(--space-lg) auto 0; font-size: var(--fs-body);" data-animate="blur-in" data-delay="200" data-i18n="services.prod.subtitle">Lifter arm, Dissector arm, and Master Console work in concert through the 14mm all-in-one endoscopic interface — designed from the ground up for ESD.</p>
+      </div>
+      <div class="grid grid--3">
+        <article class="card card-3d glow" data-animate="slide-up" data-delay="100">
+          <div class="card-3d__inner">
+            <div class="card__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="color: var(--color-accent);">
+                <circle cx="12" cy="12" r="2"/><path d="M12 2v3M12 19v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M2 12h3M19 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12"/>
+              </svg>
+            </div>
+            <p class="eyebrow" style="margin-bottom: var(--space-xs);" data-i18n="services.camera.label">Camera System</p>
+            <h3 class="card__title" data-i18n="services.camera.title">All-in-One 14mm Endoscopic Platform</h3>
+            <p class="card__text" data-i18n="services.camera.text">
+              A compact 14mm all-in-one interface integrates camera, Lifter arm and Dissector arm. The bird's-eye camera view is decoupled from the instruments — providing stable, clear visualisation of the entire operative field throughout ESD.
+            </p>
+            <div class="service-card__stat text-gradient">14mm</div>
+            <p class="text-tertiary" style="font-size: var(--fs-caption); margin-top: var(--space-xs);" data-i18n="services.camera.stat">All-in-one platform outer diameter</p>
+            <div class="service-card__tags">
+              <span class="case-card__tag" data-i18n="services.camera.t1">Bird's-Eye View</span>
+              <span class="case-card__tag" data-i18n="services.camera.t2">Decoupled Imaging</span>
+              <span class="case-card__tag" data-i18n="services.camera.t3">Bio-compatible Plastic</span>
+              <span class="case-card__tag" data-i18n="services.camera.t4">3.8mm Instrument Arms</span>
+            </div>
+            <div class="mrc-badge" data-i18n="services.badge.prog1">MRC Programme 1.1 — Endoluminal Robotics</div>
+          </div>
+        </article>
+        <article class="card card-3d glow" data-animate="slide-up" data-delay="200">
+          <div class="card-3d__inner">
+            <div class="card__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="color: var(--color-accent);">
+                <path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2V9M9 21H5a2 2 0 0 1-2-2V9m0 0h18"/>
+              </svg>
+            </div>
+            <p class="eyebrow" style="margin-bottom: var(--space-xs);" data-i18n="services.lifter.label">Robotic Arm 1</p>
+            <h3 class="card__title" data-i18n="services.lifter.title">Lifter Arm — Precision Traction</h3>
+            <p class="card__text" data-i18n="services.lifter.text">
+              The Lifter arm grasps the mucosal flap and applies consistent, adjustable traction — creating optimal submucosal exposure and eliminating the need for assistant-held clips or additional accessories during ESD.
+            </p>
+            <div class="service-card__stat text-gradient">3.8mm</div>
+            <p class="text-tertiary" style="font-size: var(--fs-caption); margin-top: var(--space-xs);" data-i18n="services.lifter.stat">Robotic instrument diameter</p>
+            <div class="service-card__tags">
+              <span class="case-card__tag" data-i18n="services.lifter.t1">Adjustable Traction</span>
+              <span class="case-card__tag" data-i18n="services.lifter.t2">Gripper Design</span>
+              <span class="case-card__tag" data-i18n="services.lifter.t3">Non-back-driven Cable</span>
+              <span class="case-card__tag" data-i18n="services.lifter.t4">Patented</span>
+            </div>
+            <div class="mrc-badge" data-i18n="services.badge.cuhk">CUHK MAE Engineering</div>
+          </div>
+        </article>
+        <article class="card card-3d glow" data-animate="slide-up" data-delay="300">
+          <div class="card-3d__inner">
+            <div class="card__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="color: var(--color-accent);">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              </svg>
+            </div>
+            <p class="eyebrow" style="margin-bottom: var(--space-xs);" data-i18n="services.dissector.label">Robotic Arm 2</p>
+            <h3 class="card__title" data-i18n="services.dissector.title">Dissector Arm — Multi-functional ESD Knife</h3>
+            <p class="card__text" data-i18n="services.dissector.text">
+              The Dissector arm carries a patented multi-functional ESD knife that performs submucosal injection, cutting and haemostasis. Tremor-free robotic movement achieves dissection speeds (~170 mm²/min) matching those of expert endoscopists.
+            </p>
+            <div class="service-card__stat text-gradient">~170</div>
+            <p class="text-tertiary" style="font-size: var(--fs-caption); margin-top: var(--space-xs);" data-i18n="services.dissector.stat">mm²/min — expert-level dissection speed</p>
+            <div class="service-card__tags">
+              <span class="case-card__tag" data-i18n="services.dissector.t1">Multi-functional Knife</span>
+              <span class="case-card__tag" data-i18n="services.dissector.t2">Tremor-free</span>
+              <span class="case-card__tag" data-i18n="services.dissector.t3">Rotary Mechanism</span>
+              <span class="case-card__tag" data-i18n="services.dissector.t4">Patented</span>
+            </div>
+            <div class="mrc-badge" data-i18n="services.badge.prog1">MRC Programme 1.1 — Endoluminal Robotics</div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <div class="sticky-section" style="height: 300vh;">
+    <div class="sticky-section__sticky">
+      <div class="container container--wide">
+        <div class="text-center" style="margin-bottom: var(--space-2xl);">
+          <p class="eyebrow" data-i18n="services.sticky.eyebrow">How ESD Works</p>
+          <h2 data-i18n="services.sticky.title">EndoR Solves Every Step<span class="text-gradient"> of the Procedure</span></h2>
+          <p class="text-secondary" style="max-width: 520px; margin: var(--space-md) auto 0; font-size: var(--fs-small);" data-i18n="services.sticky.hint">
+            Scroll through the three phases of ESD and how EndoR addresses each.
+          </p>
+        </div>
+        <div class="grid grid--3" style="max-width: var(--container-wide); margin: 0 auto;">
+          <div class="step-item" data-sticky-item>
+            <div class="step-number">01</div>
+            <h3 data-i18n="services.sticky.v.title">Marking &amp; Injection</h3>
+            <p class="text-secondary" style="font-size: var(--fs-small); line-height: var(--lh-relaxed);" data-i18n="services.sticky.v.text">
+              The Dissector arm marks lesion boundaries and injects submucosal fluid to raise the mucosa. Bird's-eye camera provides unobstructed visualisation of the injection bleb — critical for safe margin delineation.
+            </p>
+          </div>
+          <div class="step-item" data-sticky-item>
+            <div class="step-number">02</div>
+            <h3 data-i18n="services.sticky.r.title">Traction &amp; Exposure</h3>
+            <p class="text-secondary" style="font-size: var(--fs-small); line-height: var(--lh-relaxed);" data-i18n="services.sticky.r.text">
+              The Lifter arm grasps the incised mucosal edge and applies upward traction, exposing the submucosal plane. Consistent tension eliminates the most common cause of slow dissection and perforation.
+            </p>
+          </div>
+          <div class="step-item" data-sticky-item>
+            <div class="step-number">03</div>
+            <h3 data-i18n="services.sticky.m.title">En Bloc Resection</h3>
+            <p class="text-secondary" style="font-size: var(--fs-small); line-height: var(--lh-relaxed);" data-i18n="services.sticky.m.text">
+              With traction maintained, the Dissector arm dissects along the submucosal layer at expert speed (~170 mm²/min). Smooth robotic movements minimise bleeding, achieving clean en bloc resection for accurate pathological staging.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Competitor Comparison -->
+  <section style="background: var(--color-bg-secondary);">
+    <div class="container container--wide">
+      <div class="text-center" style="margin-bottom: var(--space-xl);">
+        <p class="eyebrow" data-animate="slide-down" data-i18n="services.comp.eyebrow">Competitive Landscape</p>
+        <h2 data-animate="blur-in" data-delay="100" data-i18n="services.comp.title">
+          No Mature Flexible Endoluminal<span class="text-gradient"> Robotic Product Exists Yet</span>
+        </h2>
+      </div>
+      <div style="overflow-x: auto; margin-top: var(--space-xl);" data-animate="fade-in" data-delay="150">
+        <table class="comp-table">
+          <thead>
+            <tr>
+              <th data-i18n="services.comp.th.feature">Feature</th>
+              <th class="comp-highlight" data-i18n="services.comp.th.endor">EndoR ★</th>
+              <th data-i18n="services.comp.th.endoquest">EndoQuest</th>
+              <th data-i18n="services.comp.th.endomaster">EndoMaster</th>
+              <th data-i18n="services.comp.th.endorobotics">EndoRobotics</th>
+              <th data-i18n="services.comp.th.agilis">Agilis</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-i18n="services.comp.flexible">Fully Flexible</td>
+              <td class="comp-highlight comp-yes">✓ Yes</td>
+              <td class="comp-no">✗ No</td>
+              <td class="comp-yes">✓ Yes</td>
+              <td class="comp-partial">~ Partial</td>
+              <td class="comp-yes">✓ Yes</td>
+            </tr>
+            <tr>
+              <td data-i18n="services.comp.location">Target GI Location</td>
+              <td class="comp-highlight"><strong data-i18n="services.comp.endor.loc">Upper &amp; Lower GI</strong></td>
+              <td data-i18n="services.comp.eq.loc">Upper GI / Lower GI</td>
+              <td data-i18n="services.comp.em.loc">Trans-Anal, Trans-Oral</td>
+              <td data-i18n="services.comp.er.loc">Colon 90cm only</td>
+              <td data-i18n="services.comp.ag.loc">Upper GI</td>
+            </tr>
+            <tr>
+              <td data-i18n="services.comp.diameter">Instrument Diameter</td>
+              <td class="comp-highlight"><strong>3.8mm</strong></td>
+              <td>5–6mm</td>
+              <td>4.2mm</td>
+              <td>2.8mm</td>
+              <td>2.8–3.5mm</td>
+            </tr>
+            <tr>
+              <td data-i18n="services.comp.config">Configuration</td>
+              <td class="comp-highlight" data-i18n="services.comp.dualarm">Dual-arm</td>
+              <td data-i18n="services.comp.dualarm">Dual-arm</td>
+              <td data-i18n="services.comp.dualarm">Dual-arm</td>
+              <td data-i18n="services.comp.singlearm">Single arm</td>
+              <td data-i18n="services.comp.dualarm">Dual-arm</td>
+            </tr>
+            <tr>
+              <td data-i18n="services.comp.platform">Endoscope Platform</td>
+              <td class="comp-highlight" data-i18n="services.comp.endor.plat">All-in-one (14mm)</td>
+              <td data-i18n="services.comp.eq.plat">Tailor-made (18–22mm)</td>
+              <td data-i18n="services.comp.em.plat">Tailor-made Pentax (16mm)</td>
+              <td data-i18n="services.comp.er.plat">Conventional add-on</td>
+              <td data-i18n="services.comp.ag.plat">Conventional platform</td>
+            </tr>
+            <tr>
+              <td data-i18n="services.comp.material">Instrument Material</td>
+              <td class="comp-highlight" data-i18n="services.comp.endor.mat">Bio-compatible plastic</td>
+              <td data-i18n="services.comp.metal">Metal</td>
+              <td data-i18n="services.comp.metal">Metal</td>
+              <td data-i18n="services.comp.metal">Metal</td>
+              <td data-i18n="services.comp.metal">Metal</td>
+            </tr>
+            <tr>
+              <td data-i18n="services.comp.stage">Development Stage</td>
+              <td class="comp-highlight" data-i18n="services.comp.endor.stage">First-in-human trial Q1 2026</td>
+              <td data-i18n="services.comp.clinical">Clinical trial</td>
+              <td data-i18n="services.comp.clinical">Clinical trial</td>
+              <td data-i18n="services.comp.clinical">Clinical trial</td>
+              <td data-i18n="services.comp.clinical">Clinical trial</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="section--full" style="min-height: 70vh; background: radial-gradient(ellipse at center, rgba(0,212,255,0.06) 0%, transparent 65%);">
+    <div class="container text-center">
+      <h2 data-animate="scale-in" style="margin-bottom: var(--space-md);" data-i18n="services.cta.title">
+        Partner with EndoR for<br><span class="text-gradient">First-in-Human Trial</span>
+      </h2>
+      <p class="text-secondary" data-animate="slide-right" data-delay="200" style="font-size: var(--fs-body-lg); max-width: 480px; margin: 0 auto var(--space-xl);" data-i18n="services.cta.text">
+        We are seeking clinical partners and investors to advance EndoR toward first-in-human trials and regulatory approval.
+      </p>
+      <div data-animate="fade-in" data-delay="400">
+        <a href="contact.html" class="btn btn--primary" style="padding: 1rem 2.5rem;" data-i18n="services.cta.btn">Contact Us</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <div class="nav__logo">
+            <span class="nav__logo-icon">E</span>
+            EndoR
+          </div>
+          <p data-i18n="footer.tagline">Advancing endoluminal surgery to the next horizon through flexible robotics — born from CUHK &amp; MRC research.</p>
+        </div>
+        <div>
+          <h4 class="footer__heading" data-i18n="footer.products">Products</h4>
+          <ul class="footer__links">
+            <li><a href="services.html" data-i18n="footer.system">EndoR Surgical System</a></li>
+            <li><a href="services.html" data-i18n="footer.esd">ESD Technology</a></li>
+            <li><a href="cases.html" data-i18n="footer.clinical">Clinical Evidence</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer__heading" data-i18n="footer.company">Company</h4>
+          <ul class="footer__links">
+            <li><a href="about.html" data-i18n="footer.about">About Us</a></li>
+            <li><a href="team.html" data-i18n="footer.team">Team</a></li>
+            <li><a href="cases.html" data-i18n="footer.cases">Cases</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer__heading" data-i18n="footer.contact">Contact</h4>
+          <ul class="footer__links">
+            <li><a href="contact.html" data-i18n="footer.contactus">Contact Us</a></li>
+            <li style="color: var(--color-text-tertiary); font-style: italic;">TBC</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span data-i18n="footer.copyright">&copy; 2026 EndoR. All rights reserved.</span>
+        <span><span data-i18n="footer.privacy">Privacy Policy</span> &middot; <span data-i18n="footer.terms">Terms of Use</span></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/translations.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/scroll.js"></script>
+</body>
+</html>
+
