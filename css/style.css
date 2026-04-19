@@ -1429,13 +1429,13 @@ section {
 .chairman-hero__duo {
   width: 100%;
   padding: 0 var(--space-xl);
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   align-items: start;
   box-sizing: border-box;
 }
 
 .chairman-hero__inner {
-  flex: 1;
   min-width: 0;
   display: grid;
   grid-template-columns: 180px 1fr;

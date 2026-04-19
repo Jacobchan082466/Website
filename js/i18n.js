@@ -14,7 +14,7 @@
   function getPageKey() {
     const page = window.location.pathname.split('/').pop().replace('.html', '') || 'index';
     const map = {
-      index: 'index', about: 'about', services: 'services',
+      index: 'index', about: 'about', platform: 'platform',
       cases: 'cases', team: 'team', contact: 'contact'
     };
     return map[page] || 'index';
