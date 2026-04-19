@@ -74,71 +74,77 @@
     </div>
   </section>
 
-  <!-- Mission Sticky Section -->
-  <div class="sticky-section" style="height: 300vh;">
+  <!-- Mission Sticky Section (slight pull-up: sticky pins sooner after photo hero) -->
+  <div class="sticky-section sticky-section--pull-up" style="height: 190vh;">
     <div class="sticky-section__sticky">
-      <div class="sticky-section__content">
-        <p class="eyebrow" style="margin-bottom: var(--space-xl);" data-i18n="home.mission.eyebrow">Our Mission</p>
-        <h2 style="font-size: var(--fs-h2);">
-          <span class="sticky-text-line" data-i18n="home.mission.line1">Early GI cancer is curable —</span>
-          <span class="sticky-text-line" data-i18n="home.mission.line2">if caught and treated in time.</span>
-          <span class="sticky-text-line" data-i18n="home.mission.line3">We make expert-level ESD</span>
-          <span class="sticky-text-line" data-i18n="home.mission.line4"><span class="text-gradient">accessible to every patient.</span></span>
+      <div class="sticky-section__content sticky-section__content--mission">
+        <p class="eyebrow mission-sticky__eyebrow" data-i18n="home.mission.eyebrow">Our Mission</p>
+        <h2 class="mission-sticky__headline">
+          <span class="sticky-text-line" data-i18n="home.mission.line1">Eradicate early-stage gastrointestinal cancers</span>
+          <span class="sticky-text-line" data-i18n="home.mission.line2">through intelligent endoluminal robotics —</span>
+          <span class="sticky-text-line" data-i18n="home.mission.line3">enabling scarless, organ-preserving removal</span>
+          <span class="sticky-text-line" data-i18n="home.mission.line4"><span class="text-gradient">with unprecedented precision and control.</span></span>
         </h2>
       </div>
     </div>
   </div>
 
-  <!-- Roadmap / Funding Section -->
-  <section style="background: var(--color-bg-secondary);">
-    <div class="container">
-      <div class="text-center" style="margin-bottom: var(--space-3xl);">
-        <p class="eyebrow" data-animate="fade-in" data-i18n="home.roadmap.eyebrow">Development Roadmap</p>
-        <h2 data-animate="slide-up" data-delay="100" data-i18n="home.roadmap.title">
-          From Prototype to<br><span class="text-gradient">Global Market</span>
-        </h2>
-      </div>
-      <div class="grid grid--3">
-        <div class="card" data-animate="slide-up" data-delay="100">
-          <div class="card__icon" aria-hidden="true">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="color: var(--color-accent);"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-          </div>
-          <p class="eyebrow" style="margin-bottom:0.25rem;">2026 Q1 · Seed</p>
-          <h3 class="card__title" data-i18n="home.roadmap.r1.title">First-in-Human Clinical Trial</h3>
-          <p class="card__text" data-i18n="home.roadmap.r1.text">Prototype completion and first-in-human clinical trial at Prince of Wales Hospital, CUHK.</p>
-        </div>
-        <div class="card" data-animate="slide-up" data-delay="250">
-          <div class="card__icon" aria-hidden="true">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="color: var(--color-accent);"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-          </div>
-          <p class="eyebrow" style="margin-bottom:0.25rem;">2027–2028 · Series A</p>
-          <h3 class="card__title" data-i18n="home.roadmap.r2.title">Design Freeze &amp; Multi-centre Trial</h3>
-          <p class="card__text" data-i18n="home.roadmap.r2.text">Final hardware design, pre-clinical validation, and multi-centre clinical trial for NMPA/FDA/CE regulatory approval.</p>
-        </div>
-        <div class="card" data-animate="slide-up" data-delay="400">
-          <div class="card__icon" aria-hidden="true">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="color: var(--color-accent);"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-          </div>
-          <p class="eyebrow" style="margin-bottom:0.25rem;">2029–2030 · Series B</p>
-          <h3 class="card__title" data-i18n="home.roadmap.r3.title">Regulatory Approval &amp; Launch</h3>
-          <p class="card__text" data-i18n="home.roadmap.r3.text">NMPA approval and commercial launch in China — the world's largest ESD market. Projected 5% China market share by 2030.</p>
-        </div>
+  <!-- Vision (sticky: same dwell length & pull-up as mission) -->
+  <div class="sticky-section sticky-section--pull-up sticky-section--vision" style="height: 190vh;">
+    <div class="sticky-section__sticky">
+      <div class="sticky-section__content sticky-section__content--vision">
+        <p class="eyebrow vision-sticky__eyebrow" data-animate="fade-in" data-i18n="home.vision.eyebrow">Where we&rsquo;re headed</p>
+        <p class="vision-sticky__lines" data-animate="slide-up" data-delay="100">
+          <span class="sticky-text-line" data-i18n="home.vision.line1">To build the leading endoluminal robotic platform that empowers physicians to achieve surgical precision through natural orifices,</span>
+          <span class="sticky-text-line" data-i18n="home.vision.line2">making en-bloc resection of early gastrointestinal cancers faster, safer, and accessible to far more patients &mdash;</span>
+          <span class="sticky-text-line" data-i18n="home.vision.line3">while creating substantial value by <span class="text-gradient">converting complex open and laparoscopic procedures into scalable endoscopic ones.</span></span>
+        </p>
       </div>
     </div>
-  </section>
+  </div>
 
-  <!-- CTA Section -->
-  <section class="section--full" style="background: radial-gradient(ellipse at center, rgba(0,212,255,0.08) 0%, transparent 70%);">
-    <div class="container text-center">
-      <h2 data-animate="blur-in" style="margin-bottom: var(--space-md);" data-i18n="home.cta.title">
-        Interested in<br><span class="text-gradient">Investing or Partnering?</span>
-      </h2>
-      <div data-animate="blur-in" data-delay="400" style="display:flex; gap: var(--space-md); justify-content:center; flex-wrap:wrap;">
-        <a href="contact.html" class="btn btn--primary" style="padding: 1rem 3rem; font-size: 1rem;" data-i18n="home.cta.btn">Get in Touch</a>
-        <a href="cases.html" class="btn btn--ghost" style="padding: 1rem 3rem; font-size: 1rem;" data-i18n="home.cta.btn2">View Clinical Data</a>
+  <!-- Roadmap / Funding (sticky center dwell, same as mission & vision) -->
+  <div class="sticky-section sticky-section--pull-up sticky-section--roadmap sticky-section--dwell-secondary" id="roadmap" style="height: 190vh;">
+    <div class="sticky-section__sticky sticky-section__sticky--tall-content sticky-section__sticky--roadmap-bg">
+      <div class="sticky-section__content sticky-section__content--roadmap">
+        <div class="text-center roadmap-sticky__intro">
+          <p class="eyebrow" data-animate="fade-in" data-i18n="home.roadmap.eyebrow">Milestones</p>
+          <h2 data-animate="slide-up" data-delay="100" data-i18n="home.roadmap.title">
+            Our Path to the<br><span class="text-gradient">Global Market</span>
+          </h2>
+        </div>
+        <div class="grid grid--3">
+          <div class="card" data-animate="slide-up" data-delay="100">
+            <h3 class="card__title" data-i18n="home.roadmap.r1.title">World-First Robotic ESD Trial</h3>
+            <p class="card__text" data-i18n="home.roadmap.r1.text">Completed world's first robotic colorectal ESD clinical trial — 43 patients at Prince of Wales Hospital, CUHK. Published in Endoscopy 2024.</p>
+          </div>
+          <div class="card" data-animate="slide-up" data-delay="250">
+            <h3 class="card__title" data-i18n="home.roadmap.r2.title">Government Funding</h3>
+            <p class="card__text" data-i18n="home.roadmap.r2.text">HKD 36.2M secured via Hong Kong RAISe+ Scheme to advance commercialisation of the EndoR Surgical System.</p>
+          </div>
+          <div class="card" data-animate="slide-up" data-delay="400">
+            <h3 class="card__title" data-i18n="home.roadmap.r3.title">Greater Bay Area Expansion</h3>
+            <p class="card__text" data-i18n="home.roadmap.r3.text">Established at CUHK InnoHub, Shenzhen Qianhai — advancing cross-border clinical collaboration and commercialisation across the Greater Bay Area.</p>
+          </div>
+        </div>
       </div>
     </div>
-  </section>
+  </div>
+
+  <!-- CTA (sticky center dwell) -->
+  <div class="sticky-section sticky-section--pull-up sticky-section--cta" style="height: 190vh;">
+    <div class="sticky-section__sticky sticky-section__sticky--tall-content sticky-section__sticky--cta-bg">
+      <div class="sticky-section__content sticky-section__content--cta">
+        <h2 data-animate="blur-in" style="margin-bottom: var(--space-md);" data-i18n="home.cta.title">
+          Interested in<br><span class="text-gradient">Investing or Partnering?</span>
+        </h2>
+        <div data-animate="blur-in" data-delay="400" class="home-cta-sticky__actions">
+          <a href="contact.html" class="btn btn--primary home-cta-sticky__btn" data-i18n="home.cta.btn">Get in Touch</a>
+          <a href="cases.html" class="btn btn--ghost home-cta-sticky__btn" data-i18n="home.cta.btn2">View Clinical Data</a>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- Footer -->
   <footer class="footer">

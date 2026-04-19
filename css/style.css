@@ -297,6 +297,18 @@ section {
   justify-content: center;
 }
 
+.home-cta-sticky__actions {
+  display: flex;
+  gap: var(--space-md);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.home-cta-sticky__btn {
+  padding: 1rem 3rem;
+  font-size: 1rem;
+}
+
 /* --- Grid System --- */
 .grid {
   display: grid;

@@ -66,6 +66,14 @@
     );
   }
 
+  /* Later sticky dwells paint above earlier ones (avoids mixed copy if ranges briefly overlap) */
+  function initStickySectionStacking() {
+    const stickySections = document.querySelectorAll('.sticky-section');
+    stickySections.forEach((el, i) => {
+      el.style.zIndex = String(10 + i);
+    });
+  }
+
   /* --- Sticky scroll sections with progress --- */
   function initStickyScroll() {
     const stickySections = document.querySelectorAll('.sticky-section');
@@ -116,6 +124,7 @@
             }
           });
         }
+
       });
 
       ticking = false;
@@ -209,32 +218,14 @@
     });
   }
 
-  /* --- Particle background --- */
-  function initParticles() {
-    const container = document.querySelector('.particles');
-    if (!container) return;
-
-    const count = 30;
-    for (let i = 0; i < count; i++) {
-      const particle = document.createElement('div');
-      particle.classList.add('particle');
-      particle.style.left = Math.random() * 100 + '%';
-      particle.style.animationDelay = Math.random() * 15 + 's';
-      particle.style.animationDuration = 10 + Math.random() * 20 + 's';
-      particle.style.width = 1 + Math.random() * 2 + 'px';
-      particle.style.height = particle.style.width;
-      container.appendChild(particle);
-    }
-  }
-
   /* --- Initialize all scroll features --- */
   function init() {
+    initStickySectionStacking();
     initScrollAnimations();
     initParallax();
     initStickyScroll();
     initCounters();
     initCardTilt();
-    initParticles();
   }
 
   if (document.readyState === 'loading') {
