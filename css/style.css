@@ -8,6 +8,7 @@
 /* --- Custom Properties (light defaults) --- */
 :root {
   --color-bg: #f5f5f7;
+  --color-bg-primary: #ffffff;
   --color-bg-secondary: #e8e8ed;
   --color-bg-tertiary: #dcdce0;
   --color-bg-card: #ffffff;
@@ -117,6 +118,7 @@
 /* ── Dark Theme ─────────────────────────────── */
 [data-theme="dark"] {
   --color-bg: #0a0a0a;
+  --color-bg-primary: #161616;
   --color-bg-secondary: #111111;
   --color-bg-tertiary: #1a1a1a;
   --color-bg-card: #161616;
@@ -1089,6 +1091,35 @@ section {
   overflow: hidden;
 }
 
+/* Inside a sticky dwell the section is already vertically centred by the
+   flex wrapper — only keep nav clearance, remove the extra bottom padding.
+   Also hide the section-level bg (gradient is promoted to the sticky layer). */
+.sticky-section .page-hero {
+  padding-top: calc(var(--nav-height) + var(--space-lg));
+  padding-bottom: var(--space-lg);
+  background: none;
+}
+
+.sticky-section .page-hero .page-hero__bg {
+  display: none;
+}
+
+/* Promote the hero gradient to fill the full 100vh sticky layer.
+   Also set the outer track background so the ~30vh scroll overshoot
+   doesn't expose the body colour. */
+.sticky-section--hero {
+  background-color: var(--color-bg-primary);
+}
+.sticky-section--hero .sticky-section__sticky {
+  background: radial-gradient(ellipse at 50% 0%, rgba(0, 212, 255, 0.06) 0%, transparent 60%),
+              var(--color-bg-primary);
+}
+
+[data-theme="light"] .sticky-section--hero .sticky-section__sticky {
+  background: radial-gradient(ellipse at 50% 0%, rgba(0, 113, 227, 0.07) 0%, transparent 60%),
+              var(--color-bg-primary);
+}
+
 .page-hero__bg {
   position: absolute;
   inset: 0;
@@ -1325,6 +1356,76 @@ section {
   overflow: visible;
 }
 
+/* ── Advisor Cards ──────────────────────────────── */
+.advisor-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--space-xs);
+}
+
+.advisor-card .team-card__avatar {
+  margin-bottom: var(--space-sm);
+}
+
+.advisor-card__name {
+  font-size: var(--fs-h4);
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-snug);
+}
+
+.advisor-card__title {
+  font-size: var(--fs-small);
+  color: var(--color-text-secondary);
+  line-height: 1.4;
+}
+
+.advisor-card__inst {
+  font-size: var(--fs-caption);
+  color: var(--color-accent);
+  font-weight: var(--fw-medium);
+  margin-bottom: var(--space-xs);
+}
+
+.advisor-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.4rem;
+  margin-top: var(--space-xs);
+}
+
+.advisor-card__pubrow {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: var(--space-sm);
+  margin-top: var(--space-xs);
+}
+
+.advisor-card__pubstat {
+  font-size: var(--fs-h3);
+  font-weight: var(--fw-black);
+  line-height: 1;
+}
+
+.advisor-card__publabel {
+  font-size: var(--fs-caption);
+  color: var(--color-text-tertiary);
+}
+
+.advisor-card__note {
+  font-size: var(--fs-small);
+  color: var(--color-text-secondary);
+  line-height: var(--lh-relaxed);
+  text-align: left;
+  border-top: 1px solid var(--color-border);
+  padding-top: var(--space-sm);
+  margin-top: var(--space-xs);
+  width: 100%;
+}
+
 .chairman-hero__duo {
   width: 100%;
   padding: 0 var(--space-xl);
@@ -1425,9 +1526,67 @@ section {
 }
 
 /* Awards section */
+.chairman-hero__research {
+  border-top: 1px solid var(--color-border);
+  padding-top: var(--space-xl);
+  margin-top: var(--space-xl);
+  margin-bottom: var(--space-xl);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.chairman-hero__stats {
+  display: flex;
+  gap: var(--space-2xl);
+}
+
+.chairman-hero__stat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.chairman-hero__stat-num {
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  font-weight: var(--fw-black);
+  line-height: 1;
+}
+
+.chairman-hero__stat-label {
+  font-size: var(--fs-caption);
+  color: var(--color-text-secondary);
+  white-space: nowrap;
+}
+
+.chairman-hero__milestones {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.chairman-hero__milestones li {
+  font-size: var(--fs-small);
+  color: var(--color-text-secondary);
+  line-height: var(--lh-relaxed);
+  padding-left: 1.1em;
+  position: relative;
+}
+
+.chairman-hero__milestones li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--color-accent);
+  font-weight: var(--fw-bold);
+}
+
 .chairman-hero__accordion {
   border-top: 1px solid var(--color-border);
-  padding-top: var(--space-md);
+  padding-top: var(--space-xl);
 }
 
 .chairman-hero__awards-heading {

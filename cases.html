@@ -49,13 +49,12 @@
     </div>
   </nav>
 
-  <div class="sticky-section" style="height: 130vh;">
+  <div class="sticky-section sticky-section--hero" style="height: 130vh;">
     <div class="sticky-section__sticky">
       <div class="sticky-section__content sticky-section__content--page-flush">
   <header class="page-hero">
     <div class="page-hero__bg" aria-hidden="true"></div>
     <div class="container text-center" style="position: relative; z-index: 1;">
-      <p class="eyebrow" data-animate="fade-in" data-i18n="cases.hero.eyebrow">Clinical Evidence</p>
       <h1 class="text-hero" style="font-size: var(--fs-h1); margin-top: var(--space-md);" data-animate="slide-up" data-delay="100" data-i18n="cases.hero.title">
         World-First Robotic ESD<br><span class="text-gradient">Trial &amp; Published Evidence</span>
       </h1>
@@ -69,110 +68,93 @@
   </div>
 
   <div class="sticky-section sticky-section--dwell-secondary" style="height: 190vh;">
-    <div class="sticky-section__sticky sticky-section__sticky--tall-content sticky-section__sticky--roadmap-bg">
+    <div class="sticky-section__sticky">
       <div class="sticky-section__content sticky-section__content--page">
-  <section>
-
-
-    <div class="container">
-      <div class="text-center" style="margin-bottom: var(--space-xl);">
-        <p class="eyebrow" data-animate="fade-in" data-i18n="cases.stats.eyebrow">World-First Trial</p>
-        <h2 data-animate="slide-up" data-i18n="cases.stats.title">Key Clinical<span class="text-gradient"> Metrics</span></h2>
-        <p class="text-secondary" style="max-width: 580px; margin: var(--space-md) auto 0;" data-animate="blur-in" data-delay="100" data-i18n="cases.stats.source">Source: Chiu PW et al. <em>Endoscopy</em> 2024 — World-first robotic colorectal ESD clinical trial, Prince of Wales Hospital, CUHK.</p>
-      </div>
-
-      <div class="grid grid--4" style="text-align: center;">
-        <div class="stat" data-animate="scale-in" data-delay="100">
-          <div class="stat__number text-gradient">
-            <span data-counter="43" data-suffix="">0</span>
-          </div>
-          <p class="stat__label" data-i18n="cases.stats.patients">Patients Enrolled</p>
-          <p class="stat__source" data-i18n="cases.stats.src">EndoR — Chiu PW et al. Endoscopy 2024</p>
+        <div class="text-center" style="margin-bottom: var(--space-xl);">
+          <p class="eyebrow" data-animate="fade-in" data-i18n="cases.stats.eyebrow">World-First Trial</p>
+          <h2 data-animate="slide-up" data-i18n="cases.stats.title">Key Clinical<span class="text-gradient"> Metrics</span></h2>
+          <p class="text-secondary" style="max-width: 580px; margin: var(--space-md) auto 0;" data-animate="blur-in" data-delay="100" data-i18n="cases.stats.source">Source: Chiu PW et al. <em>Endoscopy</em> 2024 — World-first robotic colorectal ESD clinical trial, Prince of Wales Hospital, CUHK.</p>
         </div>
-        <div class="stat" data-animate="scale-in" data-delay="200">
-          <div class="stat__number text-gradient">
-            <span data-counter="62" data-suffix=" min">0</span>
+        <div class="grid grid--4" style="text-align: center;">
+          <div class="stat" data-animate="scale-in" data-delay="100">
+            <div class="stat__number text-gradient">
+              <span data-counter="43" data-suffix="">0</span>
+            </div>
+            <p class="stat__label" data-i18n="cases.stats.patients">Patients Enrolled</p>
+            <p class="stat__source" data-i18n="cases.stats.src">EndoR — Chiu PW et al. Endoscopy 2024</p>
           </div>
-          <p class="stat__label" data-i18n="cases.stats.time">Mean Dissection Time</p>
-          <p class="stat__source" data-i18n="cases.stats.src">EndoR — Chiu PW et al. Endoscopy 2024</p>
-        </div>
-        <div class="stat" data-animate="scale-in" data-delay="300">
-          <div class="stat__number text-gradient">
-            <span data-counter="35" data-suffix="mm">0</span>
+          <div class="stat" data-animate="scale-in" data-delay="200">
+            <div class="stat__number text-gradient">
+              <span data-counter="62" data-suffix=" min">0</span>
+            </div>
+            <p class="stat__label" data-i18n="cases.stats.time">Mean Dissection Time</p>
+            <p class="stat__source" data-i18n="cases.stats.src">EndoR — Chiu PW et al. Endoscopy 2024</p>
           </div>
-          <p class="stat__label" data-i18n="cases.stats.size">Median Specimen Size</p>
-          <p class="stat__source" data-i18n="cases.stats.src">EndoR — Chiu PW et al. Endoscopy 2024</p>
-        </div>
-        <div class="stat" data-animate="scale-in" data-delay="400">
-          <div class="stat__number text-gradient" style="line-height: 1;">
-            <span data-counter="170" data-suffix=""></span><span style="font-size: 0.6em; font-weight: inherit; white-space: nowrap;"> mm²/min</span>
+          <div class="stat" data-animate="scale-in" data-delay="300">
+            <div class="stat__number text-gradient">
+              <span data-counter="35" data-suffix="mm">0</span>
+            </div>
+            <p class="stat__label" data-i18n="cases.stats.size">Median Specimen Size</p>
+            <p class="stat__source" data-i18n="cases.stats.src">EndoR — Chiu PW et al. Endoscopy 2024</p>
           </div>
-          <p class="stat__label" data-i18n="cases.stats.speed">Robotic Dissection Speed</p>
-          <p class="stat__source" data-i18n="cases.stats.speed.src">Literature mean — Kim et al. 2024</p>
+          <div class="stat" data-animate="scale-in" data-delay="400">
+            <div class="stat__number text-gradient" style="line-height: 1;">
+              <span data-counter="170" data-suffix=""></span><span style="font-size: 0.6em; font-weight: inherit; white-space: nowrap;"> mm²/min</span>
+            </div>
+            <p class="stat__label" data-i18n="cases.stats.speed">Robotic Dissection Speed</p>
+            <p class="stat__source" data-i18n="cases.stats.speed.src">Literature mean — Kim et al. 2024</p>
+          </div>
         </div>
-      </div>
-    </div>
-  </section>
       </div>
     </div>
   </div>
 
-  <div class="sticky-section" style="height: 220vh;">
-    <div class="sticky-section__sticky sticky-section__sticky--tall-content">
+  <div class="sticky-section sticky-section--dwell-primary" style="height: 190vh;">
+    <div class="sticky-section__sticky">
       <div class="sticky-section__content sticky-section__content--page">
-  <!-- Dissection Speed Comparison -->
-  <section>
-    <div class="container">
-      <div class="text-center" style="margin-bottom: var(--space-2xl);">
-        <p class="eyebrow" data-animate="fade-in" data-i18n="cases.speed.eyebrow">Performance Benchmark</p>
-        <h2 data-animate="slide-up" data-delay="100" data-i18n="cases.speed.title">ESD Dissection Speed<span class="text-gradient"> by Operator Category</span></h2>
-        <p class="text-secondary" style="max-width: 580px; margin: var(--space-md) auto 0; font-size: var(--fs-small);" data-animate="blur-in" data-delay="200" data-i18n="cases.speed.note">
-          Robotic ESD platforms achieve speeds matching expert endoscopists — and are significantly faster than novice operators (p &lt; 0.05). Data from published literature.
-        </p>
-      </div>
-      <div class="grid grid--3" style="gap: var(--space-lg);">
-        <div class="card" data-animate="slide-up" data-delay="100">
-          <div class="card__icon" aria-hidden="true">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="color:#86868b"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-          </div>
-          <h3 class="card__title" data-i18n="cases.speed.novice.title">Novice Endoscopists</h3>
-          <div style="font-size: var(--fs-h3); font-weight: var(--fw-black); margin: var(--space-md) 0 var(--space-xs); color: var(--color-text-secondary);">~60 mm²/min</div>
-          <p class="text-tertiary" style="font-size: var(--fs-caption);" data-i18n="cases.speed.novice.range">Range: 10.5 — 111.7 mm²/min (median)</p>
-          <p class="card__text" style="margin-top: var(--space-md);" data-i18n="cases.speed.novice.text">Limited by hand tremor, poor tissue traction, and visual obstruction — the exact challenges EndoR is designed to eliminate.</p>
+        <div class="text-center" style="margin-bottom: var(--space-2xl);">
+          <p class="eyebrow" data-animate="fade-in" data-i18n="cases.speed.eyebrow">Performance Benchmark</p>
+          <h2 data-animate="slide-up" data-delay="100" data-i18n="cases.speed.title">ESD Dissection Speed<span class="text-gradient"> by Operator Category</span></h2>
+          <p class="text-secondary" style="max-width: 580px; margin: var(--space-md) auto 0; font-size: var(--fs-small);" data-animate="blur-in" data-delay="200" data-i18n="cases.speed.note">
+            Robotic ESD platforms achieve speeds matching expert endoscopists — and are significantly faster than novice operators (p &lt; 0.05). Data from published literature.
+          </p>
         </div>
-        <div class="card" data-animate="slide-up" data-delay="200">
-          <div class="card__icon" aria-hidden="true">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="color:#f59e0b"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <div class="grid grid--3" style="gap: var(--space-lg);">
+          <div class="card" data-animate="slide-up" data-delay="100">
+            <div class="card__icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="color:#86868b"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <h3 class="card__title" data-i18n="cases.speed.novice.title">Novice Endoscopists</h3>
+            <div style="font-size: var(--fs-h3); font-weight: var(--fw-black); margin: var(--space-md) 0 var(--space-xs); color: var(--color-text-secondary);">~60 mm²/min</div>
+            <p class="text-tertiary" style="font-size: var(--fs-caption);" data-i18n="cases.speed.novice.range">Range: 10.5 — 111.7 mm²/min (median)</p>
+            <p class="card__text" style="margin-top: var(--space-md);" data-i18n="cases.speed.novice.text">Limited by hand tremor, poor tissue traction, and visual obstruction — the exact challenges EndoR is designed to eliminate.</p>
           </div>
-          <h3 class="card__title" data-i18n="cases.speed.expert.title">Expert Endoscopists</h3>
-          <div style="font-size: var(--fs-h3); font-weight: var(--fw-black); margin: var(--space-md) 0 var(--space-xs); color: var(--color-text-primary);">~150 mm²/min</div>
-          <p class="text-tertiary" style="font-size: var(--fs-caption);" data-i18n="cases.speed.expert.range">Range: 132 — 171.7 mm²/min (mean)</p>
-          <p class="card__text" style="margin-top: var(--space-md);" data-i18n="cases.speed.expert.text">Fewer than 500 endoscopists globally can perform ESD at this level. The world's current gold standard — which EndoR matches.</p>
-        </div>
-        <div class="card glow" data-animate="slide-up" data-delay="300" style="border: 1px solid var(--color-accent);">
-          <div class="card__icon" aria-hidden="true">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="color: var(--color-accent);"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+          <div class="card" data-animate="slide-up" data-delay="200">
+            <div class="card__icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="color:#f59e0b"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            </div>
+            <h3 class="card__title" data-i18n="cases.speed.expert.title">Expert Endoscopists</h3>
+            <div style="font-size: var(--fs-h3); font-weight: var(--fw-black); margin: var(--space-md) 0 var(--space-xs); color: var(--color-text-primary);">~150 mm²/min</div>
+            <p class="text-tertiary" style="font-size: var(--fs-caption);" data-i18n="cases.speed.expert.range">Range: 132 — 171.7 mm²/min (mean)</p>
+            <p class="card__text" style="margin-top: var(--space-md);" data-i18n="cases.speed.expert.text">Fewer than 500 endoscopists globally can perform ESD at this level. The world's current gold standard — which EndoR matches.</p>
           </div>
-          <h3 class="card__title" data-i18n="cases.speed.robotic.title">EndoR Robotic Platform</h3>
-          <div class="text-gradient" style="font-size: var(--fs-h3); font-weight: var(--fw-black); margin: var(--space-md) 0 var(--space-xs);">~170 mm²/min</div>
-          <p class="text-tertiary" style="font-size: var(--fs-caption);" data-i18n="cases.speed.robotic.range">Range: 48.2 — 234 mm²/min (mean)</p>
-          <p class="card__text" style="margin-top: var(--space-md);" data-i18n="cases.speed.robotic.text">Matches or exceeds expert performance. Statistical significance vs conventional: Robotic vs conventional (colorectal) p &lt; 0.05 (Kim et al. 2024).</p>
+          <div class="card glow" data-animate="slide-up" data-delay="300" style="border: 1px solid var(--color-accent);">
+            <div class="card__icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="color: var(--color-accent);"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+            </div>
+            <h3 class="card__title" data-i18n="cases.speed.robotic.title">EndoR Robotic Platform</h3>
+            <div class="text-gradient" style="font-size: var(--fs-h3); font-weight: var(--fw-black); margin: var(--space-md) 0 var(--space-xs);">~170 mm²/min</div>
+            <p class="text-tertiary" style="font-size: var(--fs-caption);" data-i18n="cases.speed.robotic.range">Range: 48.2 — 234 mm²/min (mean)</p>
+            <p class="card__text" style="margin-top: var(--space-md);" data-i18n="cases.speed.robotic.text">Matches or exceeds expert performance. Statistical significance vs conventional: Robotic vs conventional (colorectal) p &lt; 0.05 (Kim et al. 2024).</p>
+          </div>
         </div>
-      </div>
-      <p class="text-center text-tertiary" style="font-size: var(--fs-caption); margin-top: var(--space-xl);" data-i18n="cases.speed.cite">References: Kagaya Y et al. EIO 2025; Pu LZCT et al. JGH Open 2020; Kim J et al. Scientific Reports 2024; Kim SH et al. Gut and Liver 2024; Susuki Y et al. EIO 2020.</p>
-    </div>
-  </section>
+        <p class="text-center text-tertiary" style="font-size: var(--fs-caption); margin-top: var(--space-xl);" data-i18n="cases.speed.cite">References: Kagaya Y et al. EIO 2025; Pu LZCT et al. JGH Open 2020; Kim J et al. Scientific Reports 2024; Kim SH et al. Gut and Liver 2024; Susuki Y et al. EIO 2020.</p>
       </div>
     </div>
   </div>
 
-  <div class="sticky-section sticky-section--dwell-secondary" style="height: 280vh;">
-    <div class="sticky-section__sticky sticky-section__sticky--tall-content sticky-section__sticky--roadmap-bg">
-      <div class="sticky-section__content sticky-section__content--page">
-  <!-- World-First Clinical Trial — Publication + Demo -->
-  <section>
-
-
+  <!-- World-First Clinical Trial — normal flow (photos + tables too tall for sticky) -->
+  <section style="background: var(--color-bg-secondary);">
     <div class="container">
       <div class="text-center" style="margin-bottom: var(--space-2xl);">
         <p class="eyebrow" data-animate="fade-in" data-i18n="cases.trial.eyebrow">Published Clinical Trial</p>
@@ -213,16 +195,6 @@
             <p class="eyebrow" style="margin-bottom: var(--space-sm);" data-i18n="cases.trial.demo">Live Demonstration</p>
             <h3 class="card__title" data-i18n="cases.trial.demo.title">Hong Kong Live Endoscopy — December 2024</h3>
             <p class="card__text" data-i18n="cases.trial.demo.text">The EndoR Surgical System was demonstrated live to an international audience of endoscopists at Hong Kong Live Endoscopy, December 2024 — marking a major public milestone for the platform.</p>
-            <div class="demo-photos" style="margin-top: var(--space-md);">
-              <figure class="demo-photos__item">
-                <img src="pictures/endor_img_11.jpg" alt="EndoR Surgical System at Hong Kong Live Endoscopy 2024" loading="lazy">
-                <figcaption data-i18n="cases.demo.photo1">Robotic arm &amp; endoscopy tower — live demonstration setup</figcaption>
-              </figure>
-              <figure class="demo-photos__item">
-                <img src="pictures/endor_img_13.jpg" alt="EndoR robotic arm endoscope insertion close-up" loading="lazy">
-                <figcaption data-i18n="cases.demo.photo2">Robotic arm inserting flexible endoscope</figcaption>
-              </figure>
-            </div>
           </div>
         </div>
       </div>
@@ -234,34 +206,10 @@
           <h3 class="card__title" data-i18n="cases.trial.preclinical.title">25+ Porcine Model Experiments</h3>
           <p class="card__text" data-i18n="cases.trial.preclinical.text">25+ porcine model experiments for robotic colonic ESD completed using the 2025 version of the EndoR Surgical System — validating safety, consistency and instrument performance prior to human trials.</p>
         </div>
-        <div class="preclinical-photos" data-animate="fade-in" data-delay="150">
-          <figure class="preclinical-photos__item">
-            <img src="pictures/endor_img_12.jpg" alt="EndoR robotic ESD on porcine model — full setup" loading="lazy">
-            <figcaption data-i18n="cases.preclinical.photo1">Robotic ESD setup — porcine colonic model</figcaption>
-          </figure>
-          <figure class="preclinical-photos__item">
-              <img src="pictures/endor_img_5.jpg" alt="EndoR robotic arm performing ESD on ex-vivo porcine colon" loading="lazy">
-            <figcaption data-i18n="cases.preclinical.photo2">Robotic arm performing ESD on ex-vivo porcine colon</figcaption>
-          </figure>
-          <figure class="preclinical-photos__item">
-            <img src="pictures/endor_img_4.jpg" alt="Ex-vivo porcine colonic specimen with EndoR endoscope" loading="lazy">
-            <figcaption data-i18n="cases.preclinical.photo3">Ex-vivo porcine colonic specimen — pre-clinical validation</figcaption>
-          </figure>
-        </div>
       </div>
 
-      <!-- Row 3: MRC Lab photo full-width -->
-      <div data-animate="fade-in" data-delay="200">
-        <figure class="lab-photo">
-          <img src="pictures/endor_img_9.jpg" alt="EndoR Surgical System in the Multi-Scale Medical Robotics Center" loading="lazy">
-          <figcaption data-i18n="cases.trial.labphoto">EndoR Surgical System at the Multi-Scale Medical Robotics Center (MRC), Hong Kong Science Park</figcaption>
-        </figure>
-      </div>
     </div>
   </section>
-      </div>
-    </div>
-  </div>
 
   <footer class="footer">
     <div class="container">

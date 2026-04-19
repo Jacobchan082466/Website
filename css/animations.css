@@ -249,8 +249,14 @@
 .sticky-section--dwell-secondary {
   background-color: var(--color-bg-secondary);
 }
+.sticky-section--dwell-secondary .sticky-section__sticky {
+  background-color: var(--color-bg-secondary);
+}
 
 .sticky-section--dwell-primary {
+  background-color: var(--color-bg-primary);
+}
+.sticky-section--dwell-primary .sticky-section__sticky {
   background-color: var(--color-bg-primary);
 }
 
