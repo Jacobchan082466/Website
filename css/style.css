@@ -163,7 +163,7 @@ body, body * {
 }
 
 /* But keep transform/opacity animations un-throttled for scroll effects */
-[data-animate], .sticky-section *, .hero *, .particles, .card-3d, .card-3d__inner {
+[data-animate], .sticky-section *, .hero *, .card-3d, .card-3d__inner {
   transition-property: background-color, border-color, color, fill, stroke;
 }
 
@@ -259,8 +259,6 @@ h4 { font-size: var(--fs-h4); }
 .text-tertiary { color: var(--color-text-tertiary); }
 .text-accent { color: var(--color-accent); }
 .text-center { text-align: center; }
-.text-balance { text-wrap: balance; }
-
 .eyebrow {
   font-size: var(--fs-small);
   font-weight: var(--fw-semibold);
@@ -290,13 +288,6 @@ section {
   padding-top: var(--space-section);
   padding-bottom: var(--space-section);
   position: relative;
-}
-
-.section--full {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .home-cta-sticky__actions {
@@ -530,17 +521,6 @@ section {
   color: var(--color-bg);
 }
 
-.btn--secondary {
-  background: transparent;
-  color: var(--color-accent);
-  border: 1.5px solid var(--color-accent);
-}
-
-.btn--secondary:hover {
-  background: var(--color-accent);
-  color: var(--color-bg);
-  transform: scale(1.05);
-}
 
 .btn--ghost {
   color: var(--color-accent);
@@ -623,44 +603,6 @@ section {
   letter-spacing: var(--ls-wider);
 }
 
-/* --- Cases page: summary stat visualization --- */
-.cases-summary__viz {
-  margin-top: var(--space-2xl);
-  max-width: 720px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.cases-summary__viz-track {
-  height: 6px;
-  border-radius: var(--radius-full);
-  background: var(--color-border);
-  overflow: hidden;
-  margin-top: var(--space-sm);
-}
-
-.cases-summary__viz-fill {
-  display: block;
-  height: 100%;
-  width: 0;
-  border-radius: inherit;
-  background: linear-gradient(90deg, var(--color-gradient-start), var(--color-gradient-end));
-  transform-origin: left center;
-  transition: width 1.2s var(--ease-out-expo);
-}
-
-.stat.is-visible .cases-summary__viz-fill,
-[data-animate].is-visible .cases-summary__viz-fill {
-  width: var(--viz-pct, 100%);
-}
-
-/* --- Section Divider --- */
-.divider {
-  width: 100%;
-  height: 1px;
-  background: var(--color-border);
-}
-
 /* --- Footer --- */
 .footer {
   padding: var(--space-3xl) 0 var(--space-xl);
@@ -721,205 +663,9 @@ section {
   background: var(--color-bg);
 }
 
-.hero__bg-glow {
-  position: absolute;
-  width: 600px;
-  height: 600px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(0, 212, 255, 0.12) 0%, transparent 70%);
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  pointer-events: none;
-  animation: float 8s ease-in-out infinite;
-}
-
-/* ── Product Photo Gallery ───────────────── */
-.product-gallery {
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
-  grid-template-rows: auto;
-  gap: var(--space-sm);
-}
-.product-gallery__item {
-  margin: 0;
-  overflow: hidden;
-  border-radius: var(--radius-lg);
-  position: relative;
-}
-.product-gallery__item img {
-  width: 100%;
-  height: 300px;
-  object-fit: cover;
-  object-position: center;
-  display: block;
-  transition: transform 0.4s ease;
-}
-.product-gallery__item--wide img {
-  height: 300px;
-}
-.product-gallery__item:hover img {
-  transform: scale(1.03);
-}
-.product-gallery__item figcaption {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: var(--space-sm) var(--space-md);
-  background: linear-gradient(to top, rgba(6,10,22,0.75) 0%, transparent 100%);
-  font-size: var(--fs-caption);
-  color: rgba(255,255,255,0.85);
-}
-
-/* ── Product Gallery — 5-up variant ──────── */
-/* Row 1: wide + 2 narrow; Row 2: 2 equal (auto via named areas) */
-.product-gallery--5 {
-  grid-template-columns: 2fr 1fr 1fr;
-  grid-template-rows: auto auto;
-}
-.product-gallery--5 .product-gallery__item:nth-child(4),
-.product-gallery--5 .product-gallery__item:nth-child(5) {
-  grid-column: span 1;
-}
-.product-gallery--5 .product-gallery__item:nth-child(4) {
-  grid-column: 1 / 2;
-  grid-row: 2;
-}
-.product-gallery--5 .product-gallery__item:nth-child(5) {
-  grid-column: 2 / 4;
-  grid-row: 2;
-}
-.product-gallery--5 .product-gallery__item img,
-.product-gallery--5 .product-gallery__item--wide img {
-  height: 300px;
-  object-fit: cover;
-  object-position: center;
-}
-
-/* ── Lab Photo ────────────────────────────── */
-.lab-photo {
-  margin: 0;
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  position: relative;
-}
-.lab-photo img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-.lab-photo figcaption {
-  text-align: center;
-  font-size: var(--fs-caption);
-  color: var(--color-text-tertiary);
-  margin-top: var(--space-sm);
-  padding: 0 var(--space-md);
-}
-
-/* ── Lab Duo (About page) ─────────────────── */
-.lab-duo {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--space-sm);
-}
-.lab-duo .lab-photo img {
-  height: 380px;
-  object-fit: cover;
-  object-position: center;
-}
-
-/* ── Pre-clinical Photos (Cases page) ───── */
-.preclinical-photos {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: var(--space-sm);
-  margin-top: var(--space-md);
-}
-.preclinical-photos__item {
-  margin: 0;
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-}
-.preclinical-photos__item img {
-  width: 100%;
-  height: 260px;
-  object-fit: cover;
-  object-position: center;
-  display: block;
-  transition: transform 0.4s ease;
-}
-.preclinical-photos__item:hover img {
-  transform: scale(1.03);
-}
-.preclinical-photos__item figcaption {
-  text-align: center;
-  font-size: var(--fs-caption);
-  color: var(--color-text-tertiary);
-  margin-top: var(--space-xs);
-  padding: 0 var(--space-sm);
-}
-
-@media (max-width: 768px) {
-  .preclinical-photos {
-    grid-template-columns: 1fr 1fr;
-  }
-  .preclinical-photos__item img {
-    height: 220px;
-  }
-}
-
-/* ── Demo Photos (Cases page) ────────────── */
-.demo-photos {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--space-sm);
-  margin-top: var(--space-md);
-}
-.demo-photos__item {
-  margin: 0;
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  position: relative;
-}
-.demo-photos__item img {
-  width: 100%;
-  height: 300px;
-  object-fit: cover;
-  object-position: center top;
-  display: block;
-  transition: transform 0.4s ease;
-}
-.demo-photos__item:hover img {
-  transform: scale(1.03);
-}
-.demo-photos__item figcaption {
-  text-align: center;
-  font-size: var(--fs-caption);
-  color: var(--color-text-tertiary);
-  margin-top: var(--space-xs);
-  padding: 0 var(--space-sm);
-}
-
-@media (max-width: 768px) {
-  .product-gallery,
-  .product-gallery--5 {
-    grid-template-columns: 1fr;
-  }
-  .lab-duo {
-    grid-template-columns: 1fr;
-  }
-  .demo-photos {
-    grid-template-columns: 1fr;
-  }
-  .preclinical-photos {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
 /* ── Photo Hero ───────────────────────────── */
 .hero--photo {
-  background: transparent;
+  background: var(--color-bg-primary);
   margin-top: 0 !important;
   padding-top: 0 !important;
 }
@@ -1095,8 +841,8 @@ section {
    flex wrapper — only keep nav clearance, remove the extra bottom padding.
    Also hide the section-level bg (gradient is promoted to the sticky layer). */
 .sticky-section .page-hero {
-  padding-top: calc(var(--nav-height) + var(--space-lg));
-  padding-bottom: var(--space-lg);
+  padding-top: 0;
+  padding-bottom: 0;
   background: none;
 }
 
@@ -1189,27 +935,6 @@ section {
 .timeline__text {
   color: var(--color-text-secondary);
   line-height: var(--lh-relaxed);
-}
-
-/* --- Service Sticky --- */
-.service-showcase {
-  position: relative;
-}
-
-.service-showcase__item {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  transition: opacity 0.6s var(--ease-out-expo);
-  pointer-events: none;
-}
-
-.service-showcase__item.is-active {
-  opacity: 1;
-  pointer-events: auto;
 }
 
 /* --- Case Grid --- */
@@ -1913,10 +1638,6 @@ select.form-input option {
     padding-bottom: var(--space-2xl);
   }
 
-  .hero__bg-glow {
-    width: 300px;
-    height: 300px;
-  }
 }
 
 @media (max-width: 480px) {
@@ -1958,10 +1679,6 @@ select.form-input option {
 [data-theme="light"] .step-item.is-active {
   border-color: rgba(0, 113, 227, 0.3);
   box-shadow: 0 0 40px rgba(0, 113, 227, 0.08);
-}
-
-[data-theme="light"] .hero__bg-glow {
-  background: radial-gradient(circle, rgba(0, 113, 227, 0.10) 0%, transparent 70%);
 }
 
 [data-theme="light"] .page-hero__bg {

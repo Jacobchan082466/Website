@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8">
@@ -26,7 +26,7 @@
       </div>
       <div class="nav__controls">
       <div class="lang-switcher">
-        <button class="lang-btn" data-lang="en">EN</button>
+        <button class="lang-btn active" data-lang="en">EN</button>
         <button class="lang-btn" data-lang="zh-Hant">繁</button>
         <button class="lang-btn" data-lang="zh-Hans">简</button>
       </div>
@@ -47,14 +47,14 @@
     </div>
   </nav>
 
-  <div class="sticky-section sticky-section--hero" style="height: 130vh;">
+  <div class="sticky-section sticky-section--hero" style="height: 100vh;">
     <div class="sticky-section__sticky">
       <div class="sticky-section__content sticky-section__content--page-flush">
   <section class="page-hero">
-    <div class="page-hero__bg"></div>
+    <div class="page-hero__bg" aria-hidden="true"></div>
     <div class="container text-center" style="position: relative; z-index: 1;">
-      <h1 class="text-gradient" data-animate="slide-up" data-delay="100" style="font-size: var(--fs-h1); margin-bottom: var(--space-md);" data-i18n="team.hero.title">World-Leading Surgeons &amp; Engineers</h1>
-      <p class="text-secondary" data-animate="slide-up" data-delay="200" style="font-size: var(--fs-body-lg); max-width: 640px; margin: 0 auto;" data-i18n="team.hero.subtitle">
+      <h1 class="text-hero text-gradient" data-animate="slide-up" data-delay="100" data-i18n="team.hero.title">World-Leading Surgeons &amp; Engineers</h1>
+      <p class="text-secondary" data-animate="blur-in" data-delay="200" style="font-size: var(--fs-body-lg); max-width: 640px; margin: var(--space-lg) auto 0;" data-i18n="team.hero.subtitle">
         Founded by CUHK's foremost surgeon endoscopists and robotics engineers — with 20 years of leadership in endoluminal and robotic surgery and global KOL clinical advisors across 6 countries.
       </p>
     </div>
@@ -73,7 +73,7 @@
           <img src="pictures/Professor CHIU Wai Yan Philip.webp" alt="Prof. Philip Chiu">
         </div>
         <div class="chairman-hero__content">
-          <p class="eyebrow" style="color: var(--color-accent); margin-bottom: var(--space-sm);" data-i18n="team.chairman.eyebrow">Founding Chairman</p>
+          <p class="eyebrow" style="margin-bottom: var(--space-sm);" data-i18n="team.chairman.eyebrow">Founding Chairman</p>
           <h2 class="chairman-hero__name">Prof. Wai Yan Philip Chiu <span class="name-zh" data-i18n="team.chairman.name.zh"></span></h2>
           <div class="chairman-hero__titles">
             <p data-i18n="team.chairman.t1">Surgeon Endoscopist</p>
@@ -139,7 +139,7 @@
           <div class="team-card__avatar" aria-hidden="true" style="width: 160px; height: 160px; font-size: 2.5rem; border-radius: 50%;">W</div>
         </div>
         <div class="chairman-hero__content">
-          <p class="eyebrow" style="color: var(--color-accent); margin-bottom: var(--space-sm);" data-i18n="team.ceo.eyebrow">CEO</p>
+          <p class="eyebrow" style="margin-bottom: var(--space-sm);" data-i18n="team.ceo.eyebrow">CEO</p>
           <h2 class="chairman-hero__name">Ir David Wong</h2>
         </div>
       </div>

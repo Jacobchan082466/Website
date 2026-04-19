@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8">
@@ -26,7 +26,7 @@
       </div>
       <div class="nav__controls">
       <div class="lang-switcher">
-        <button class="lang-btn" data-lang="en">EN</button>
+        <button class="lang-btn active" data-lang="en">EN</button>
         <button class="lang-btn" data-lang="zh-Hant">繁</button>
         <button class="lang-btn" data-lang="zh-Hans">简</button>
       </div>
@@ -49,20 +49,20 @@
     </div>
   </nav>
 
-  <div class="sticky-section sticky-section--hero" style="height: 130vh;">
+  <div class="sticky-section sticky-section--hero" style="height: 100vh;">
     <div class="sticky-section__sticky">
       <div class="sticky-section__content sticky-section__content--page-flush">
-  <header class="page-hero">
+  <section class="page-hero">
     <div class="page-hero__bg" aria-hidden="true"></div>
     <div class="container text-center" style="position: relative; z-index: 1;">
-      <h1 class="text-hero" style="font-size: var(--fs-h1); margin-top: var(--space-md);" data-animate="slide-up" data-delay="100" data-i18n="cases.hero.title">
+      <h1 class="text-hero" data-animate="slide-up" data-delay="100" data-i18n="cases.hero.title">
         World-First Robotic ESD<br><span class="text-gradient">Trial &amp; Published Evidence</span>
       </h1>
-      <p class="text-secondary" style="font-size: var(--fs-body-lg); max-width: 560px; margin: var(--space-lg) auto 0;" data-animate="blur-in" data-delay="200" data-i18n="cases.hero.subtitle">
+      <p class="text-secondary" style="font-size: var(--fs-body-lg); max-width: 640px; margin: var(--space-lg) auto 0; line-height: var(--lh-relaxed);" data-animate="blur-in" data-delay="200" data-i18n="cases.hero.subtitle">
         EndoR's clinical foundation is built on peer-reviewed evidence — including the world's first robotic colorectal ESD clinical trial, conducted at Prince of Wales Hospital, CUHK.
       </p>
     </div>
-  </header>
+  </section>
       </div>
     </div>
   </div>
@@ -122,7 +122,7 @@
         <div class="grid grid--3" style="gap: var(--space-lg);">
           <div class="card" data-animate="slide-up" data-delay="100">
             <div class="card__icon" aria-hidden="true">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="color:#86868b"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="color:var(--color-text-tertiary)"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
             </div>
             <h3 class="card__title" data-i18n="cases.speed.novice.title">Novice Endoscopists</h3>
             <div style="font-size: var(--fs-h3); font-weight: var(--fw-black); margin: var(--space-md) 0 var(--space-xs); color: var(--color-text-secondary);">~60 mm²/min</div>
@@ -131,12 +131,12 @@
           </div>
           <div class="card" data-animate="slide-up" data-delay="200">
             <div class="card__icon" aria-hidden="true">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="color:#f59e0b"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="color:var(--color-text-primary)"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
             </div>
             <h3 class="card__title" data-i18n="cases.speed.expert.title">Expert Endoscopists</h3>
             <div style="font-size: var(--fs-h3); font-weight: var(--fw-black); margin: var(--space-md) 0 var(--space-xs); color: var(--color-text-primary);">~150 mm²/min</div>
             <p class="text-tertiary" style="font-size: var(--fs-caption);" data-i18n="cases.speed.expert.range">Range: 132 — 171.7 mm²/min (mean)</p>
-            <p class="card__text" style="margin-top: var(--space-md);" data-i18n="cases.speed.expert.text">Fewer than 500 endoscopists globally can perform ESD at this level. The world's current gold standard — which EndoR matches.</p>
+            <p class="card__text" style="margin-top: var(--space-md);" data-i18n="cases.speed.expert.text">Expert-level ESD demands years of high-volume training and remains a rare skill worldwide — the benchmark EndoR is built to match.</p>
           </div>
           <div class="card glow" data-animate="slide-up" data-delay="300" style="border: 1px solid var(--color-accent);">
             <div class="card__icon" aria-hidden="true">
@@ -148,7 +148,7 @@
             <p class="card__text" style="margin-top: var(--space-md);" data-i18n="cases.speed.robotic.text">Matches or exceeds expert performance. Statistical significance vs conventional: Robotic vs conventional (colorectal) p &lt; 0.05 (Kim et al. 2024).</p>
           </div>
         </div>
-        <p class="text-center text-tertiary" style="font-size: var(--fs-caption); margin-top: var(--space-xl);" data-i18n="cases.speed.cite">References: Kagaya Y et al. EIO 2025; Pu LZCT et al. JGH Open 2020; Kim J et al. Scientific Reports 2024; Kim SH et al. Gut and Liver 2024; Susuki Y et al. EIO 2020.</p>
+        <p class="text-center text-tertiary" style="font-size: var(--fs-caption); margin-top: var(--space-xl);" data-i18n="cases.speed.cite">References: Kagaya Y et al. EIO 2025; Pu LZCT et al. JGH Open 2020; Kim J et al. Scientific Reports 2024; Kim SH et al. Gut and Liver 2024; Suzuki Y et al. EIO 2020.</p>
       </div>
     </div>
   </div>
