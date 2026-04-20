@@ -352,6 +352,59 @@
   text-align: initial;
 }
 
+/* --- Global fallback: prioritize complete rendering over sticky effects ---
+   Recent content updates made several sticky sections taller than the viewport,
+   causing clipping/overlap on multiple pages. Force sticky shells to flow
+   naturally so all content is always visible. */
+.sticky-section {
+  height: auto !important;
+  z-index: auto !important;
+}
+
+.sticky-section--pull-up {
+  margin-top: 0 !important;
+}
+
+.sticky-section__sticky {
+  position: relative;
+  top: 0;
+  height: auto;
+  min-height: 0;
+  align-items: stretch;
+  justify-content: flex-start;
+  overflow: visible;
+  padding-top: var(--space-lg);
+  padding-bottom: var(--space-lg);
+}
+
+/* Restore normal inner-page hero spacing when sticky shell is disabled */
+.sticky-section .page-hero {
+  padding-top: calc(var(--nav-height) + var(--space-2xl));
+  padding-bottom: var(--space-2xl);
+  background: var(--color-bg-primary);
+}
+
+.sticky-section .page-hero .page-hero__bg {
+  display: block;
+}
+
+/* Sticky-only reveal states should render fully in fallback flow mode */
+.sticky-text-line {
+  opacity: 1;
+  transform: none;
+}
+
+.sticky-text-line.is-active {
+  opacity: 1;
+  transform: none;
+}
+
+[data-sticky-item],
+.step-item {
+  opacity: 1;
+  transform: none;
+}
+
 .mission-sticky__eyebrow {
   margin-bottom: clamp(0.375rem, 1.5vw, 1rem);
 }
@@ -413,3 +466,4 @@
   [data-animate="slide-right"] { transform: translateX(-30px); }
   [data-animate="scale-in"] { transform: scale(0.9); }
 }
+
