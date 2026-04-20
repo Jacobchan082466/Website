@@ -1,4 +1,4 @@
-﻿(function () {
+(function () {
   const placeholder = document.getElementById('site-footer');
   if (!placeholder) return;
 
@@ -14,7 +14,7 @@
           <h4 class="footer__heading" data-i18n="footer.platform">Platform</h4>
           <ul class="footer__links">
             <li><a href="platform.html" data-i18n="footer.platform.link">EndoR Platform</a></li>
-            <li><a href="cases.html" data-i18n="footer.clinical">Clinical Evidence</a></li>
+            <li><a href="platform.html#clinical-evidence" data-i18n="footer.clinical">Clinical Evidence</a></li>
           </ul>
         </div>
         <div>

@@ -359,7 +359,7 @@ section {
   background: rgba(10, 10, 10, 0.82);
 }
 
-/* ── Photo-hero pages: navbar always white, no flash ── */
+/* ── Photo-hero pages: navbar glass — light mode ── */
 .nav--light-hero,
 .nav--light-hero.scrolled {
   background: rgba(255, 255, 255, 0.92) !important;
@@ -376,6 +376,23 @@ section {
 .nav--light-hero .nav__link:hover,
 .nav--light-hero .nav__link.active {
   color: #000;
+}
+
+/* ── Photo-hero pages: dark mode override ── */
+[data-theme="dark"] .nav--light-hero,
+[data-theme="dark"] .nav--light-hero.scrolled {
+  background: rgba(10, 10, 10, 0.82) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+[data-theme="dark"] .nav--light-hero .nav__logo,
+[data-theme="dark"] .nav--light-hero .nav__link {
+  color: var(--color-text-secondary) !important;
+}
+
+[data-theme="dark"] .nav--light-hero .nav__link:hover,
+[data-theme="dark"] .nav--light-hero .nav__link.active {
+  color: var(--color-text-primary) !important;
 }
 
 .nav__inner {
