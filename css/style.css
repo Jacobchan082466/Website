@@ -244,8 +244,9 @@ h4 { font-size: var(--fs-h4); }
 .text-hero {
   font-size: var(--fs-hero);
   font-weight: var(--fw-black);
-  line-height: 1;
+  line-height: 1.1;
   letter-spacing: -0.04em;
+  padding-bottom: 0.08em;
 }
 
 .text-gradient {
