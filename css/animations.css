@@ -373,8 +373,8 @@
   align-items: stretch;
   justify-content: flex-start;
   overflow: visible;
-  padding-top: var(--space-lg);
-  padding-bottom: var(--space-lg);
+  padding-top: clamp(3rem, 6vh, 5rem);
+  padding-bottom: clamp(3rem, 6vh, 5rem);
 }
 
 /* Restore normal inner-page hero spacing when sticky shell is disabled */
@@ -386,6 +386,13 @@
 
 .sticky-section .page-hero .page-hero__bg {
   display: block;
+}
+
+@media (max-width: 768px) {
+  .sticky-section__sticky {
+    padding-top: var(--space-xl);
+    padding-bottom: var(--space-xl);
+  }
 }
 
 /* Sticky-only reveal states should render fully in fallback flow mode */
