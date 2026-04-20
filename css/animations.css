@@ -236,6 +236,21 @@
   box-sizing: border-box;
 }
 
+/* Contact main should flow naturally; sticky pinning can overlap footer on short viewports */
+.sticky-section--contact-main {
+  height: auto;
+}
+
+.sticky-section--contact-main .sticky-section__sticky {
+  position: relative;
+  top: 0;
+  height: auto;
+  align-items: stretch;
+  overflow: visible;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
 .sticky-section__sticky--roadmap-bg {
   background: var(--color-bg-secondary);
 }
