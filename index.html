@@ -48,6 +48,7 @@
     </div>
   </nav>
 
+  <main>
   <!-- Hero Section -->
   <section class="hero hero--photo" id="hero">
     <!-- Full photo -->
@@ -102,7 +103,7 @@
   </div>
 
   <!-- Market Opportunity -->
-  <section style="background: var(--color-bg-secondary);">
+  <section>
     <div class="container">
       <div class="text-center" style="margin-bottom: var(--space-2xl);">
         <p class="eyebrow" data-animate="fade-in">Market Opportunity</p>
@@ -160,31 +161,33 @@
       </div>
       <div class="grid grid--2" style="align-items: stretch; gap: var(--space-xl);">
         <div data-animate="slide-right" data-delay="100">
-          <div class="card" style="margin-bottom: var(--space-lg);">
-            <p class="eyebrow" style="margin-bottom: var(--space-sm);">Corporate Structure</p>
-            <h3 class="card__title">Hong Kong HQ &middot; Shenzhen Qianhai &middot; Cayman Islands</h3>
-            <p class="card__text">Headquartered in Hong Kong, with a Shenzhen Qianhai office for GBA clinical collaboration and manufacturing. The Hong Kong entity is 100% owned by a Cayman Islands holding structure — enabling clean international investment and capital markets access.</p>
-          </div>
-          <div class="card">
-            <p class="eyebrow" style="margin-bottom: var(--space-sm);">GBA Advantage</p>
-            <h3 class="card__title">Access to China's Largest ESD Market</h3>
-            <p class="card__text">Direct access to mainland China's hospital network — the world's largest ESD market. Supports NMPA regulatory engagement and commercial partnerships with Chinese hospital groups.</p>
+          <div class="card" style="height: 100%; display: flex; flex-direction: column;">
+            <div style="margin-bottom: var(--space-lg);">
+              <p class="eyebrow" style="margin-bottom: var(--space-sm);">Corporate Structure</p>
+              <h3 class="card__title">Hong Kong HQ &middot; Shenzhen Qianhai &middot; Cayman Islands</h3>
+              <p class="card__text">Headquartered in Hong Kong, with a Shenzhen Qianhai office for GBA clinical collaboration and manufacturing. The Hong Kong entity is 100% owned by a Cayman Islands holding structure — enabling clean international investment and capital markets access.</p>
+            </div>
+            <div style="border-top: 1px solid var(--color-border); padding-top: var(--space-lg);">
+              <p class="eyebrow" style="margin-bottom: var(--space-sm);">GBA Advantage</p>
+              <h3 class="card__title">Access to China's Largest ESD Market</h3>
+              <p class="card__text">Direct access to mainland China's hospital network — the world's largest ESD market. Supports NMPA regulatory engagement and commercial partnerships with Chinese hospital groups.</p>
+            </div>
           </div>
         </div>
         <div data-animate="slide-left" data-delay="200">
-          <div class="card">
+          <div class="card" style="height: 100%;">
             <p class="eyebrow" style="margin-bottom: var(--space-sm);">Regulatory &amp; Policy Tailwinds</p>
             <h3 class="card__title">Healthy China 2030 &amp; Innovation Policy</h3>
             <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: var(--space-md);">
-              <li style="display: flex; gap: 0.75rem; align-items: flex-start;">
+              <li style="display: flex; gap: var(--space-xs); align-items: flex-start;">
                 <span class="text-accent" style="font-weight: 700; flex-shrink: 0; margin-top: 0.15em;">&#9658;</span>
                 <span><strong>Healthy China 2030</strong> — national initiative targeting reduced GI cancer mortality through early detection, directly driving ESD volumes and government investment in advanced platforms.</span>
               </li>
-              <li style="display: flex; gap: 0.75rem; align-items: flex-start;">
+              <li style="display: flex; gap: var(--space-xs); align-items: flex-start;">
                 <span class="text-accent" style="font-weight: 700; flex-shrink: 0; margin-top: 0.15em;">&#9658;</span>
                 <span><strong>Medical Robotics Policy</strong> — preferential procurement for innovative robotic platforms in public hospitals.</span>
               </li>
-              <li style="display: flex; gap: 0.75rem; align-items: flex-start;">
+              <li style="display: flex; gap: var(--space-xs); align-items: flex-start;">
                 <span class="text-accent" style="font-weight: 700; flex-shrink: 0; margin-top: 0.15em;">&#9658;</span>
                 <span><strong>NMPA Innovative Device Designation</strong> — fast-track pathway significantly reduces regulatory timelines for breakthrough robotics platforms.</span>
               </li>
@@ -225,9 +228,9 @@
 
   <!-- CTA (sticky center dwell) -->
   <div class="sticky-section sticky-section--cta" style="height: 190vh;">
-    <div class="sticky-section__sticky sticky-section__sticky--cta-bg">
-      <div class="sticky-section__content sticky-section__content--cta">
-        <h2 data-animate="blur-in" style="margin-bottom: var(--space-md);" data-i18n="home.cta.title">
+    <div class="sticky-section__sticky sticky-section__sticky--cta-bg" style="display: flex; align-items: center; justify-content: center;">
+      <div class="sticky-section__content sticky-section__content--cta" style="text-align: center;">
+        <h2 data-animate="blur-in" style="margin-bottom: var(--space-md); text-align: center;" data-i18n="home.cta.title">
           Interested in<br><span class="text-gradient">Investing or Partnering?</span>
         </h2>
         <div data-animate="blur-in" data-delay="400" class="home-cta-sticky__actions">
@@ -237,6 +240,7 @@
       </div>
     </div>
   </div>
+  </main>
   <!-- Footer -->
   <div id="site-footer"></div>
 

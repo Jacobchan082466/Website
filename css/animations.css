@@ -214,8 +214,8 @@
   overflow: visible;
   align-items: flex-start;
   justify-content: center;
-  padding-top: clamp(2rem, 5vh, 4rem);
-  padding-bottom: clamp(1rem, 3vh, 2rem);
+  padding-top: var(--space-section);
+  padding-bottom: var(--space-section);
   box-sizing: border-box;
 }
 
@@ -366,21 +366,23 @@
 }
 
 .sticky-section__sticky {
-  position: relative;
-  top: 0;
-  height: auto;
-  min-height: 0;
-  align-items: stretch;
-  justify-content: flex-start;
-  overflow: visible;
-  padding-top: clamp(3rem, 6vh, 5rem);
-  padding-bottom: clamp(3rem, 6vh, 5rem);
+  position: sticky;
+  top: var(--nav-height);
+  height: calc(100vh - var(--nav-height));
+  min-height: calc(100vh - var(--nav-height));
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding-top: var(--space-section);
+  padding-bottom: var(--space-section);
+  display: flex;
+  background-color: var(--color-bg-primary);
 }
 
 /* Restore normal inner-page hero spacing when sticky shell is disabled */
 .sticky-section .page-hero {
-  padding-top: calc(var(--nav-height) + var(--space-2xl));
-  padding-bottom: var(--space-2xl);
+  padding-top: calc(var(--nav-height) + var(--space-section));
+  padding-bottom: var(--space-section);
   background: var(--color-bg-primary);
 }
 
@@ -388,10 +390,44 @@
   display: block;
 }
 
-@media (max-width: 768px) {
+/* --- Ultra Wide Screens --- */
+@media (min-width: 1920px) {
+  .sticky-section__content--mission,
+  .sticky-section__content--vision {
+    max-width: min(900px, calc(100vw - 8rem));
+  }
+  
+  .sticky-section__content--roadmap,
+  .sticky-section__content--page {
+    max-width: min(1600px, calc(100vw - 8rem));
+  }
+}
+
+/* --- Large Screens --- */
+@media (min-width: 1440px) and (max-width: 1919px) {
+  .sticky-section__content--roadmap,
+  .sticky-section__content--page {
+    max-width: min(1400px, calc(100vw - 6rem));
+  }
+}
+
+/* --- Tablet and Mobile --- */
+@media (max-width: 1023px) {
   .sticky-section__sticky {
-    padding-top: var(--space-xl);
-    padding-bottom: var(--space-xl);
+    padding-top: var(--space-section);
+    padding-bottom: var(--space-section);
+  }
+}
+
+@media (max-width: 567px) {
+  .sticky-section__sticky {
+    padding-top: var(--space-lg);
+    padding-bottom: var(--space-lg);
+  }
+  
+  .mission-sticky__headline,
+  .vision-sticky__lines {
+    font-size: clamp(1.2rem, 8vw, 2rem);
   }
 }
 

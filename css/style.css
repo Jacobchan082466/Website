@@ -31,13 +31,13 @@
   --font-tc: 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif;
   --font-sc: 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif;
 
-  --fs-hero: clamp(3rem, 8vw, 7rem);
-  --fs-h1: clamp(2.5rem, 5vw, 5rem);
-  --fs-h2: clamp(2rem, 4vw, 3.5rem);
-  --fs-h3: clamp(1.5rem, 3vw, 2rem);
-  --fs-h4: clamp(1.25rem, 2vw, 1.5rem);
-  --fs-body: clamp(1rem, 1.2vw, 1.125rem);
-  --fs-body-lg: clamp(1.125rem, 1.5vw, 1.375rem);
+  --fs-hero: clamp(2.5rem, 6vw + 1rem, 8rem);
+  --fs-h1: clamp(2rem, 4vw + 0.5rem, 6rem);
+  --fs-h2: clamp(1.75rem, 3vw + 0.5rem, 4rem);
+  --fs-h3: clamp(1.25rem, 2.5vw + 0.25rem, 2.5rem);
+  --fs-h4: clamp(1.125rem, 1.8vw + 0.2rem, 1.75rem);
+  --fs-body: clamp(0.9rem, 1vw + 0.1rem, 1.25rem);
+  --fs-body-lg: clamp(1rem, 1.2vw + 0.2rem, 1.5rem);
   --fs-small: 0.875rem;
   --fs-caption: 0.75rem;
 
@@ -67,12 +67,13 @@
   --space-2xl: 5rem;
   --space-3xl: 8rem;
   --space-4xl: 12rem;
-  --space-section: clamp(6rem, 12vh, 10rem);
+  --space-section: clamp(4rem, 8vh, 6rem);
 
   --container-max: 1200px;
   --container-wide: 1400px;
+  --container-ultra-wide: 1600px;
   --container-narrow: 800px;
-  --container-padding: clamp(1.5rem, 4vw, 3rem);
+  --container-padding: clamp(1rem, 4vw, 4rem);
 
   --radius-sm: 8px;
   --radius-md: 12px;
@@ -175,6 +176,10 @@ body, body * {
   font-family: var(--font-sc);
 }
 
+html, body {
+  height: 100%;
+}
+
 body {
   font-family: var(--font-primary);
   font-size: var(--fs-body);
@@ -184,6 +189,9 @@ body {
   color: var(--color-text-primary);
   background-color: var(--color-bg);
   overflow-x: hidden;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 img, video, svg {
@@ -275,6 +283,10 @@ h4 { font-size: var(--fs-h4); }
   margin: 0 auto;
   padding-left: var(--container-padding);
   padding-right: var(--container-padding);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .container--wide {
@@ -289,6 +301,20 @@ section {
   padding-top: var(--space-section);
   padding-bottom: var(--space-section);
   position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Fixed nav clearance is handled by hero/page-hero blocks, not every section. */
+
+/* Sticky sections have their own height management */
+.sticky-section {
+  min-height: auto;
+  display: block;
+  align-items: unset;
+  justify-content: unset;
 }
 
 .home-cta-sticky__actions {
@@ -340,8 +366,17 @@ section {
   right: 0;
   height: var(--nav-height);
   z-index: 1000;
+  background: rgba(245, 245, 247, 0.95);
+  backdrop-filter: saturate(180%) blur(var(--nav-blur));
+  -webkit-backdrop-filter: saturate(180%) blur(var(--nav-blur));
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
   transition: background var(--duration-normal) ease,
               backdrop-filter var(--duration-normal) ease;
+}
+
+[data-theme="dark"] .nav {
+  background: rgba(10, 10, 10, 0.95);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .nav.scrolled {
@@ -621,11 +656,17 @@ section {
   letter-spacing: var(--ls-wider);
 }
 
+/* --- Main Content Area --- */
+main {
+  flex: 1;
+}
+
 /* --- Footer --- */
 .footer {
   padding: var(--space-3xl) 0 var(--space-xl);
   border-top: 1px solid var(--color-border);
   background: var(--color-bg);
+  margin-top: auto;
 }
 
 .footer__grid {
@@ -679,6 +720,10 @@ section {
   position: relative;
   overflow: hidden;
   background: var(--color-bg);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-top: 0;
 }
 
 /* ── Photo Hero ───────────────────────────── */
@@ -848,11 +893,15 @@ section {
 
 /* --- Page Hero (inner pages) --- */
 .page-hero {
-  padding-top: calc(var(--nav-height) + var(--space-4xl));
-  padding-bottom: var(--space-3xl);
+  padding-top: calc(var(--nav-height) + var(--space-section));
+  padding-bottom: var(--space-section);
   text-align: center;
   position: relative;
   overflow: hidden;
+  min-height: calc(100vh - var(--nav-height));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 /* Inside a sticky dwell the section is already vertically centred by the
@@ -896,6 +945,11 @@ section {
   position: relative;
   max-width: 800px;
   margin: 0 auto;
+}
+
+/* Timeline section needs more height */
+.timeline-section {
+  min-height: 150vh;
 }
 
 .timeline::before {
@@ -1606,13 +1660,51 @@ select.form-input option {
   display: inline-block;
 }
 
-@media (max-width: 1024px) {
+/* --- Ultra Wide Screens (1920px+) --- */
+@media (min-width: 1920px) {
+  .container { max-width: var(--container-ultra-wide); }
+  .container--wide { max-width: 1800px; }
+  .hero__photo-img { height: calc(100vh - var(--nav-height)); object-fit: cover; object-position: center; }
+}
+
+/* --- Large Desktop (1440px - 1919px) --- */
+@media (min-width: 1440px) and (max-width: 1919px) {
+  .container--wide { max-width: 1500px; }
+}
+
+/* --- Standard Desktop (1200px - 1439px) --- */
+@media (min-width: 1200px) and (max-width: 1439px) {
+  .container--wide { max-width: 1200px; }
+}
+
+/* --- Tablet Landscape (1024px - 1199px) --- */
+@media (max-width: 1199px) and (min-width: 1024px) {
+  .grid--4 { grid-template-columns: repeat(3, 1fr); }
+  .footer__grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* --- Tablet Portrait (768px - 1023px) --- */
+@media (max-width: 1023px) and (min-width: 768px) {
   .grid--4 { grid-template-columns: repeat(2, 1fr); }
   .footer__grid { grid-template-columns: repeat(2, 1fr); }
   .steps-display { grid-template-columns: repeat(2, 1fr); }
 }
 
-@media (max-width: 768px) {
+/* --- Mobile Landscape (568px - 767px) --- */
+@media (max-width: 767px) and (min-width: 568px) {
+  .nav__links { display: none; }
+  .nav__hamburger { display: flex; }
+  
+  .grid--2,
+  .grid--3,
+  .grid--4 { grid-template-columns: repeat(2, 1fr); }
+  .steps-display { grid-template-columns: repeat(2, 1fr); }
+  
+  .hero__photo-img { height: calc(80vh - var(--nav-height)); object-position: 40% top; }
+}
+
+/* --- Mobile Portrait (320px - 567px) --- */
+@media (max-width: 567px) {
   .nav__links { display: none; }
   .nav__hamburger { display: flex; }
 
@@ -1625,7 +1717,11 @@ select.form-input option {
   .footer__grid { grid-template-columns: 1fr; gap: var(--space-xl); }
   .footer__bottom { flex-direction: column; gap: var(--space-sm); text-align: center; }
 
-  section { padding-top: var(--space-2xl); padding-bottom: var(--space-2xl); }
+  section { 
+    padding-top: var(--space-section); 
+    padding-bottom: var(--space-section);
+    min-height: 100vh;
+  }
 
   .timeline::before { left: 20px; }
 
@@ -1652,20 +1748,42 @@ select.form-input option {
   }
 
   .page-hero {
-    padding-top: calc(var(--nav-height) + var(--space-2xl));
-    padding-bottom: var(--space-2xl);
+    padding-top: calc(var(--nav-height) + var(--space-section));
+    padding-bottom: var(--space-section);
+  }
+  
+  .hero__photo-img { 
+    height: calc(70vh - var(--nav-height)); 
+    object-position: 35% top; 
   }
 
+  /* Timeline section on mobile needs scrollable height */
+  .timeline-section {
+    min-height: 200vh;
+  }
 }
 
-@media (max-width: 480px) {
+/* --- Very Small Mobile (320px - 479px) --- */
+@media (max-width: 479px) {
   :root {
-    --container-padding: 1.25rem;
+    --container-padding: 1rem;
+    --fs-hero: clamp(2rem, 12vw, 3rem);
+    --fs-h1: clamp(1.8rem, 10vw, 2.5rem);
+    --fs-h2: clamp(1.5rem, 8vw, 2rem);
   }
 
   .case-card__stats {
     flex-direction: column;
     gap: var(--space-sm);
+  }
+  
+  .hero__photo-img { 
+    height: calc(60vh - var(--nav-height)); 
+  }
+  
+  .hero__photo-caption {
+    bottom: 10%;
+    padding: 0 1rem;
   }
 }
 

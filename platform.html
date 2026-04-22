@@ -14,7 +14,7 @@
     .service-card__tags {
       display: flex;
       flex-wrap: wrap;
-      gap: 0.5rem;
+      gap: var(--space-xs);
       margin-top: var(--space-md);
     }
     .service-card__stat {
@@ -61,9 +61,7 @@
     </div>
   </nav>
 
-  <div class="sticky-section sticky-section--hero" style="height: 100vh;">
-    <div class="sticky-section__sticky">
-      <div class="sticky-section__content sticky-section__content--page-flush">
+  <main>
   <section class="page-hero">
     <div class="page-hero__bg" aria-hidden="true"></div>
     <div class="container text-center" style="position: relative; z-index: 1;">
@@ -78,29 +76,24 @@
       </div>
     </div>
   </section>
+
+  <!-- System Components -->
+  <section id="system-components" style="background: var(--color-bg-secondary);">
+    <div class="container">
+      <div class="text-center">
+        <p class="eyebrow" data-animate="fade-in" data-i18n="services.prod.eyebrow">System Components</p>
+        <h2 data-animate="slide-up" data-delay="100" data-i18n="services.prod.title">
+          Three Components,<span class="text-gradient"> One Integrated Platform</span>
+        </h2>
+        <p class="text-secondary" style="max-width: 640px; margin: var(--space-lg) auto 0; font-size: var(--fs-body);" data-animate="blur-in" data-delay="200" data-i18n="services.prod.subtitle">Lifter arm, Dissector arm, and Master Console work in concert through the 14mm all-in-one endoscopic interface — designed from the ground up for ESD.</p>
       </div>
     </div>
-  </div>
+  </section>
 
-  <!-- Products: title dwells sticky, cards scroll normally on grey -->
-  <div id="system-components" class="sticky-section sticky-section--dwell-secondary" style="height: 160vh;">
-    <div class="sticky-section__sticky">
-      <div class="sticky-section__content">
-        <div class="text-center">
-          <p class="eyebrow" data-animate="fade-in" data-i18n="services.prod.eyebrow">System Components</p>
-          <h2 data-animate="slide-up" data-delay="100" data-i18n="services.prod.title">
-            Three Components,<span class="text-gradient"> One Integrated Platform</span>
-          </h2>
-          <p class="text-secondary" style="max-width: 640px; margin: var(--space-lg) auto 0; font-size: var(--fs-body);" data-animate="blur-in" data-delay="200" data-i18n="services.prod.subtitle">Lifter arm, Dissector arm, and Master Console work in concert through the 14mm all-in-one endoscopic interface — designed from the ground up for ESD.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="sticky-section sticky-section--dwell-secondary" style="height: 190vh;">
-    <div class="sticky-section__sticky">
-      <div class="sticky-section__content sticky-section__content--page">
-        <div class="grid grid--3">
+  <!-- Component Cards -->
+  <section style="background: var(--color-bg-secondary);">
+    <div class="container">
+      <div class="grid grid--3">
           <article class="card card-3d glow" data-animate="slide-up" data-delay="100">
             <div class="card-3d__inner">
               <p class="eyebrow" style="margin-bottom: var(--space-xs);" data-i18n="services.camera.label">Camera System</p>
@@ -146,7 +139,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </section>
 
   <!-- Clinical Performance: Key Metrics -->
   <section id="clinical-evidence" style="background: var(--color-bg-secondary);">
@@ -244,24 +237,24 @@
           <div class="card" style="border: 1px solid var(--color-accent);">
             <p class="eyebrow" style="margin-bottom: var(--space-sm);" data-i18n="cases.trial.pub">Publication</p>
             <p style="font-weight: var(--fw-semibold); line-height: 1.6; margin-bottom: var(--space-md);">Chiu PW et al. <span class="text-gradient">Endoscopy</span> 2024</p>
-            <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 0.75rem;">
-              <li style="display: flex; gap: 0.75rem; align-items: flex-start;">
+            <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: var(--space-xs);">
+              <li style="display: flex; gap: var(--space-xs); align-items: flex-start;">
                 <span class="text-accent" style="font-weight:700; flex-shrink:0;">PI</span>
                 <span data-i18n="cases.trial.pi">Prof. Philip Chiu, Prince of Wales Hospital, CUHK</span>
               </li>
-              <li style="display: flex; gap: 0.75rem; align-items: flex-start;">
+              <li style="display: flex; gap: var(--space-xs); align-items: flex-start;">
                 <span class="text-accent" style="font-weight:700; flex-shrink:0;">Site</span>
                 <span data-i18n="cases.trial.site">Endoscopy Centre, Prince of Wales Hospital, CUHK</span>
               </li>
-              <li style="display: flex; gap: 0.75rem; align-items: flex-start;">
+              <li style="display: flex; gap: var(--space-xs); align-items: flex-start;">
                 <span class="text-accent" style="font-weight:700; flex-shrink:0;">N</span>
                 <span data-i18n="cases.trial.n">43 patients — robotic colorectal ESD</span>
               </li>
-              <li style="display: flex; gap: 0.75rem; align-items: flex-start;">
+              <li style="display: flex; gap: var(--space-xs); align-items: flex-start;">
                 <span class="text-accent" style="font-weight:700; flex-shrink:0;">Time</span>
                 <span data-i18n="cases.trial.time">Mean robotic dissection time: 62.0 ± 45.1 min</span>
               </li>
-              <li style="display: flex; gap: 0.75rem; align-items: flex-start;">
+              <li style="display: flex; gap: var(--space-xs); align-items: flex-start;">
                 <span class="text-accent" style="font-weight:700; flex-shrink:0;">Size</span>
                 <span data-i18n="cases.trial.size">Median specimen size: 35mm (range 15—90mm)</span>
               </li>
@@ -284,10 +277,8 @@
     </div>
   </section>
 
-  <div class="sticky-section sticky-section--dwell-primary" style="height: 190vh;">
-    <div class="sticky-section__sticky">
-      <div class="sticky-section__content sticky-section__content--page">
-      <div class="container container--wide">
+  <section>
+    <div class="container container--wide">
         <div class="text-center" style="margin-bottom: var(--space-2xl);">
           <p class="eyebrow" data-i18n="services.sticky.eyebrow">How ESD Works</p>
           <h2 data-i18n="services.sticky.title">EndoR Solves Every Step<span class="text-gradient"> of the Procedure</span></h2>
@@ -321,13 +312,10 @@
       </div>
       </div>
     </div>
-  </div>
+  </section>
 
-  <div class="sticky-section sticky-section--dwell-secondary" style="height: 190vh;">
-    <div class="sticky-section__sticky">
-      <div class="sticky-section__content sticky-section__content--page">
   <!-- Key Differentiators -->
-  <section>
+  <section style="background: var(--color-bg-secondary);">
 
     <div class="container">
       <div class="text-center" style="margin-bottom: var(--space-xl);">
@@ -432,15 +420,15 @@
         <div class="card" data-animate="slide-up" data-delay="200">
           <h3 class="card__title">AI Capabilities</h3>
           <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: var(--space-md);">
-            <li style="display: flex; gap: 0.75rem; align-items: flex-start;">
+            <li style="display: flex; gap: var(--space-xs); align-items: flex-start;">
               <span class="text-accent" style="font-weight: 700; flex-shrink: 0;">&#9658;</span>
               <span><strong>Tissue Recognition</strong> — submucosal boundary and lesion margin identification</span>
             </li>
-            <li style="display: flex; gap: 0.75rem; align-items: flex-start;">
+            <li style="display: flex; gap: var(--space-xs); align-items: flex-start;">
               <span class="text-accent" style="font-weight: 700; flex-shrink: 0;">&#9658;</span>
               <span><strong>Instrument Guidance</strong> — real-time dissection path optimisation</span>
             </li>
-            <li style="display: flex; gap: 0.75rem; align-items: flex-start;">
+            <li style="display: flex; gap: var(--space-xs); align-items: flex-start;">
               <span class="text-accent" style="font-weight: 700; flex-shrink: 0;">&#9658;</span>
               <span><strong>Decision Support</strong> — live alerts for bleeding risk and perforation proximity</span>
             </li>
@@ -451,17 +439,16 @@
   </section>
 
   <!-- Future Development Roadmap -->
-  <div class="sticky-section sticky-section--dwell-primary" style="height: 190vh;">
-    <div class="sticky-section__sticky">
-      <div class="sticky-section__content sticky-section__content--page" style="background: var(--color-bg-secondary);">
-        <div class="text-center" style="margin-bottom: var(--space-2xl);">
-          <p class="eyebrow" data-animate="fade-in">Long-Term Development</p>
-          <h2 data-animate="slide-up" data-delay="100">Next-Generation<span class="text-gradient"> Platform Roadmap</span></h2>
-          <p class="text-secondary" style="max-width: 640px; margin: var(--space-md) auto 0;" data-animate="blur-in" data-delay="200">
-            Third-party components replaced with proprietary designs — reducing cost, deepening integration, and expanding margin.
-          </p>
-        </div>
-        <div class="grid grid--3">
+  <section style="background: var(--color-bg-secondary);">
+    <div class="container">
+      <div class="text-center" style="margin-bottom: var(--space-2xl);">
+        <p class="eyebrow" data-animate="fade-in">Long-Term Development</p>
+        <h2 data-animate="slide-up" data-delay="100">Next-Generation<span class="text-gradient"> Platform Roadmap</span></h2>
+        <p class="text-secondary" style="max-width: 640px; margin: var(--space-md) auto 0;" data-animate="blur-in" data-delay="200">
+          Third-party components replaced with proprietary designs — reducing cost, deepening integration, and expanding margin.
+        </p>
+      </div>
+      <div class="grid grid--3">
           <div class="card" data-animate="slide-up" data-delay="100">
             <p class="eyebrow" style="margin-bottom: var(--space-sm);">Proprietary Controllers</p>
             <h3 class="card__title">In-House Hand Controllers</h3>
@@ -480,8 +467,9 @@
         </div>
       </div>
     </div>
-  </div>
+  </section>
 
+  </main>
   <div id="site-footer"></div>
 
   <script src="js/footer.js"></script>
