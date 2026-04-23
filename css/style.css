@@ -724,13 +724,13 @@ section {
   color: var(--txt-3);
 }
 
-/* ── 11. Timeline ────────────────────────────────────────── */
+/* ── 11. Timeline — vertical centre-line style ────────── */
 .timeline {
   position: relative;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--s32) var(--s48);
+  max-width: 800px;
+  margin: 0 auto;
 }
+
 .timeline::before {
   content: '';
   position: absolute;
@@ -741,28 +741,48 @@ section {
   background: var(--border);
   transform: translateX(-50%);
 }
+
 .timeline__item {
-  display: flex;
-  flex-direction: column;
-  gap: var(--s8);
-  padding: var(--s20) var(--s24);
-  background: var(--bg-alt);
-  border-radius: var(--r-lg);
-  border: 0.5px solid var(--border);
   position: relative;
+  width: 50%;
+  padding: var(--s5) var(--s8);
 }
-.timeline__year {
-  font-size: var(--f-sm);
-  font-weight: 700;
-  color: var(--accent);
+
+.timeline__item:nth-child(odd) {
+  padding-right: var(--s8);
+  text-align: right;
 }
-.timeline__text {
-  font-size: var(--f-sm);
-  color: var(--txt-2);
-  line-height: 1.6;
+
+.timeline__item:nth-child(even) {
+  margin-left: 50%;
+  padding-left: var(--s8);
 }
+
 .timeline__dot {
-  display: none;
+  position: absolute;
+  top: var(--s5);
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 12px var(--accent-glow);
+}
+
+.timeline__item:nth-child(odd) .timeline__dot  { right: -6px; }
+.timeline__item:nth-child(even) .timeline__dot { left: -6px; }
+
+.timeline__year {
+  font-size: var(--fs-h3);
+  font-weight: 800;
+  color: var(--accent);
+  margin-bottom: var(--s2);
+  letter-spacing: -0.02em;
+}
+
+.timeline__text {
+  font-size: var(--fs-small);
+  color: var(--text-secondary);
+  line-height: 1.65;
 }
 
 /* ── 12. Sticky Sections ─────────────────────────────────── */
@@ -1233,12 +1253,21 @@ main { flex: 1; }
   .steps-display { grid-template-columns: repeat(2, 1fr); }
   .footer__grid { grid-template-columns: 1fr 1fr; gap: var(--s24); }
 
-  /* Timeline becomes single column */
-  .timeline {
-    grid-template-columns: 1fr;
-    gap: var(--s16);
+  /* Timeline — collapse to single left-aligned column on mobile */
+  .timeline::before { left: 20px; }
+
+  .timeline__item {
+    width: 100%;
+    padding-left: 50px !important;
+    padding-right: var(--s5) !important;
+    text-align: left !important;
+    margin-left: 0 !important;
   }
-  .timeline::before { display: none; }
+
+  .timeline__dot {
+    left: 14px !important;
+    right: auto !important;
+  }
 
   /* Chairman */
   .chairman-hero__duo {
