@@ -7,9 +7,14 @@ on:
       - master
   workflow_dispatch:
 
+concurrency:
+  group: sync-gitee-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   sync:
     runs-on: ubuntu-latest
+    timeout-minutes: 5
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -21,6 +26,7 @@ jobs:
           GITEE_USERNAME: ${{ secrets.GITEE_USERNAME }}
           GITEE_TOKEN: ${{ secrets.GITEE_TOKEN }}
           GITEE_REPO: ${{ secrets.GITEE_REPO }}
+          GIT_TERMINAL_PROMPT: 0
         run: |
           if [ -z "$GITEE_USERNAME" ] || [ -z "$GITEE_TOKEN" ] || [ -z "$GITEE_REPO" ]; then
             echo "Missing required secrets: GITEE_USERNAME, GITEE_TOKEN, GITEE_REPO"
@@ -31,4 +37,5 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
           git remote add gitee "https://${GITEE_USERNAME}:${GITEE_TOKEN}@gitee.com/${GITEE_REPO}.git"
-          git push gitee HEAD:master --force
+          echo "Syncing branch ${GITHUB_REF_NAME} to Gitee..."
+          timeout 120s git push gitee "HEAD:${GITHUB_REF_NAME}" --force
