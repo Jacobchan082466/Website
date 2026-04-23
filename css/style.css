@@ -865,14 +865,10 @@ main {
   border-radius: var(--radius-lg);
   background: var(--color-bg-card);
   border: 1px solid var(--color-border);
-  opacity: 0.3;
-  transform: translateY(20px);
-  transition: all 0.6s var(--ease-out-expo);
+  transition: border-color 0.4s var(--ease-out-expo), box-shadow 0.4s var(--ease-out-expo);
 }
 
 .step-item.is-active {
-  opacity: 1;
-  transform: translateY(0);
   border-color: rgba(0, 212, 255, 0.3);
   box-shadow: 0 0 40px rgba(0, 212, 255, 0.08);
 }
