@@ -231,7 +231,7 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
-.text-hero   { font-size: var(--f-hero); font-weight: 800; line-height: 1.15; letter-spacing: -0.04em; }
+.text-hero   { font-size: var(--f-hero); font-weight: 800; line-height: 1.05; letter-spacing: -0.04em; }
 .text-center { text-align: center; }
 .text-secondary { color: var(--txt-2); }
 .text-tertiary  { color: var(--txt-3); }
@@ -1350,6 +1350,9 @@ main { flex: 1; }
   .chairman-hero__photo img { width: 140px; height: 140px; }
   .chairman-hero__milestones li,
   .chairman-hero__awards-list li { text-align: left; }
+  /* Ensure bullet symbols are clearly visible */
+  .chairman-hero__milestones li::before { font-size: 16px; }
+  .chairman-hero__awards-list li::before { font-size: 12px; top: 0.2rem; }
   .chairman-hero__stats { justify-content: center; }
   .chairman-card { grid-template-columns: 1fr; text-align: center; }
   .chairman-card__avatar { margin: 0 auto; }
@@ -1416,6 +1419,13 @@ main { flex: 1; }
   .chairman-hero__stats { flex-direction: column; align-items: center; gap: var(--s16); }
   .chairman-hero__milestones li,
   .chairman-hero__awards-list li { font-size: var(--f-xs); }
+  
+  /* Ensure bullets are visible on mobile */
+  .chairman-hero__milestones li::before,
+  .chairman-hero__awards-list li::before {
+    font-size: 14px;
+    font-weight: 700;
+  }
   
   /* Advisor avatar smaller on mobile */
   .advisor-card .team-card__avatar { width: 110px; height: 110px; font-size: 44px; }
