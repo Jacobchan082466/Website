@@ -912,7 +912,7 @@ section {
 /* ── 16. Team Page ───────────────────────────────────────── */
 /* Chairman hero */
 .chairman-hero {
-  padding: var(--s48) 0;
+  padding: var(--s48) var(--px);
 }
 .chairman-hero__duo {
   display: grid;
@@ -1000,6 +1000,7 @@ section {
   gap: var(--s48);
   justify-content: center;
   flex-wrap: wrap;
+  margin-bottom: var(--s64);
 }
 
 /* Advisor card */
