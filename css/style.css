@@ -1266,9 +1266,11 @@ main { flex: 1; }
   .nav__hamburger:hover { transform: none; }
 
   /* Grid collapses to 2 col */
-  .grid--3 { grid-template-columns: repeat(2, 1fr); }
-  .steps-display { grid-template-columns: repeat(2, 1fr); }
-  .footer__grid { grid-template-columns: 1fr 1fr; gap: var(--s24); }
+  .grid--2,
+  .grid--3,
+  .grid--4 { grid-template-columns: 1fr; }
+  .steps-display { grid-template-columns: 1fr; }
+  .footer__grid { grid-template-columns: 1fr; gap: var(--s24); }
 
   /* Timeline — collapse to single left-aligned column on mobile */
   .timeline::before { left: 20px; }
@@ -1363,12 +1365,8 @@ main { flex: 1; }
   .nav__mobile { top: calc(var(--nav-safe) + 8px); left: 12px; right: 12px; }
 
   /* All grids → single column */
-  .grid--2,
-  .grid--3,
-  .grid--4 { grid-template-columns: 1fr; }
-  .steps-display { grid-template-columns: 1fr; }
   .tech-specs-grid { grid-template-columns: 1fr 1fr; }
-  .footer__grid { grid-template-columns: 1fr; gap: var(--s32); }
+  .footer__grid { gap: var(--s32); }
   .footer__bottom { flex-direction: column; gap: var(--s8); text-align: center; }
 
   /* Chairman inner padding */
