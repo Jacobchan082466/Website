@@ -82,6 +82,7 @@
   --radius-full: 9999px;
 
   --nav-height: 52px;
+  --nav-total-height: calc(52px + env(safe-area-inset-top, 0px));
   --nav-blur: 20px;
 
   --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
@@ -379,7 +380,8 @@ section {
   top: 0;
   left: 0;
   right: 0;
-  height: var(--nav-height);
+  height: calc(var(--nav-height) + env(safe-area-inset-top, 0px));
+  padding-top: env(safe-area-inset-top, 0px);
   z-index: 1000;
   background: rgba(245, 245, 247, 0.95);
   backdrop-filter: saturate(180%) blur(var(--nav-blur));
@@ -449,7 +451,7 @@ section {
   max-width: var(--container-wide);
   margin: 0 auto;
   padding: 0 var(--container-padding);
-  height: 100%;
+  height: var(--nav-height);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -534,7 +536,7 @@ section {
 
 .nav__mobile {
   position: fixed;
-  top: var(--nav-height);
+  top: calc(var(--nav-height) + env(safe-area-inset-top, 0px));
   left: 0;
   right: 0;
   bottom: env(safe-area-inset-bottom, 0);
@@ -916,12 +918,12 @@ main {
 
 /* --- Page Hero (inner pages) --- */
 .page-hero {
-  padding-top: calc(var(--nav-height) + var(--space-section));
+  padding-top: calc(var(--nav-height) + var(--space-section) + env(safe-area-inset-top, 0px));
   padding-bottom: var(--space-section);
   text-align: center;
   position: relative;
   overflow: hidden;
-  min-height: calc(100vh - var(--nav-height));
+  min-height: calc(100vh - var(--nav-height) - env(safe-area-inset-top, 0px));
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1815,8 +1817,8 @@ select.form-input option {
 
   /* Hero mobile optimization */
   .page-hero {
-    padding-top: calc(var(--nav-height) + var(--space-lg));
-    padding-bottom: var(--space-lg);
+    padding-top: calc(var(--nav-height) + var(--space-xl) + env(safe-area-inset-top, 0px));
+    padding-bottom: var(--space-xl);
     min-height: auto;
   }
   
