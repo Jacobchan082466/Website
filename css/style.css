@@ -231,7 +231,7 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
-.text-hero   { font-size: var(--f-hero); font-weight: 800; line-height: 1.22; letter-spacing: -0.04em; }
+.text-hero   { font-size: var(--f-hero); font-weight: 800; line-height: 1.05; letter-spacing: -0.04em; }
 .text-center { text-align: center; }
 .text-secondary { color: var(--txt-2); }
 .text-tertiary  { color: var(--txt-3); }
@@ -530,20 +530,18 @@ section {
   /* Push image down so it starts below the fixed nav */
   padding-top: var(--nav-safe);
   padding-bottom: 0;
-  min-height: 100vh;
 }
 
 .hero__photo-wrap {
-  position: absolute;
-  inset: 0;
-  top: var(--nav-safe);
+  position: relative;
+  width: 100%;
+  /* Ensure the vignette / caption can overlay absolutely */
+  display: block;
 }
 
 .hero__photo-img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center center;
+  height: auto;          /* show the full image, no cropping */
   display: block;
 }
 
@@ -1376,23 +1374,18 @@ main { flex: 1; }
   /* Contact single column */
   #contact-main .grid--2 { grid-template-columns: 1fr !important; gap: var(--s40); }
 
-  /* Hero photo — show full image on mobile without cropping */
-  .hero--photo { min-height: auto; }
-  .hero__photo-wrap { position: relative; inset: auto; top: auto; }
-  .hero__photo-img { height: auto; object-fit: contain; }
-
   /* Hero — keep same right-aligned style as desktop, just scale down */
   .hero__photo-caption { 
     bottom: 5%; 
     right: 5%; 
-    max-width: 68%;
-    padding: 0 var(--s12);
+    max-width: 70%;
+    padding: 0 var(--s16);
   }
-  .hero__photo-brand { font-size: 8px; margin-bottom: var(--s4); letter-spacing: 0.08em; }
-  .hero__photo-title { font-size: clamp(1rem, 3.8vw, 1.4rem); margin-bottom: var(--s8); }
-  .hero__photo-sub { font-size: 10px; line-height: 1.5; margin-bottom: var(--s10); }
+  .hero__photo-brand { font-size: 9px; margin-bottom: var(--s4); letter-spacing: 0.08em; }
+  .hero__photo-title { font-size: clamp(1.1rem, 4vw, 1.6rem); margin-bottom: var(--s10); }
+  .hero__photo-sub { font-size: 11px; line-height: 1.5; margin-bottom: var(--s12); }
   .hero__photo-cta { gap: var(--s6); }
-  .hero__photo-cta .btn { padding: var(--s8) var(--s16); font-size: 12px; }
+  .hero__photo-cta .btn { padding: var(--s6) var(--s12); font-size: 12px; }
 }
 
 /* ─ Mobile portrait (≤430px) ─ */
@@ -1441,13 +1434,16 @@ main { flex: 1; }
   /* Advisor avatar smaller on mobile */
   .advisor-card .team-card__avatar { width: 110px; height: 110px; font-size: 44px; }
 
+  /* Buttons full-width */
+  .hero__photo-cta { flex-direction: column; }
+  .hero__photo-cta .btn { width: 100%; justify-content: center; }
+  
   /* Hero — even smaller on portrait */
-  .hero__photo-caption { max-width: 76%; bottom: 4%; }
-  .hero__photo-brand { font-size: 7px; }
-  .hero__photo-title { font-size: clamp(0.9rem, 4.2vw, 1.2rem); }
-  .hero__photo-sub { font-size: 9px; line-height: 1.45; }
-  .hero__photo-cta { justify-content: flex-end; }
-  .hero__photo-cta .btn { font-size: 11px; padding: var(--s6) var(--s12); }
+  .hero__photo-caption { max-width: 80%; bottom: 4%; }
+  .hero__photo-brand { font-size: 8px; }
+  .hero__photo-title { font-size: clamp(1rem, 4.5vw, 1.3rem); }
+  .hero__photo-sub { font-size: 10px; line-height: 1.45; }
+  .hero__photo-cta .btn { font-size: 11px; padding: var(--s6) var(--s10); }
   
   .home-cta-sticky__actions { flex-direction: column; }
   .home-cta-sticky__btn { width: 100%; justify-content: center; }
