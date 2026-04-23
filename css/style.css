@@ -1006,6 +1006,13 @@ section {
 }
 
 /* Advisor card */
+.advisor-card { text-align: left; }
+.advisor-card .team-card__avatar {
+  margin: 0 auto var(--s20);
+  width: 140px;
+  height: 140px;
+  font-size: 56px;
+}
 .advisor-card__name   { font-size: var(--f-h4); font-weight: 700; margin-bottom: var(--s4); }
 .advisor-card__title  { font-size: var(--f-sm); color: var(--txt-2); margin-bottom: var(--s4); }
 .advisor-card__inst   { font-size: var(--f-sm); color: var(--accent); margin-bottom: var(--s16); }
@@ -1023,6 +1030,14 @@ section {
   object-fit: cover;
   margin-bottom: var(--s16);
   border: 2px solid var(--border);
+  /* When used as letter placeholder (div) */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+  font-weight: 700;
+  color: var(--txt-2);
+  background: var(--bg-alt);
 }
 .team-card__name { font-size: var(--f-h4); font-weight: 600; margin-bottom: var(--s4); }
 .team-card__role { font-size: var(--f-sm); color: var(--txt-2); }
@@ -1367,6 +1382,9 @@ main { flex: 1; }
   .chairman-hero__stats { flex-direction: column; align-items: center; gap: var(--s16); }
   .chairman-hero__milestones li,
   .chairman-hero__awards-list li { font-size: var(--f-xs); }
+  
+  /* Advisor avatar smaller on mobile */
+  .advisor-card .team-card__avatar { width: 110px; height: 110px; font-size: 44px; }
 
   /* Buttons full-width */
   .hero__photo-cta { flex-direction: column; }
