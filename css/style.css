@@ -228,9 +228,8 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-
 .text-gradient {
   background: linear-gradient(135deg, var(--grad-start), var(--grad-end));
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent !important;
+  -webkit-text-fill-color: transparent;
   background-clip: text;
-  color: transparent !important;
 }
 .text-hero   { font-size: var(--f-hero); font-weight: 800; line-height: 1.05; letter-spacing: -0.04em; }
 .text-center { text-align: center; }
@@ -1375,14 +1374,14 @@ main { flex: 1; }
   .hero__photo-caption { 
     bottom: 5%; 
     right: 5%; 
-    max-width: 75%;
+    max-width: 70%;
     padding: 0 var(--s16);
   }
-  .hero__photo-brand { font-size: 10px; margin-bottom: var(--s4); }
-  .hero__photo-title { font-size: clamp(1.2rem, 4.5vw, 1.8rem); margin-bottom: var(--s12); }
-  .hero__photo-sub { font-size: 13px; line-height: 1.5; margin-bottom: var(--s16); }
-  .hero__photo-cta { gap: var(--s8); }
-  .hero__photo-cta .btn { padding: var(--s8) var(--s16); font-size: 13px; }
+  .hero__photo-brand { font-size: 9px; margin-bottom: var(--s4); letter-spacing: 0.08em; }
+  .hero__photo-title { font-size: clamp(1.1rem, 4vw, 1.6rem); margin-bottom: var(--s10); }
+  .hero__photo-sub { font-size: 12px; line-height: 1.5; margin-bottom: var(--s12); }
+  .hero__photo-cta { gap: var(--s6); }
+  .hero__photo-cta .btn { padding: var(--s6) var(--s12); font-size: 12px; }
 }
 
 /* ─ Mobile portrait (≤430px) ─ */
@@ -1436,9 +1435,11 @@ main { flex: 1; }
   .hero__photo-cta .btn { width: 100%; justify-content: center; }
   
   /* Hero — even smaller on portrait */
-  .hero__photo-caption { max-width: 85%; bottom: 4%; }
-  .hero__photo-title { font-size: clamp(1.1rem, 5vw, 1.5rem); }
-  .hero__photo-sub { font-size: 12px; }
+  .hero__photo-caption { max-width: 80%; bottom: 4%; }
+  .hero__photo-brand { font-size: 8px; }
+  .hero__photo-title { font-size: clamp(1rem, 4.5vw, 1.3rem); }
+  .hero__photo-sub { font-size: 11px; line-height: 1.45; }
+  .hero__photo-cta .btn { font-size: 11px; padding: var(--s6) var(--s10); }
   
   .home-cta-sticky__actions { flex-direction: column; }
   .home-cta-sticky__btn { width: 100%; justify-content: center; }
