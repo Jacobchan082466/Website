@@ -1386,8 +1386,8 @@ main { flex: 1; }
   .hero__photo-brand { font-size: 8px; margin-bottom: var(--s4); letter-spacing: 0.08em; }
   .hero__photo-title { font-size: clamp(1rem, 3.8vw, 1.4rem); margin-bottom: var(--s8); }
   .hero__photo-sub { font-size: 11px; line-height: 1.5; margin-bottom: var(--s10); }
-  .hero__photo-cta { gap: var(--s4); }
-  .hero__photo-cta .btn { padding: var(--s5) var(--s10); font-size: 11px; }
+  .hero__photo-cta { gap: var(--s6); }
+  .hero__photo-cta .btn { padding: var(--s8) var(--s16); font-size: 12px; }
 }
 
 /* ─ Mobile portrait (≤430px) ─ */
@@ -1445,7 +1445,7 @@ main { flex: 1; }
   .hero__photo-brand { font-size: 7px; }
   .hero__photo-title { font-size: clamp(0.9rem, 4.2vw, 1.2rem); }
   .hero__photo-sub { font-size: 10px; line-height: 1.45; }
-  .hero__photo-cta .btn { font-size: 10px; padding: var(--s4) var(--s8); }
+  .hero__photo-cta .btn { font-size: 11px; padding: var(--s6) var(--s12); }
   
   .home-cta-sticky__actions { flex-direction: column; }
   .home-cta-sticky__btn { width: 100%; justify-content: center; }
