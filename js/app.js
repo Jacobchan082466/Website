@@ -79,12 +79,21 @@
     const mobileMenu = document.querySelector('.nav__mobile');
     if (!hamburger || !mobileMenu) return;
     
+    // Create Apple-style backdrop
+    let backdrop = document.querySelector('.nav__backdrop');
+    if (!backdrop) {
+      backdrop = document.createElement('div');
+      backdrop.className = 'nav__backdrop';
+      document.body.appendChild(backdrop);
+    }
+    
     // Set initial aria-expanded state
     hamburger.setAttribute('aria-expanded', 'false');
 
     const toggleMobileMenu = () => {
       const isOpen = hamburger.classList.toggle('open');
       mobileMenu.classList.toggle('open');
+      backdrop.classList.toggle('open');
       hamburger.setAttribute('aria-expanded', isOpen);
       
       // Apple-style body scroll handling
@@ -117,6 +126,7 @@
       link.addEventListener('click', () => {
         hamburger.classList.remove('open');
         mobileMenu.classList.remove('open');
+        backdrop.classList.remove('open');
         hamburger.setAttribute('aria-expanded', 'false');
         document.body.style.overflow = '';
         document.documentElement.style.setProperty('--backdrop-filter', 'none');
@@ -128,11 +138,13 @@
       });
     });
     
-    // Apple-style outside click handling
+    // Apple-style outside click handling (including backdrop click)
     document.addEventListener('click', (e) => {
-      if (!hamburger.contains(e.target) && !mobileMenu.contains(e.target) && mobileMenu.classList.contains('open')) {
+      if ((!hamburger.contains(e.target) && !mobileMenu.contains(e.target) && mobileMenu.classList.contains('open')) ||
+          e.target === backdrop) {
         hamburger.classList.remove('open');
         mobileMenu.classList.remove('open');
+        backdrop.classList.remove('open');
         hamburger.setAttribute('aria-expanded', 'false');
         document.body.style.overflow = '';
         document.documentElement.style.setProperty('--backdrop-filter', 'none');
@@ -144,6 +156,7 @@
       if (e.key === 'Escape' && mobileMenu.classList.contains('open')) {
         hamburger.classList.remove('open');
         mobileMenu.classList.remove('open');
+        backdrop.classList.remove('open');
         hamburger.setAttribute('aria-expanded', 'false');
         document.body.style.overflow = '';
         document.documentElement.style.setProperty('--backdrop-filter', 'none');
@@ -155,7 +168,8 @@
   /* --- Active Nav Link Highlighting --- */
   function initActiveLinks() {
     const currentPath = window.location.pathname.split('/').pop() || 'index.html';
-    const navLinks = document.querySelectorAll('.nav__link');
+    // Select both desktop and mobile nav links
+    const navLinks = document.querySelectorAll('.nav__link, .nav__mobile a');
 
     navLinks.forEach((link) => {
       const href = link.getAttribute('href');

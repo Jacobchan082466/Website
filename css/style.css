@@ -585,7 +585,22 @@ section {
 .nav__hamburger:hover,
 .nav__hamburger:focus {
   background: rgba(var(--color-text-primary-rgb, 0,0,0), 0.08); /* Apple hover */
-  transform: scale(1.02); /* Subtle scale */
+}
+
+/* Desktop hover scale (no positioning conflicts) */
+@media (min-width: 769px) {
+  .nav__hamburger:hover,
+  .nav__hamburger:focus {
+    transform: scale(1.02); /* Desktop scale */
+  }
+}
+
+/* Mobile positioned hamburger (maintain position on hover) */
+@media (max-width: 768px) {
+  .nav__hamburger:hover,
+  .nav__hamburger:focus {
+    transform: translateY(-50%) scale(1.02); /* Combined transform */
+  }
 }
 
 .nav__hamburger:active {
@@ -1930,13 +1945,40 @@ select.form-input option {
   .steps-display { grid-template-columns: repeat(3, 1fr); }
 }
 
-/* Tablet Portrait & Mobile Landscape (481px - 768px) */
-@media (max-width: 768px) and (min-width: 481px) {
-  /* Navigation */
+/* Apple-style unified mobile navigation (≤768px) */
+@media (max-width: 768px) {
+  /* Navigation - Apple style */
   .nav__links { display: none !important; }
-  .nav__hamburger { display: flex !important; }
+  .nav__hamburger { 
+    display: flex !important;
+    position: absolute;
+    right: 16px; /* Apple spacing */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 44px; /* Apple touch target */
+    height: 44px;
+    min-width: 44px;
+    min-height: 44px;
+    z-index: 10001; /* Above everything */
+  }
   
-  /* Grid System */
+  /* Controls spacing for hamburger */
+  .nav__controls {
+    margin-right: 72px; /* Space for 44px button + 28px margin */
+    gap: 8px; /* Apple spacing */
+    padding-right: 0; /* Clean spacing */
+  }
+  
+  /* Ensure proper theme toggle size */
+  .theme-toggle {
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+    min-height: 36px;
+    flex-shrink: 0;
+  }
+
+  /* Grid System for tablet portrait */
   .grid--2,
   .grid--3,
   .grid--4 { grid-template-columns: repeat(2, 1fr); }
@@ -1976,18 +2018,19 @@ select.form-input option {
     --fs-caption: 13px;
   }
 
-  /* Navigation */
-  .nav__links { display: none !important; }
-  .nav__hamburger { 
-    display: flex !important; 
-    position: absolute;
-    right: var(--space-sm);
-    top: 50%;
-    transform: translateY(-50%);
+  /* Navigation - Maintain Apple 44px touch targets */
+  .nav__hamburger {
+    /* Keep 44px touch target even on small screens */
+    width: 44px !important;
+    height: 44px !important;
+    min-width: 44px !important;
+    min-height: 44px !important;
+    right: 12px; /* Tighter spacing for small screens */
   }
-  .nav__controls { 
-    margin-right: 54px; 
-    gap: 0.25rem; 
+  
+  .nav__hamburger span {
+    width: 16px; /* Smaller icon, same touch area */
+    height: 2px;
   }
 
   /* Grid System - Single column */
@@ -2080,6 +2123,23 @@ select.form-input option {
   .chairman-hero__titles p {
     font-size: var(--fs-caption) !important;
     margin-bottom: 0.3rem;
+  }
+  
+  /* Apple mobile menu refinements */
+  .nav__mobile {
+    top: calc(var(--nav-height) + env(safe-area-inset-top, 0px) + 8px); /* Tighter spacing */
+    left: 12px; /* Apple tight margins */
+    right: 12px;
+    padding: 8px; /* Apple card padding */
+    border-radius: 16px; /* Apple card radius */
+  }
+  
+  .nav__mobile a {
+    font-size: 17px; /* Keep Apple size */
+    padding: 12px 16px; /* Apple cell padding */
+    min-height: 44px; /* Apple touch target */
+    display: flex;
+    align-items: center;
   }
   
   /* Apple Mobile Navigation */
@@ -2198,6 +2258,44 @@ select.form-input option {
   color: rgba(255, 255, 255, 0.4);
 }
 
+/* Apple-style active states for mobile menu */
+.nav__mobile a.active {
+  background: rgba(var(--color-accent-rgb, 29, 155, 240), 0.12); /* Apple active */
+  color: var(--color-accent); /* Apple active color */
+  font-weight: 500; /* Apple medium weight for active */
+}
+
+[data-theme="dark"] .nav__mobile a.active {
+  background: rgba(var(--color-accent-rgb, 29, 155, 240), 0.2);
+  color: var(--color-accent-light);
+}
+
+/* Apple-style backdrop blur when mobile menu is open */
+main {
+  transition: filter 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+  filter: var(--backdrop-filter, none);
+}
+
+/* Alternative: overlay approach */
+.nav__backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.2); /* Apple overlay */
+  backdrop-filter: blur(4px); /* Apple background blur */
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+  z-index: 9998; /* Below nav but above content */
+}
+
+.nav__backdrop.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
 /* ── Nav Controls group (lang + theme) ─────── */
 .nav__controls {
   display: flex;
@@ -2208,16 +2306,7 @@ select.form-input option {
   padding: 0 8px; /* Apple control padding */
 }
 
-@media (max-width: 768px) {
-  .nav__controls {
-    margin-right: 54px; /* 为汉堡菜单留出空间 (44px + 10px margin) */
-    gap: 0.25rem;
-  }
-  
-  .nav__inner {
-    padding-right: var(--space-sm);
-  }
-}
+/* Removed duplicate - using unified mobile navigation above */
 
 /* ── Language Switcher ──────────────────────── */
 .lang-switcher {
@@ -2251,14 +2340,13 @@ select.form-input option {
   background: var(--color-accent-glow);
 }
 
+/* Language button improvements for mobile */
 @media (max-width: 768px) {
-  .nav__controls {
-    margin-right: var(--space-xs);
-    gap: 0.25rem;
-  }
   .lang-btn {
-    font-size: 0.7rem;
-    padding: 0.2rem 0.4rem;
+    font-size: 14px; /* Apple readable size */
+    padding: 8px 12px; /* Apple touch friendly */
+    min-height: 36px; /* Closer to 44px touch target */
+    border-radius: 8px; /* Apple rounded rectangle */
   }
 }
 
@@ -2337,6 +2425,33 @@ select.form-input option {
   letter-spacing: 0.02em;
   margin-top: 0.35rem;
   opacity: 0.75;
+}
+
+/* Apple-style contact page mobile optimization */
+@media (max-width: 768px) {
+  /* Make contact form single column for better mobile experience */
+  #contact-main .grid--2 {
+    grid-template-columns: 1fr !important;
+    gap: 48px; /* Apple generous spacing */
+  }
+  
+  /* Form inputs get full width and better spacing */
+  .form-group {
+    margin-bottom: 20px; /* Apple form spacing */
+  }
+  
+  .form-input, .form-textarea {
+    width: 100%;
+    padding: 12px 16px; /* Apple input padding */
+    border-radius: 8px; /* Apple input radius */
+    border: 1px solid rgba(var(--color-text-primary-rgb, 0,0,0), 0.2);
+    transition: all 0.2s cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+  
+  .form-input:focus, .form-textarea:focus {
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 3px rgba(var(--color-accent-rgb, 29,155,240), 0.1); /* Apple focus ring */
+  }
 }
 
 /* Background / industry data — muted number */
