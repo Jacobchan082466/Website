@@ -231,7 +231,7 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
-.text-hero   { font-size: var(--f-hero); font-weight: 800; line-height: 1.05; letter-spacing: -0.04em; }
+.text-hero   { font-size: var(--f-hero); font-weight: 800; line-height: 1.15; letter-spacing: -0.04em; }
 .text-center { text-align: center; }
 .text-secondary { color: var(--txt-2); }
 .text-tertiary  { color: var(--txt-3); }
