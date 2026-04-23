@@ -917,7 +917,7 @@ section {
 .chairman-hero__duo {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 0;
+  gap: var(--s48);
   align-items: start;
   max-width: var(--max-w);
   margin: 0 auto;
@@ -926,10 +926,10 @@ section {
   display: flex;
   flex-direction: column;
   gap: var(--s20);
-  padding-right: var(--s48);
+  align-items: center;
+  text-align: center;
 }
 .chairman-hero__inner--ceo {
-  padding-right: 0;
   padding-left: var(--s48);
   border-left: 1px solid var(--border);
 }
@@ -939,6 +939,8 @@ section {
   border-radius: 50%;
   object-fit: cover;
   border: 3px solid var(--border);
+  display: block;
+  margin: 0 auto;
 }
 .chairman-hero__name {
   font-size: var(--f-h3);
@@ -956,40 +958,55 @@ section {
   display: flex;
   gap: var(--s32);
   flex-wrap: wrap;
+  justify-content: center;
 }
-.chairman-hero__stat { display: flex; flex-direction: column; gap: var(--s4); }
+.chairman-hero__stat { 
+  display: flex; 
+  flex-direction: column; 
+  gap: var(--s4);
+  align-items: center;
+  text-align: center;
+}
 .chairman-hero__stat-num { font-size: var(--f-h3); font-weight: 800; line-height: 1; }
 .chairman-hero__stat-label { font-size: var(--f-xs); color: var(--txt-2); }
 .chairman-hero__milestones li {
   font-size: var(--f-sm);
   color: var(--txt-2);
   line-height: 1.6;
-  padding-left: 1.4em;
+  padding-left: 0;
   position: relative;
   margin-bottom: var(--s8);
+  text-align: center;
 }
 .chairman-hero__milestones li::before {
-  content: '—';
-  position: absolute;
-  left: 0;
-  color: var(--accent);
+  content: '';
+  display: none;
 }
 .chairman-hero__awards-heading {
   font-size: var(--f-sm);
   font-weight: 600;
   color: var(--txt);
   margin-bottom: var(--s12);
+  text-align: center;
 }
-.chairman-hero__awards-list { display: flex; flex-direction: column; gap: var(--s8); }
+.chairman-hero__awards-list { 
+  display: flex; 
+  flex-direction: column; 
+  gap: var(--s8);
+  align-items: center;
+}
 .chairman-hero__awards-list li {
   font-size: var(--f-sm);
   color: var(--txt-2);
   line-height: 1.5;
-  padding-left: 1.2em;
+  padding-left: 0;
   position: relative;
+  text-align: center;
 }
 .chairman-hero__awards-list li::before {
-  content: '▸';
+  content: '';
+  display: none;
+}
   position: absolute;
   left: 0;
   color: var(--accent);
