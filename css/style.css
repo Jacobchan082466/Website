@@ -1436,15 +1436,12 @@ main { flex: 1; }
   /* Advisor avatar smaller on mobile */
   .advisor-card .team-card__avatar { width: 110px; height: 110px; font-size: 44px; }
 
-  /* Buttons full-width */
-  .hero__photo-cta { flex-direction: column; }
-  .hero__photo-cta .btn { width: 100%; justify-content: center; }
-  
   /* Hero — even smaller on portrait */
   .hero__photo-caption { max-width: 76%; bottom: 4%; }
   .hero__photo-brand { font-size: 7px; }
   .hero__photo-title { font-size: clamp(0.9rem, 4.2vw, 1.2rem); }
   .hero__photo-sub { font-size: 10px; line-height: 1.45; }
+  .hero__photo-cta { justify-content: flex-end; }
   .hero__photo-cta .btn { font-size: 11px; padding: var(--s6) var(--s12); }
   
   .home-cta-sticky__actions { flex-direction: column; }
