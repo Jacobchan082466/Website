@@ -1342,9 +1342,18 @@ main { flex: 1; }
   /* Contact single column */
   #contact-main .grid--2 { grid-template-columns: 1fr !important; gap: var(--s40); }
 
-  /* Hero — keep same right-aligned style as desktop, just tighten font */
-  .hero__photo-title { font-size: clamp(1.4rem, 5vw, 2rem); }
-  .hero__photo-caption { bottom: 6%; right: 4%; max-width: 88%; }
+  /* Hero — keep same right-aligned style as desktop, just scale down */
+  .hero__photo-caption { 
+    bottom: 5%; 
+    right: 5%; 
+    max-width: 75%;
+    padding: 0 var(--s16);
+  }
+  .hero__photo-brand { font-size: 10px; margin-bottom: var(--s4); }
+  .hero__photo-title { font-size: clamp(1.2rem, 4.5vw, 1.8rem); margin-bottom: var(--s12); }
+  .hero__photo-sub { font-size: 13px; line-height: 1.5; margin-bottom: var(--s16); }
+  .hero__photo-cta { gap: var(--s8); }
+  .hero__photo-cta .btn { padding: var(--s8) var(--s16); font-size: 13px; }
 }
 
 /* ─ Mobile portrait (≤430px) ─ */
@@ -1389,6 +1398,12 @@ main { flex: 1; }
   /* Buttons full-width */
   .hero__photo-cta { flex-direction: column; }
   .hero__photo-cta .btn { width: 100%; justify-content: center; }
+  
+  /* Hero — even smaller on portrait */
+  .hero__photo-caption { max-width: 85%; bottom: 4%; }
+  .hero__photo-title { font-size: clamp(1.1rem, 5vw, 1.5rem); }
+  .hero__photo-sub { font-size: 12px; }
+  
   .home-cta-sticky__actions { flex-direction: column; }
   .home-cta-sticky__btn { width: 100%; justify-content: center; }
 
