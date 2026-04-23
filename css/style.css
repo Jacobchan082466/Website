@@ -1324,26 +1324,9 @@ main { flex: 1; }
   /* Contact single column */
   #contact-main .grid--2 { grid-template-columns: 1fr !important; gap: var(--s40); }
 
-  /* Hero caption */
-  /* Hero — move caption to bottom-centre on tablet/mobile */
-  .hero__photo-vignette {
-    background: linear-gradient(
-      to top,
-      rgba(6,10,22,0.90) 0%,
-      rgba(6,10,22,0.30) 55%,
-      transparent 100%
-    );
-  }
-  .hero__photo-caption {
-    bottom: 5%;
-    right: 0;
-    left: 0;
-    max-width: 100%;
-    text-align: center;
-    padding: 0 var(--s20) calc(env(safe-area-inset-bottom, 0px) + var(--s20));
-  }
-  .hero__photo-cta { justify-content: center; }
+  /* Hero — keep same right-aligned style as desktop, just tighten font */
   .hero__photo-title { font-size: clamp(1.4rem, 5vw, 2rem); }
+  .hero__photo-caption { bottom: 6%; right: 4%; max-width: 88%; }
 }
 
 /* ─ Mobile portrait (≤430px) ─ */
