@@ -29,38 +29,6 @@
       min-height: 2rem;
     }
     
-    /* Platform Navigation */
-    .platform-nav {
-      position: sticky;
-      top: var(--nav-height);
-      z-index: 100;
-      background: var(--color-bg-secondary);
-      border-bottom: 1px solid var(--color-border);
-    }
-    
-    .platform-nav__list {
-      display: flex;
-      justify-content: center;
-      gap: var(--space-lg);
-      flex-wrap: wrap;
-    }
-    
-    .platform-nav__link {
-      padding: 0.75rem 1rem;
-      font-size: var(--fs-small);
-      font-weight: var(--fw-medium);
-      color: var(--color-text-secondary);
-      text-decoration: none;
-      border-radius: var(--radius-sm);
-      transition: all var(--duration-fast) ease;
-      position: relative;
-    }
-    
-    .platform-nav__link:hover,
-    .platform-nav__link.active {
-      color: var(--color-accent);
-      background: var(--color-accent-glow);
-    }
     
     /* Tech Specs Cards */
     .tech-specs-grid {
@@ -167,20 +135,6 @@
     </div>
   </section>
 
-  <!-- Platform Navigation -->
-  <section style="background: var(--color-bg-secondary); padding: var(--space-md) 0;">
-    <div class="container">
-      <nav class="platform-nav" data-animate="fade-in">
-        <div class="platform-nav__list">
-          <a href="#system-components" class="platform-nav__link">System Components</a>
-          <a href="#clinical-evidence" class="platform-nav__link">Clinical Evidence</a>
-          <a href="#how-esd-works" class="platform-nav__link">How ESD Works</a>
-          <a href="#technical-specs" class="platform-nav__link">Technical Specs</a>
-          <a href="#future-roadmap" class="platform-nav__link">Future Development</a>
-        </div>
-      </nav>
-    </div>
-  </section>
 
   <!-- System Components -->
   <section id="system-components" style="background: var(--color-bg-secondary);">
@@ -539,7 +493,6 @@
   <script src="js/i18n.js"></script>
   <script src="js/app.js"></script>
   <script src="js/scroll.js"></script>
-  <script src="js/platform-nav.js"></script>
 </body>
 </html>
 
