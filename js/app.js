@@ -86,7 +86,21 @@
       const isOpen = hamburger.classList.toggle('open');
       mobileMenu.classList.toggle('open');
       hamburger.setAttribute('aria-expanded', isOpen);
-      document.body.style.overflow = isOpen ? 'hidden' : '';
+      
+      // Apple-style body scroll handling
+      if (isOpen) {
+        document.body.style.overflow = 'hidden';
+        // Add subtle backdrop blur to main content
+        document.documentElement.style.setProperty('--backdrop-filter', 'blur(2px)');
+      } else {
+        document.body.style.overflow = '';
+        document.documentElement.style.setProperty('--backdrop-filter', 'none');
+      }
+      
+      // Apple-style haptic feedback (if supported)
+      if ('vibrate' in navigator) {
+        navigator.vibrate(10); // Subtle haptic feedback
+      }
     };
     
     hamburger.addEventListener('click', toggleMobileMenu);
@@ -105,16 +119,35 @@
         mobileMenu.classList.remove('open');
         hamburger.setAttribute('aria-expanded', 'false');
         document.body.style.overflow = '';
+        document.documentElement.style.setProperty('--backdrop-filter', 'none');
+        
+        // Apple-style link feedback
+        if ('vibrate' in navigator) {
+          navigator.vibrate(5);
+        }
       });
     });
     
-    // Close menu when clicking outside
+    // Apple-style outside click handling
     document.addEventListener('click', (e) => {
       if (!hamburger.contains(e.target) && !mobileMenu.contains(e.target) && mobileMenu.classList.contains('open')) {
         hamburger.classList.remove('open');
         mobileMenu.classList.remove('open');
         hamburger.setAttribute('aria-expanded', 'false');
         document.body.style.overflow = '';
+        document.documentElement.style.setProperty('--backdrop-filter', 'none');
+      }
+    });
+    
+    // Apple-style escape key handling
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && mobileMenu.classList.contains('open')) {
+        hamburger.classList.remove('open');
+        mobileMenu.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+        document.documentElement.style.setProperty('--backdrop-filter', 'none');
+        hamburger.focus(); // Return focus to trigger
       }
     });
   }
