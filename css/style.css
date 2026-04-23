@@ -1376,14 +1376,17 @@ main { flex: 1; }
   /* Contact single column */
   #contact-main .grid--2 { grid-template-columns: 1fr !important; gap: var(--s40); }
 
+  /* Hero photo — show full image on mobile without cropping */
+  .hero--photo { min-height: auto; }
+  .hero__photo-wrap { position: relative; inset: auto; top: auto; }
+  .hero__photo-img { height: auto; object-fit: contain; }
+
   /* Hero — keep same right-aligned style as desktop, just scale down */
   .hero__photo-caption { 
     bottom: 5%; 
     right: 5%; 
-    left: auto;
     max-width: 68%;
     padding: 0 var(--s12);
-    text-align: right;
   }
   .hero__photo-brand { font-size: 8px; margin-bottom: var(--s4); letter-spacing: 0.08em; }
   .hero__photo-title { font-size: clamp(1rem, 3.8vw, 1.4rem); margin-bottom: var(--s8); }
@@ -1439,7 +1442,7 @@ main { flex: 1; }
   .advisor-card .team-card__avatar { width: 110px; height: 110px; font-size: 44px; }
 
   /* Hero — even smaller on portrait */
-  .hero__photo-caption { max-width: 76%; bottom: 4%; right: 5%; left: auto; text-align: right; }
+  .hero__photo-caption { max-width: 76%; bottom: 4%; }
   .hero__photo-brand { font-size: 7px; }
   .hero__photo-title { font-size: clamp(0.9rem, 4.2vw, 1.2rem); }
   .hero__photo-sub { font-size: 9px; line-height: 1.45; }
