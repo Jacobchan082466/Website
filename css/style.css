@@ -527,10 +527,8 @@ section {
 .hero--photo {
   position: relative;
   overflow: hidden;
-  /* Pull up behind the nav bar */
-  margin-top: calc(-1 * var(--nav-safe));
-  /* Override the global section padding */
-  padding-top: 0;
+  /* Push image down so it starts below the fixed nav */
+  padding-top: var(--nav-safe);
   padding-bottom: 0;
 }
 
