@@ -608,6 +608,10 @@ section {
   padding-bottom: var(--s48);
   background: var(--bg-alt);
   text-align: center;
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .page-hero__bg {
   position: absolute;
