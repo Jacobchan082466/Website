@@ -926,12 +926,14 @@ section {
   display: flex;
   flex-direction: column;
   gap: var(--s20);
-  align-items: center;
-  text-align: center;
+  text-align: left;
 }
 .chairman-hero__inner--ceo {
   padding-left: var(--s48);
   border-left: 1px solid var(--border);
+}
+.chairman-hero__photo {
+  align-self: center;
 }
 .chairman-hero__photo img {
   width: 180px;
@@ -940,7 +942,6 @@ section {
   object-fit: cover;
   border: 3px solid var(--border);
   display: block;
-  margin: 0 auto;
 }
 .chairman-hero__name {
   font-size: var(--f-h3);
@@ -958,14 +959,11 @@ section {
   display: flex;
   gap: var(--s32);
   flex-wrap: wrap;
-  justify-content: center;
 }
 .chairman-hero__stat { 
   display: flex; 
   flex-direction: column; 
   gap: var(--s4);
-  align-items: center;
-  text-align: center;
 }
 .chairman-hero__stat-num { font-size: var(--f-h3); font-weight: 800; line-height: 1; }
 .chairman-hero__stat-label { font-size: var(--f-xs); color: var(--txt-2); }
@@ -973,39 +971,42 @@ section {
   font-size: var(--f-sm);
   color: var(--txt-2);
   line-height: 1.6;
-  padding-left: 0;
+  padding-left: 1.4em;
   position: relative;
   margin-bottom: var(--s8);
-  text-align: center;
 }
 .chairman-hero__milestones li::before {
-  content: '';
-  display: none;
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-weight: 700;
 }
 .chairman-hero__awards-heading {
   font-size: var(--f-sm);
   font-weight: 600;
   color: var(--txt);
   margin-bottom: var(--s12);
-  text-align: center;
 }
 .chairman-hero__awards-list { 
   display: flex; 
   flex-direction: column; 
   gap: var(--s8);
-  align-items: center;
 }
 .chairman-hero__awards-list li {
   font-size: var(--f-sm);
   color: var(--txt-2);
   line-height: 1.5;
-  padding-left: 0;
+  padding-left: 1.2em;
   position: relative;
-  text-align: center;
 }
 .chairman-hero__awards-list li::before {
-  content: '';
-  display: none;
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-size: 0.7rem;
+  top: 0.25rem;
 }
   position: absolute;
   left: 0;
@@ -1340,8 +1341,6 @@ main { flex: 1; }
   }
   .chairman-hero__photo { display: flex; justify-content: center; }
   .chairman-hero__photo img { width: 140px; height: 140px; }
-  .chairman-hero__inner { text-align: center; }
-  .chairman-hero__titles p { text-align: center; }
   .chairman-hero__milestones li,
   .chairman-hero__awards-list li { text-align: left; }
   .chairman-hero__stats { justify-content: center; }
