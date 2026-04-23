@@ -731,6 +731,7 @@ main {
   background: var(--color-bg-primary);
   margin-top: 0 !important;
   padding-top: 0 !important;
+  padding-bottom: 0 !important;
 }
 
 .hero__photo-wrap {
