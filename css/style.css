@@ -928,6 +928,9 @@ section {
   gap: var(--s20);
   text-align: left;
 }
+.chairman-hero__inner .eyebrow {
+  text-align: center;
+}
 .chairman-hero__inner--ceo {
   padding-left: var(--s48);
   border-left: 1px solid var(--border);
@@ -948,6 +951,7 @@ section {
   font-weight: 700;
   color: var(--txt);
   margin-bottom: var(--s8);
+  text-align: center;
 }
 .chairman-hero__titles p {
   font-size: var(--f-sm);
@@ -959,11 +963,14 @@ section {
   display: flex;
   gap: var(--s32);
   flex-wrap: wrap;
+  justify-content: center;
 }
 .chairman-hero__stat { 
   display: flex; 
   flex-direction: column; 
   gap: var(--s4);
+  align-items: center;
+  text-align: center;
 }
 .chairman-hero__stat-num { font-size: var(--f-h3); font-weight: 800; line-height: 1; }
 .chairman-hero__stat-label { font-size: var(--f-xs); color: var(--txt-2); }
