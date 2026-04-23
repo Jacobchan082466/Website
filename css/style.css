@@ -919,6 +919,8 @@ section {
   grid-template-columns: 1fr 1fr;
   gap: var(--s48);
   align-items: start;
+  max-width: var(--max-w);
+  margin: 0 auto;
 }
 .chairman-hero__inner {
   display: flex;
