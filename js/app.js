@@ -78,13 +78,25 @@
     const hamburger = document.querySelector('.nav__hamburger');
     const mobileMenu = document.querySelector('.nav__mobile');
     if (!hamburger || !mobileMenu) return;
+    
+    // Set initial aria-expanded state
+    hamburger.setAttribute('aria-expanded', 'false');
 
-    hamburger.addEventListener('click', () => {
-      hamburger.classList.toggle('open');
+    const toggleMobileMenu = () => {
+      const isOpen = hamburger.classList.toggle('open');
       mobileMenu.classList.toggle('open');
-      document.body.style.overflow = mobileMenu.classList.contains('open')
-        ? 'hidden'
-        : '';
+      hamburger.setAttribute('aria-expanded', isOpen);
+      document.body.style.overflow = isOpen ? 'hidden' : '';
+    };
+    
+    hamburger.addEventListener('click', toggleMobileMenu);
+    
+    // Keyboard support for mobile menu
+    hamburger.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        toggleMobileMenu();
+      }
     });
 
     mobileMenu.querySelectorAll('a').forEach((link) => {

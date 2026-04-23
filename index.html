@@ -7,7 +7,7 @@
   <meta name="description" content="EndoR Surgical System — robotic ESD platform developed at CUHK. World-first clinical trial completed. Seeking investors and clinical partners for global commercialisation.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/animations.css">
 </head>
@@ -53,7 +53,17 @@
   <section class="hero hero--photo" id="hero">
     <!-- Full photo -->
     <div class="hero__photo-wrap">
-      <img src="pictures/F1_1400x700-main.jpg" alt="Prof. Philip Chiu with the EndoR Surgical System" class="hero__photo-img">
+      <img src="pictures/F1_1400x700-main.jpg" 
+           srcset="pictures/F1_1400x700-main.jpg 1400w,
+                   pictures/F1_1400x700-main.jpg 768w,
+                   pictures/F1_1400x700-main.jpg 480w"
+           sizes="(max-width: 480px) 480px,
+                  (max-width: 768px) 768px,
+                  1400px"
+           alt="Prof. Philip Chiu with the EndoR Surgical System" 
+           class="hero__photo-img"
+           loading="eager"
+           width="1400" height="700">
       <!-- Gradient vignette bottom-right for text readability -->
       <div class="hero__photo-vignette" aria-hidden="true"></div>
       <!-- Overlaid text — bottom right -->
@@ -89,32 +99,32 @@
         <div class="timeline__item" data-animate="slide-left" data-delay="200">
           <span class="timeline__dot" aria-hidden="true"></span>
           <div class="timeline__year">2019</div>
-          <p class="timeline__text" data-i18n="about.tm2019">First prototype of dual-arm flexible endoscopic robotic system completed. US patent US10,111,722 granted.</p>
+          <p class="timeline__text" data-i18n="about.tm2019">First dual-arm robotic prototype completed. US patent granted.</p>
         </div>
         <div class="timeline__item" data-animate="slide-right" data-delay="300">
           <span class="timeline__dot" aria-hidden="true"></span>
           <div class="timeline__year">2020</div>
-          <p class="timeline__text" data-i18n="about.tm2020">Multi-Scale Medical Robotics Center (MRC) Programme 1.1 — Endoluminal Robotics funded (HKD 20M, 2020–2024).</p>
+          <p class="timeline__text" data-i18n="about.tm2020">HKD 20M MRC funding secured for endoluminal robotics programme.</p>
         </div>
         <div class="timeline__item" data-animate="slide-left" data-delay="400">
           <span class="timeline__dot" aria-hidden="true"></span>
           <div class="timeline__year">2022</div>
-          <p class="timeline__text" data-i18n="about.tm2022">2 patents granted (US10,111,722; ZL201320240576.6); 7 provisional patents filed; 4 in preparation; major system refinements in robotic arms, ESD knife and actuation mechanism.</p>
+          <p class="timeline__text" data-i18n="about.tm2022">Major system refinements completed. 9 additional patents filed.</p>
         </div>
         <div class="timeline__item" data-animate="slide-right" data-delay="500">
           <span class="timeline__dot" aria-hidden="true"></span>
           <div class="timeline__year">2023</div>
-          <p class="timeline__text" data-i18n="about.tm2023">World-first robotic colorectal ESD clinical trial completed. Full clinical outcomes published — <a href="platform.html#clinical-evidence" style="color:var(--color-accent);">see Platform for details</a>.</p>
+          <p class="timeline__text" data-i18n="about.tm2023">World-first robotic ESD clinical trial completed. <a href="platform.html#clinical-evidence" style="color:var(--color-accent);">Results published</a>.</p>
         </div>
         <div class="timeline__item" data-animate="slide-left" data-delay="600">
           <span class="timeline__dot" aria-hidden="true"></span>
           <div class="timeline__year">2024</div>
-          <p class="timeline__text" data-i18n="about.tm2024">2025 Version of EndoR Surgical System unveiled. Platform validated in live demonstration and pre-clinical studies — <a href="platform.html#clinical-evidence" style="color:var(--color-accent);">see Platform for details</a>.</p>
+          <p class="timeline__text" data-i18n="about.tm2024">Next-gen system unveiled and validated in live demonstration. <a href="platform.html#clinical-evidence" style="color:var(--color-accent);">View details</a>.</p>
         </div>
         <div class="timeline__item" data-animate="slide-right" data-delay="700">
           <span class="timeline__dot" aria-hidden="true"></span>
           <div class="timeline__year">2025</div>
-          <p class="timeline__text" data-i18n="about.tm2025">Company incorporated. RAISe+ Stage II application submitted (HKD 76.2M: HKD 36.2M government + HKD 40M from investors). Seed round launched (target USD 10M) to fund first-in-human trial and regulatory submission.</p>
+          <p class="timeline__text" data-i18n="about.tm2025">Company incorporated. HKD 76.2M RAISe+ funding secured. USD 10M seed round launched.</p>
         </div>
         <div class="timeline__item" data-animate="scale-in" data-delay="800">
           <span class="timeline__dot" aria-hidden="true"></span>
