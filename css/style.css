@@ -530,18 +530,20 @@ section {
   /* Push image down so it starts below the fixed nav */
   padding-top: var(--nav-safe);
   padding-bottom: 0;
+  min-height: 100vh;
 }
 
 .hero__photo-wrap {
-  position: relative;
-  width: 100%;
-  /* Ensure the vignette / caption can overlay absolutely */
-  display: block;
+  position: absolute;
+  inset: 0;
+  top: var(--nav-safe);
 }
 
 .hero__photo-img {
   width: 100%;
-  height: auto;          /* show the full image, no cropping */
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
   display: block;
 }
 
