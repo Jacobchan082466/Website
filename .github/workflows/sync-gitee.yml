@@ -14,7 +14,7 @@ concurrency:
 jobs:
   sync:
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 15
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -38,4 +38,18 @@ jobs:
 
           git remote add gitee "https://${GITEE_USERNAME}:${GITEE_TOKEN}@gitee.com/${GITEE_REPO}.git"
           echo "Syncing branch ${GITHUB_REF_NAME} to Gitee..."
-          timeout 120s git push gitee "HEAD:${GITHUB_REF_NAME}" --force
+          # First sync can be slower on Gitee; retry to reduce transient network failures.
+          for attempt in 1 2 3; do
+            echo "Push attempt ${attempt}/3..."
+            if timeout 600s git push gitee "HEAD:${GITHUB_REF_NAME}" --force; then
+              echo "Sync completed."
+              exit 0
+            fi
+            if [ "$attempt" -lt 3 ]; then
+              echo "Push failed, retrying in 10s..."
+              sleep 10
+            fi
+          done
+
+          echo "Sync failed after 3 attempts."
+          exit 1
