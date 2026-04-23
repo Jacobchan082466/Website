@@ -917,7 +917,7 @@ section {
 .chairman-hero__duo {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: var(--s48);
+  gap: 0;
   align-items: start;
   max-width: var(--max-w);
   margin: 0 auto;
@@ -926,8 +926,10 @@ section {
   display: flex;
   flex-direction: column;
   gap: var(--s20);
+  padding-right: var(--s48);
 }
 .chairman-hero__inner--ceo {
+  padding-right: 0;
   padding-left: var(--s48);
   border-left: 1px solid var(--border);
 }
