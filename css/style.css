@@ -1250,11 +1250,13 @@ main { flex: 1; }
   .nav__links { display: none; }
   .nav__hamburger { display: flex; }
 
-  /* Group controls + hamburger together on the right */
+  /* Hamburger back in flow, snug to the right of controls */
   .nav__controls {
-    margin-left: auto;
     margin-right: 0;
     gap: var(--s4);
+    /* Ensure a clear gap from the logo on narrow screens */
+    margin-left: auto;
+    padding-left: var(--s16);
   }
   .nav__hamburger {
     position: static;
@@ -1351,8 +1353,9 @@ main { flex: 1; }
   h2 { font-size: clamp(1.3rem, 7vw, 1.7rem); }
   h3 { font-size: clamp(1.1rem, 5vw, 1.4rem); }
 
-  /* Nav: very small screens — compact lang buttons */
-  .nav__controls  { gap: var(--s2); }
+  /* Nav: even on very small screens keep 44px touch targets */
+  .nav__controls  { gap: var(--s2); padding-left: var(--s12); }
+  .nav__hamburger { margin-left: var(--s2); }
   .lang-btn       { padding: 4px 6px; font-size: 11px; }
   .theme-toggle   { width: 32px; height: 32px; }
 
