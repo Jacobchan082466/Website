@@ -246,6 +246,8 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-
 }
 
 /* ── 5. Layout ───────────────────────────────────────────── */
+.mobile-only { display: none; }
+@media (max-width: 768px) { .mobile-only { display: inline; } }
 .container {
   width: 100%;
   max-width: var(--max-w);
@@ -1148,7 +1150,6 @@ section {
   display: flex;
   flex-direction: column;
   gap: var(--s24);
-  padding-left: var(--s32);
 }
 .contact-info-item {
   display: flex;
@@ -1386,7 +1387,7 @@ main { flex: 1; }
   .hero__photo-title { font-size: clamp(1.1rem, 4vw, 1.6rem); margin-bottom: var(--s10); }
   .hero__photo-sub { font-size: 11px; line-height: 1.5; margin-bottom: var(--s12); }
   .hero__photo-cta { gap: var(--s8); }
-  .hero__photo-cta .btn { padding: 6px var(--s16); font-size: 12px; }
+  .hero__photo-cta .btn { padding: var(--s8) var(--s20); font-size: 12px; }
 }
 
 /* ─ Mobile portrait (≤430px) ─ */
@@ -1435,15 +1436,16 @@ main { flex: 1; }
   /* Advisor avatar smaller on mobile */
   .advisor-card .team-card__avatar { width: 110px; height: 110px; font-size: 44px; }
 
-  /* Buttons same row */
-  .hero__photo-cta { flex-direction: row; flex-wrap: nowrap; }
+  /* Buttons full-width */
+  .hero__photo-cta { flex-direction: column; }
+  .hero__photo-cta .btn { width: 100%; justify-content: center; }
   
   /* Hero — even smaller on portrait */
   .hero__photo-caption { max-width: 80%; bottom: 4%; }
   .hero__photo-brand { font-size: 8px; }
   .hero__photo-title { font-size: clamp(1rem, 4.5vw, 1.3rem); }
   .hero__photo-sub { font-size: 10px; line-height: 1.45; }
-  .hero__photo-cta .btn { font-size: 11px; padding: 6px var(--s12); }
+  .hero__photo-cta .btn { font-size: 11px; padding: var(--s8) var(--s16); }
   
   .home-cta-sticky__actions { flex-direction: column; }
   .home-cta-sticky__btn { width: 100%; justify-content: center; }
