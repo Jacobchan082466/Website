@@ -8,12 +8,12 @@ const TRANSLATIONS = {
   /* ── English ─────────────────────────────── */
   en: {
     /* Page titles */
-    'title.index':    'EndoR Surgical System — Advancing Endoluminal Surgery through Flexible Robotics',
-    'title.about':    'About Us — EndoR',
-    'title.platform': 'EndoR Platform — Dual-Arm Flexible Endoscopic Robotic System',
+    'title.index':    'EndoR Surgical — Robotic ESD Platform',
+    'title.about':    'About — EndoR Surgical',
+    'title.platform': 'Platform — EndoR Surgical',
     'title.cases':    'Success Stories — EndoR',
-    'title.team':     'Our Team — EndoR',
-    'title.contact':  'Contact Us — EndoR',
+    'title.team':     'Team — EndoR Surgical',
+    'title.contact':  'Contact — EndoR Surgical',
 
     /* Navigation */
     'nav.home':    'Home',
