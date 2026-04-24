@@ -1021,12 +1021,6 @@ section {
   font-size: 0.7rem;
   top: 0.25rem;
 }
-  position: absolute;
-  left: 0;
-  color: var(--accent);
-  font-size: var(--f-xs);
-  top: 0.15em;
-}
 .chairman-hero__research { font-size: var(--f-sm); color: var(--txt-2); }
 
 /* Advisory board */
@@ -1284,6 +1278,11 @@ main { flex: 1; }
 /* ─ Large desktop (≥1280px) ─ */
 @media (min-width: 1280px) {
   .chairman-hero__awards-list { columns: 2; column-gap: var(--s24); }
+}
+
+/* Contact desktop: larger gap between form and info */
+@media (min-width: 769px) {
+  #contact-main .grid--2 { gap: var(--s64); }
 }
 
 /* ─ Tablet landscape (≤1024px) ─ */
