@@ -967,6 +967,7 @@ section {
   display: flex;
   gap: var(--s32);
   flex-wrap: wrap;
+  margin: var(--s16) 0;
   justify-content: center;
 }
 .chairman-hero__stat { 
