@@ -1385,7 +1385,7 @@ main { flex: 1; }
   .hero__photo-title { font-size: clamp(1.1rem, 4vw, 1.6rem); margin-bottom: var(--s10); }
   .hero__photo-sub { font-size: 11px; line-height: 1.5; margin-bottom: var(--s12); }
   .hero__photo-cta { gap: var(--s8); }
-  .hero__photo-cta .btn { padding: var(--s12) var(--s24); font-size: 14px; }
+  .hero__photo-cta .btn { padding: var(--s8) var(--s20); font-size: 12px; }
 }
 
 /* ─ Mobile portrait (≤430px) ─ */
@@ -1443,7 +1443,7 @@ main { flex: 1; }
   .hero__photo-brand { font-size: 8px; }
   .hero__photo-title { font-size: clamp(1rem, 4.5vw, 1.3rem); }
   .hero__photo-sub { font-size: 10px; line-height: 1.45; }
-  .hero__photo-cta .btn { font-size: 13px; padding: var(--s12) var(--s20); }
+  .hero__photo-cta .btn { font-size: 11px; padding: var(--s8) var(--s16); }
   
   .home-cta-sticky__actions { flex-direction: column; }
   .home-cta-sticky__btn { width: 100%; justify-content: center; }
