@@ -246,8 +246,6 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-
 }
 
 /* ── 5. Layout ───────────────────────────────────────────── */
-.mobile-only { display: none; }
-@media (max-width: 768px) { .mobile-only { display: inline; } }
 .container {
   width: 100%;
   max-width: var(--max-w);
