@@ -40,7 +40,7 @@ const TRANSLATIONS = {
 
     /* ── Homepage ── */
     'home.hero.title':      'The Robotic Platform That<br><span class="text-gradient">Makes ESD Accessible</span>',
-    'home.hero.subtitle':   'Clinically validated. Government-funded. Investment-ready. — A dual-arm flexible endoscopic robot built to unlock the global ESD market.',
+    'home.hero.subtitle':   '— A dual-arm flexible endoscopic robot built to unlock the global ESD market.',
     'home.hero.cta1':       'Explore the System',
     'home.hero.cta2':       'Clinical Evidence',
     'home.mission.eyebrow': 'Our Mission',
@@ -307,7 +307,7 @@ const TRANSLATIONS = {
     'footer.terms':     '使用條款',
     'footer.copyright': '© 2026 EndoR. All rights reserved.',
     'home.hero.title':      '讓 ESD 觸手可及的<br><span class="text-gradient">機器人平台</span>',
-    'home.hero.subtitle':   '臨床驗證。政府資助。隨時可投資。——專為打開全球 ESD 市場而生的雙臂柔性內鏡機器人。',
+    'home.hero.subtitle':   '——專為打開全球 ESD 市場而生的雙臂柔性內鏡機器人。',
     'home.hero.cta1':       '探索系統',
     'home.hero.cta2':       '臨床實證',
     'home.mission.eyebrow': '我們的使命',
@@ -565,7 +565,7 @@ const TRANSLATIONS = {
     'footer.terms':     '使用条款',
     'footer.copyright': '© 2026 EndoR. All rights reserved.',
     'home.hero.title':      '让 ESD 触手可及的<br><span class="text-gradient">机器人平台</span>',
-    'home.hero.subtitle':   '临床验证。政府资助。随时可投资。——专为打开全球 ESD 市场而生的双臂柔性内镜机器人。',
+    'home.hero.subtitle':   '——专为打开全球 ESD 市场而生的双臂柔性内镜机器人。',
     'home.hero.cta1':       '探索系统',
     'home.hero.cta2':       '临床实证',
     'home.mission.eyebrow': '我们的使命',
