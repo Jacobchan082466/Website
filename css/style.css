@@ -1378,7 +1378,7 @@ main { flex: 1; }
   .hero__photo-caption { 
     bottom: 5%; 
     right: 5%; 
-    max-width: 70%;
+    max-width: 65%;
     padding: 0 var(--s16);
   }
   .hero__photo-brand { font-size: 9px; margin-bottom: var(--s4); letter-spacing: 0.08em; }
