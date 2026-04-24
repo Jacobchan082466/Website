@@ -1383,7 +1383,7 @@ main { flex: 1; }
   }
   .hero__photo-brand { font-size: 9px; margin-bottom: var(--s4); letter-spacing: 0.08em; }
   .hero__photo-title { font-size: clamp(1.1rem, 4vw, 1.6rem); margin-bottom: var(--s10); }
-  .hero__photo-sub { font-size: 11px; line-height: 1.5; margin-bottom: var(--s12); }
+  .hero__photo-sub { font-size: 13px; line-height: 1.5; margin-bottom: var(--s12); }
   .hero__photo-cta { gap: var(--s8); }
   .hero__photo-cta .btn { padding: 6px var(--s16); font-size: 12px; }
 }
@@ -1442,7 +1442,7 @@ main { flex: 1; }
   .hero__photo-caption { max-width: 80%; bottom: 4%; }
   .hero__photo-brand { font-size: 8px; }
   .hero__photo-title { font-size: clamp(1rem, 4.5vw, 1.3rem); }
-  .hero__photo-sub { font-size: 10px; line-height: 1.45; }
+  .hero__photo-sub { font-size: 12px; line-height: 1.45; }
   .hero__photo-cta .btn { font-size: 11px; padding: 5px var(--s12); }
   
   .home-cta-sticky__actions { flex-direction: column; }
