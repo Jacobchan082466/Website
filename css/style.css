@@ -1148,6 +1148,7 @@ section {
   display: flex;
   flex-direction: column;
   gap: var(--s24);
+  padding-left: var(--s32);
 }
 .contact-info-item {
   display: flex;
