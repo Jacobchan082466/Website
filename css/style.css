@@ -1146,7 +1146,6 @@ section {
 .chairman-hero__accordion { border: none; background: none; }
 
 /* ── 17. Contact Page ────────────────────────────────────── */
-#contact-main .grid--2 { gap: var(--s64); }
 .contact-info-card {
   display: flex;
   flex-direction: column;
