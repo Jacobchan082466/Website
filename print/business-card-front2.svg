@@ -12,12 +12,12 @@
   <text x="45" y="21" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-weight="700" font-size="5.4" fill="#0B2B3A">Jacob Chan</text>
   <text x="45" y="25.5" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="2.8" fill="#0B87C9" letter-spacing="0.5">軟件工程師 / SOFTWARE ENGINEER</text>
   <line x1="5" y1="30.4" x2="85" y2="30.4" stroke="#D0E6F0" stroke-width="0.3"/>
-  <text x="45" y="32.4" dominant-baseline="hanging" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="2.8" fill="#333333">Tel: +852 98522039 / +86 13924616272</text>
-  <text x="45" y="36.8" dominant-baseline="hanging" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="2.8" fill="#333333">Email: jacobchan@endormedical.com</text>
+  <text x="45" y="33.9" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="2.8" fill="#333333">Tel: +852 98522039 / +86 13924616272</text>
+  <text x="45" y="38.1" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="2.8" fill="#333333">Email: jacobchan@endormedical.com</text>
   <line x1="5" y1="41.6" x2="85" y2="41.6" stroke="#D0E6F0" stroke-width="0.3"/>
-  <text x="45" y="43.6" dominant-baseline="hanging" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="1.7" fill="#555">深圳前海夢海大道5188號深港青年夢工廠北區B棟502C6</text>
-  <text x="45" y="45.9" dominant-baseline="hanging" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="1.7" fill="#555">Room 502C6, Building B, North District, Qianhai Shenzhen-Hong Kong Youth Innovation Hub</text>
+  <text x="45" y="44.45" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="1.7" fill="#555">深圳前海夢海大道5188號深港青年夢工廠北區B棟502C6</text>
+  <text x="45" y="46.75" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="1.7" fill="#555">Room 502C6, Building B, North District, Qianhai Shenzhen-Hong Kong Youth Innovation Hub</text>
   <line x1="5" y1="49.6" x2="85" y2="49.6" stroke="#D0E6F0" stroke-width="0.3"/>
-  <text x="45" y="51.6" dominant-baseline="hanging" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="1.7" fill="#555">香港九龍尖沙咀廣東道17號海港城環球金融中心南座13A樓05-15室</text>
-  <text x="45" y="54" dominant-baseline="hanging" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="1.7" fill="#555">Rooms 05-15, 13A/F South Tower, World Finance Centre, Harbour City, TST, Hong Kong</text>
+  <text x="45" y="52.45" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="1.7" fill="#555">香港九龍尖沙咀廣東道17號海港城環球金融中心南座13A樓05-15室</text>
+  <text x="45" y="54.85" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="1.7" fill="#555">Rooms 05-15, 13A/F South Tower, World Finance Centre, Harbour City, TST, Hong Kong</text>
 </svg>
