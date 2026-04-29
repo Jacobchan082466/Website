@@ -24,4 +24,10 @@
     </svg>
     <text x="4.16" y="1.4" dominant-baseline="central" text-anchor="start">jacobchan@endormedical.com</text>
   </g>
+
+  <text x="5" y="52.4" text-anchor="start" font-family="Segoe UI,Arial,sans-serif" font-size="1.4" fill="#555">
+    <tspan x="5" dy="0">Room 502C6, Building B, North District,</tspan>
+    <tspan x="5" dy="1.7">Qianhai Shenzhen-Hong Kong Youth Innovation and Entrepreneur Hub,</tspan>
+    <tspan x="5" dy="1.7">5188 Menghai Avenue, Nanshan District, Shenzhen, Guangdong Province, China</tspan>
+  </text>
 </svg>
