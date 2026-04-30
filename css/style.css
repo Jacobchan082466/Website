@@ -535,13 +535,17 @@ section {
 .hero__photo-wrap {
   position: relative;
   width: 100%;
+  aspect-ratio: 2 / 1;
+  overflow: hidden;
   /* Ensure the vignette / caption can overlay absolutely */
   display: block;
 }
 
 .hero__photo-img {
   width: 100%;
-  height: auto;          /* show the full image, no cropping */
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
   display: block;
 }
 
