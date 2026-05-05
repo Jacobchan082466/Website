@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap">
-  <link rel="stylesheet" href="css/style.css?v=2">
+  <link rel="stylesheet" href="css/style.css?v=4">
   <link rel="stylesheet" href="css/animations.css">
   <style>
     .service-card__tags {
@@ -97,7 +97,6 @@
         <a href="index.html" class="nav__link" data-i18n="nav.home">Home</a>
         <a href="about.html" class="nav__link" data-i18n="nav.about">About</a>
         <a href="platform.html" class="nav__link active" data-i18n="nav.services">Platform</a>
-        <a href="team.html" class="nav__link" data-i18n="nav.team">Team</a>
         <a href="contact.html" class="nav__link" data-i18n="nav.contact">Contact</a>
       </div>
       <div class="nav__controls">
@@ -119,7 +118,6 @@
       <a href="index.html" data-i18n="nav.home">Home</a>
       <a href="about.html" data-i18n="nav.about">About</a>
       <a href="platform.html" data-i18n="nav.services">Platform</a>
-      <a href="team.html" data-i18n="nav.team">Team</a>
       <a href="contact.html" data-i18n="nav.contact">Contact</a>
     </div>
   </nav>
@@ -179,7 +177,7 @@
               <p class="eyebrow" style="margin-bottom: var(--space-xs);" data-i18n="services.dissector.label">Robotic Arm 2</p>
               <h3 class="card__title" data-i18n="services.dissector.title">Dissector Arm — Multi-functional ESD Knife</h3>
               <p class="card__text" data-i18n="services.dissector.text">
-                Patented multi-functional ESD knife performing injection, cutting and haemostasis. Tremor-free movement matches expert-level dissection speed.
+                Patented multi-functional ESD knife performing injection, cutting and electrosurgical haemostasis on one energy-capable instrument. Tremor-free movement matches expert-level dissection speed.
               </p>
               <div class="service-card__stat text-gradient">170 mm²/min</div>
               <p class="text-tertiary" style="font-size: var(--fs-caption); margin-top: var(--space-xs);" data-i18n="services.dissector.stat">robotic ESD dissection speed</p>
@@ -195,7 +193,7 @@
       <div class="text-center" style="margin-bottom: var(--space-xl);">
         <p class="eyebrow" data-animate="fade-in" data-i18n="cases.stats.eyebrow">World-First Completed Trial — Commercial Validation</p>
         <h2 data-animate="slide-up" data-i18n="cases.stats.title">Proven Clinical<span class="text-gradient"> Performance</span></h2>
-        <p class="text-secondary" style="max-width: 580px; margin: var(--space-md) auto 0;" data-animate="blur-in" data-delay="100" data-i18n="cases.stats.source">Chiu PW et al. <em>Endoscopy</em> 2024 (IF &gt;10) — World-first robotic colorectal ESD trial. No competitor has achieved this milestone. Prince of Wales Hospital, CUHK.</p>
+        <p class="text-secondary" style="max-width: 580px; margin: var(--space-md) auto 0;" data-animate="blur-in" data-delay="100" data-i18n="cases.stats.source">Chiu PW et al. <em>Endoscopy</em> 2024 (IF &gt;10) — World-first robotic colorectal ESD trial. No competitor has achieved this milestone. Prince of Wales Hospital, Hong Kong.</p>
       </div>
       <div class="grid grid--3" style="text-align: center;">
         <div class="stat" data-animate="scale-in" data-delay="100">
@@ -238,11 +236,11 @@
             <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: var(--space-xs);">
               <li style="display: flex; gap: var(--space-xs); align-items: flex-start;">
                 <span class="text-accent" style="font-weight:700; flex-shrink:0;">PI</span>
-                <span data-i18n="cases.trial.pi">Prof. Philip Chiu, Prince of Wales Hospital, CUHK</span>
+                <span data-i18n="cases.trial.pi">Prof. Philip Chiu, Prince of Wales Hospital, Hong Kong</span>
               </li>
               <li style="display: flex; gap: var(--space-xs); align-items: flex-start;">
                 <span class="text-accent" style="font-weight:700; flex-shrink:0;">Site</span>
-                <span data-i18n="cases.trial.site">Endoscopy Centre, Prince of Wales Hospital, CUHK</span>
+                <span data-i18n="cases.trial.site">Endoscopy Centre, Prince of Wales Hospital, Hong Kong</span>
               </li>
               <li style="display: flex; gap: var(--space-xs); align-items: flex-start;">
                 <span class="text-accent" style="font-weight:700; flex-shrink:0;">Design</span>
@@ -367,28 +365,6 @@
     </div>
   </section>
 
-  <!-- Control System -->
-  <section style="background: var(--color-bg-secondary);">
-    <div class="container">
-      <div class="text-center" style="margin-bottom: var(--space-2xl);">
-        <p class="eyebrow" data-animate="fade-in" data-i18n="plat.ctrl.eyebrow">Current Generation Hardware</p>
-        <h2 data-animate="slide-up" data-delay="100" data-i18n="plat.ctrl.title">Control System<span class="text-gradient"> &amp; Robotic Platform</span></h2>
-      </div>
-      <div class="grid grid--2" style="align-items: stretch; gap: var(--space-xl);">
-        <div class="card" data-animate="slide-up" data-delay="100" style="display: flex; flex-direction: column;">
-          <p class="eyebrow" style="margin-bottom: var(--space-sm);" data-i18n="plat.ctrl.c1.eyebrow">Master Console</p>
-          <h3 class="card__title" data-i18n="plat.ctrl.c1.title">Force Dimension Hand Controllers</h3>
-          <p class="card__text" data-i18n="plat.ctrl.c1.text">Medical-grade Force Dimension haptic controllers (Switzerland). Bilateral force-feedback input for precise, intuitive control of both robotic arms.</p>
-        </div>
-        <div class="card" data-animate="slide-up" data-delay="200" style="display: flex; flex-direction: column;">
-          <p class="eyebrow" style="margin-bottom: var(--space-sm);" data-i18n="plat.ctrl.c2.eyebrow">Patient-Side Carrier</p>
-          <h3 class="card__title" data-i18n="plat.ctrl.c2.title">Kuka Robotic Arm — Transport System Mounting</h3>
-          <p class="card__text" data-i18n="plat.ctrl.c2.text">Kuka robotic arm mounts and stabilises the transport system. Integrated motors drive the wire-and-pulley actuation for tremor-free, 5-DOF instrument control.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- AI Platform -->
   <section>
     <div class="container">
@@ -401,7 +377,7 @@
         <div class="card" data-animate="slide-up" data-delay="100">
           <div class="text-gradient" style="font-size: var(--fs-h1); font-weight: var(--fw-black); line-height: 1; margin-bottom: var(--space-md);">300+</div>
           <h3 class="card__title" data-i18n="plat.ai.c1.title">Patients in AI Training Dataset</h3>
-          <p class="card__text" data-i18n="plat.ai.c1.text">AI model in development, trained on endoscopy data and video from 300+ patients accumulated through the team's high-volume ESD practice at CUHK.</p>
+          <p class="card__text" data-i18n="plat.ai.c1.text">AI model in development, trained on endoscopy data and video from 300+ patients accumulated through the team's high-volume ESD practice in Hong Kong.</p>
         </div>
         <div class="card" data-animate="slide-up" data-delay="200">
           <h3 class="card__title" data-i18n="plat.ai.c2.title">Research-Stage AI Capabilities</h3>
@@ -424,72 +400,6 @@
     </div>
   </section>
 
-  <!-- Future Development Roadmap -->
-  <section id="future-roadmap" style="background: var(--color-bg-secondary);">
-    <div class="container">
-      <div class="text-center" style="margin-bottom: var(--space-2xl);">
-        <p class="eyebrow" data-animate="fade-in" data-i18n="plat.road.eyebrow">Future Development</p>
-        <h2 data-animate="slide-up" data-delay="100" data-i18n="plat.road.title">Next-Generation<span class="text-gradient"> Platform Roadmap</span></h2>
-        <p class="text-secondary" style="max-width: 640px; margin: var(--space-md) auto 0;" data-animate="blur-in" data-delay="200" data-i18n="plat.road.desc">
-          Third-party components replaced with proprietary designs — reducing cost, deepening integration, and expanding margin.
-        </p>
-      </div>
-      <div class="grid grid--3" style="margin-bottom: var(--space-2xl);">
-        <div class="card" data-animate="slide-up" data-delay="100">
-          <p class="eyebrow" style="margin-bottom: var(--space-sm);" data-i18n="plat.road.c1.eyebrow">Proprietary Controllers</p>
-          <h3 class="card__title" data-i18n="plat.road.c1.title">In-House Hand Controllers</h3>
-          <p class="card__text" data-i18n="plat.road.c1.text">Proprietary controllers replace Force Dimension — lower cost, deeper integration, and haptic feedback tuned for endoluminal surgery.</p>
-        </div>
-        <div class="card" data-animate="slide-up" data-delay="200">
-          <p class="eyebrow" style="margin-bottom: var(--space-sm);" data-i18n="plat.road.c2.eyebrow">Proprietary Robotic Arm</p>
-          <h3 class="card__title" data-i18n="plat.road.c2.title">Lower-Cost Arm with Stabilisation</h3>
-          <p class="card__text" data-i18n="plat.road.c2.text">Purpose-built lower-cost arm with active stabilisation replaces the Kuka — optimised for endoluminal surgery at a hospital-procurement price point.</p>
-        </div>
-        <div class="card" data-animate="slide-up" data-delay="300">
-          <p class="eyebrow" style="margin-bottom: var(--space-sm);" data-i18n="plat.road.c3.eyebrow">Reusable Transport System</p>
-          <h3 class="card__title" data-i18n="plat.road.c3.title">Integrated Camera — Reusable Design</h3>
-          <p class="card__text" data-i18n="plat.road.c3.text">Transport system redesigned with integrated camera, transitioning to reusable format. Grasper and ESD knife remain single-use, preserving per-procedure revenue.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Strategic Pipeline -->
-  <section>
-    <div class="container">
-      <div class="text-center" style="margin-bottom: var(--space-xl);">
-        <p class="eyebrow" data-animate="fade-in" data-i18n="plat.pipe.eyebrow">Strategic Pipeline</p>
-        <h3 data-animate="slide-up" data-delay="100" data-i18n="plat.pipe.title">Future Strategic<span class="text-gradient"> Developments</span></h3>
-      </div>
-      <div class="grid grid--2">
-        <div class="card" data-animate="slide-up" data-delay="100">
-          <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: var(--space-md);">
-            <li style="display: flex; gap: var(--space-sm); align-items: flex-start;">
-              <span class="text-accent" style="font-weight: 700; flex-shrink: 0;">&#9658;</span>
-              <span data-i18n="plat.pipe.li1"><strong>AI-Enhanced Robotic ESD</strong> — intelligent tissue recognition and automated surgical guidance systems</span>
-            </li>
-            <li style="display: flex; gap: var(--space-sm); align-items: flex-start;">
-              <span class="text-accent" style="font-weight: 700; flex-shrink: 0;">&#9658;</span>
-              <span data-i18n="plat.pipe.li2"><strong>Endoscopic Robotic Suturing</strong> — extending endoluminal robotic capability to tissue repair</span>
-            </li>
-          </ul>
-        </div>
-        <div class="card" data-animate="slide-up" data-delay="200">
-          <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: var(--space-md);">
-            <li style="display: flex; gap: var(--space-sm); align-items: flex-start;">
-              <span class="text-accent" style="font-weight: 700; flex-shrink: 0;">&#9658;</span>
-              <span data-i18n="plat.pipe.li3"><strong>Endoscopic Stapling</strong> — in collaboration with Boston Scientific</span>
-            </li>
-            <li style="display: flex; gap: var(--space-sm); align-items: flex-start;">
-              <span class="text-accent" style="font-weight: 700; flex-shrink: 0;">&#9658;</span>
-              <span data-i18n="plat.pipe.li4"><strong>Single-Arm Traction Robot</strong> — a quick-to-market product for endoluminal traction assistance</span>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
   </main>
   <div id="site-footer"></div>
 
@@ -497,7 +407,7 @@
   <script src="js/translations.js"></script>
   <script src="js/i18n.js"></script>
   <script src="js/app.js"></script>
-  <script src="js/scroll.js"></script>
+  <script src="js/scroll.js?v=2"></script>
 </body>
 </html>
 

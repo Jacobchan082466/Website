@@ -15,7 +15,7 @@
     const page = window.location.pathname.split('/').pop().replace('.html', '') || 'index';
     const map = {
       index: 'index', about: 'about', platform: 'platform',
-      cases: 'cases', team: 'team', contact: 'contact'
+      cases: 'cases', contact: 'contact'
     };
     return map[page] || 'index';
   }

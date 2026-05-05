@@ -21,7 +21,7 @@
           <h4 class="footer__heading" data-i18n="footer.company">Company</h4>
           <ul class="footer__links">
             <li><a href="about.html" data-i18n="footer.about">About Us</a></li>
-            <li><a href="team.html" data-i18n="footer.team">Team</a></li>
+            <li><a href="index.html#team" data-i18n="footer.team">Team</a></li>
           </ul>
         </div>
         <div>

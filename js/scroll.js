@@ -11,18 +11,28 @@
     const elements = document.querySelectorAll('[data-animate]');
     if (!elements.length) return;
 
+    function reveal(target) {
+      /* Two rAFs: ensure the browser has painted opacity/transform “off” state before we add .is-visible, so CSS transitions actually run. */
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          target.classList.add('is-visible');
+        });
+      });
+    }
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add('is-visible');
+            reveal(entry.target);
             observer.unobserve(entry.target);
           }
         });
       },
       {
-        threshold: 0.15,
-        rootMargin: '0px 0px -60px 0px',
+        /* Looser than before: half-width timeline cards + bottom nav safe-area were easy to under-intersect. */
+        threshold: [0, 0.06, 0.12],
+        rootMargin: '0px 0px -8px 0px',
       }
     );
 
@@ -88,7 +98,8 @@
         const viewportHeight = window.innerHeight;
 
         const scrolled = -rect.top;
-        const totalScroll = sectionHeight - viewportHeight;
+        const rawTotal = sectionHeight - viewportHeight;
+        const totalScroll = Math.max(rawTotal, 1);
         const progress = Math.max(0, Math.min(1, scrolled / totalScroll));
 
         section.style.setProperty('--scroll-progress', progress);
@@ -101,7 +112,7 @@
             const lineEnd = lineStart + step;
             if (progress >= lineStart && progress < lineEnd + 0.1) {
               line.classList.add('is-active');
-            } else if (progress < lineStart) {
+            } else {
               line.classList.remove('is-active');
             }
           });

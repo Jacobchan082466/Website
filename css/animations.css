@@ -361,6 +361,13 @@
   z-index: auto !important;
 }
 
+/* Explicit dwell height: required for scroll.js --scroll-progress (mission/vision lines, home CTA).
+   Must win over the height:auto rule above (same specificity → order + !important). */
+.sticky-section.sticky-section--scroll-dwell,
+.sticky-section.sticky-section--cta {
+  height: 190vh !important;
+}
+
 .sticky-section--pull-up {
   margin-top: 0 !important;
 }
@@ -431,15 +438,32 @@
   }
 }
 
-/* Sticky-only reveal states should render fully in fallback flow mode */
-.sticky-text-line {
-  opacity: 1;
-  transform: none;
+/* Mission / vision sticky lines: scroll progress toggles .is-active (scroll.js).
+   Inactive lines stay faint (reads as “grey” on the band); active line is full contrast.
+   Scoped so the global sticky layout fallback above still fixes clipping/overlap. */
+.mission-sticky__headline > .sticky-text-line {
+  display: block;
+  transition: opacity 0.55s var(--ease-out-expo), transform 0.55s var(--ease-out-expo);
+  opacity: 0.22;
+  transform: translateY(6px);
 }
 
-.sticky-text-line.is-active {
+.mission-sticky__headline > .sticky-text-line.is-active {
   opacity: 1;
-  transform: none;
+  transform: translateY(0);
+  color: var(--txt);
+}
+
+.vision-sticky__lines .sticky-text-line {
+  transition: opacity 0.55s var(--ease-out-expo), transform 0.55s var(--ease-out-expo);
+  opacity: 0.22;
+  transform: translateY(6px);
+}
+
+.vision-sticky__lines .sticky-text-line.is-active {
+  opacity: 1;
+  transform: translateY(0);
+  color: var(--txt);
 }
 
 [data-sticky-item],
@@ -456,17 +480,6 @@
   font-size: clamp(1.45rem, 2.8vw + 0.9rem, 3.25rem);
   line-height: var(--lh-snug);
   font-weight: var(--fw-bold);
-}
-
-.sticky-text-line {
-  opacity: 1;
-  transform: none;
-  transition: none;
-}
-
-.sticky-text-line.is-active {
-  opacity: 1;
-  transform: none;
 }
 
 /* --- 3D Card Tilt --- */
@@ -498,6 +511,17 @@
 
 .glow:hover::before {
   opacity: 0.4;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mission-sticky__headline > .sticky-text-line,
+  .mission-sticky__headline > .sticky-text-line.is-active,
+  .vision-sticky__lines .sticky-text-line,
+  .vision-sticky__lines .sticky-text-line.is-active {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 }
 
 /* --- Responsive: reduce motion complexity on mobile --- */

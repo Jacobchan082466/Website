@@ -717,6 +717,23 @@ section {
   margin-top: var(--s12);
 }
 
+/* About — principles band (hero gradient ends on --bg-secondary; same here avoids a muddy seam and lets white cards read clearly) */
+.about-principles {
+  background: var(--bg-secondary);
+}
+
+[data-theme="dark"] .about-principles {
+  background: var(--bg);
+}
+
+.about-principles .card {
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="dark"] .about-principles .card {
+  box-shadow: 0 2px 24px rgba(0, 0, 0, 0.5);
+}
+
 /* ── 10. Stats ───────────────────────────────────────────── */
 .stat { text-align: center; }
 .stat__number {
@@ -746,6 +763,10 @@ section {
 }
 
 /* ── 11. Timeline — vertical centre-line style ────────── */
+.timeline-section {
+  background: var(--bg);
+}
+
 .timeline {
   position: relative;
   max-width: 800px;
@@ -766,22 +787,58 @@ section {
 .timeline__item {
   position: relative;
   width: 50%;
-  padding: var(--s5) var(--s8);
+  padding: var(--s16) var(--s20);
+  margin-bottom: var(--s16);
+  border-radius: var(--r-lg);
+  border: 0.5px solid var(--border);
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.52);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+  transition: transform var(--t-mid) var(--ease-out),
+              box-shadow var(--t-mid) var(--ease-out),
+              background-color 0.25s ease,
+              border-color 0.25s ease;
+}
+
+.timeline__item:last-child {
+  margin-bottom: 0;
+}
+
+.timeline__item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.12);
+  background: rgba(255, 255, 255, 0.78);
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] .timeline__item {
+  background: rgba(28, 28, 30, 0.55);
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.35);
+}
+
+[data-theme="dark"] .timeline__item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.45);
+  background: rgba(34, 34, 36, 0.88);
+  border-color: rgba(255, 255, 255, 0.12);
 }
 
 .timeline__item:nth-child(odd) {
-  padding-right: var(--s8);
+  padding-right: var(--s24);
   text-align: right;
 }
 
 .timeline__item:nth-child(even) {
   margin-left: 50%;
-  padding-left: var(--s8);
+  padding-left: var(--s24);
 }
 
 .timeline__dot {
   position: absolute;
-  top: var(--s5);
+  top: var(--s20);
+  z-index: 1;
   width: 12px;
   height: 12px;
   border-radius: 50%;
@@ -834,9 +891,23 @@ section {
 }
 .home-cta-sticky__btn { padding: 14px 32px; font-size: var(--f-sm); }
 
-/* Mission / Vision sticky */
+/* Mission / Vision sticky — default grey pin (homepage / generic) */
 .sticky-section--pull-up .sticky-section__sticky {
   background: var(--bg-secondary);
+}
+
+/* About page only: grey principles → white mission → grey vision */
+.about-page--mission-band .sticky-section__sticky {
+  background: var(--color-bg-primary);
+}
+.about-page--vision-band .sticky-section__sticky {
+  background: var(--color-bg-secondary);
+}
+[data-theme="dark"] .about-page--mission-band .sticky-section__sticky {
+  background: var(--color-bg-card);
+}
+[data-theme="dark"] .about-page--vision-band .sticky-section__sticky {
+  background: var(--bg);
 }
 .mission-sticky__eyebrow,
 .vision-sticky__eyebrow {
@@ -1024,12 +1095,6 @@ section {
   font-size: 0.7rem;
   top: 0.25rem;
 }
-  position: absolute;
-  left: 0;
-  color: var(--accent);
-  font-size: var(--f-xs);
-  top: 0.15em;
-}
 .chairman-hero__research { font-size: var(--f-sm); color: var(--txt-2); }
 
 /* Advisory board */
@@ -1145,8 +1210,40 @@ section {
   top: 0.15em;
 }
 
-/* Chairman accordion */
+/* Chairman accordion — Awards & Honours collapsible */
 .chairman-hero__accordion { border: none; background: none; }
+.chairman-hero__awards-details {
+  border: none;
+  background: none;
+}
+.chairman-hero__awards-details summary.chairman-hero__awards-heading {
+  list-style: none;
+  cursor: pointer;
+  margin-bottom: 0;
+  padding: var(--s8) 0 var(--s8) 1.1em;
+  position: relative;
+  user-select: none;
+}
+.chairman-hero__awards-details summary::-webkit-details-marker { display: none; }
+.chairman-hero__awards-details summary::marker { content: ''; }
+.chairman-hero__awards-details summary::before {
+  content: '▶';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.55rem;
+  color: var(--accent);
+  line-height: 1;
+  transition: transform 0.2s ease;
+}
+.chairman-hero__awards-details[open] summary::before {
+  transform: translateY(-50%) rotate(90deg);
+}
+.chairman-hero__awards-details .chairman-hero__awards-list {
+  margin-top: var(--s12);
+  margin-bottom: 0;
+}
 
 /* ── 17. Contact Page ────────────────────────────────────── */
 .contact-info-card {

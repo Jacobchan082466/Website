@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About — EndoR Surgical</title>
-  <meta name="description" content="EndoR Surgical System — born from a decade of research at CUHK and the Multi-Scale Medical Robotics Center. Our story, milestones and vision.">
+  <meta name="description" content="EndoR Surgical System — developed at CUHK and the Multi-Scale Medical Robotics Center. Milestones, clinical principles and vision.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap">
@@ -22,7 +22,6 @@
         <a href="index.html" class="nav__link" data-i18n="nav.home">Home</a>
         <a href="about.html" class="nav__link active" data-i18n="nav.about">About</a>
         <a href="platform.html" class="nav__link" data-i18n="nav.services">Platform</a>
-        <a href="team.html" class="nav__link" data-i18n="nav.team">Team</a>
         <a href="contact.html" class="nav__link" data-i18n="nav.contact">Contact</a>
       </div>
       <div class="nav__controls">
@@ -44,7 +43,6 @@
       <a href="index.html" data-i18n="nav.home">Home</a>
       <a href="about.html" data-i18n="nav.about">About</a>
       <a href="platform.html" data-i18n="nav.services">Platform</a>
-      <a href="team.html" data-i18n="nav.team">Team</a>
       <a href="contact.html" data-i18n="nav.contact">Contact</a>
     </div>
   </nav>
@@ -54,36 +52,24 @@
     <div class="page-hero__bg" data-parallax="0.22" aria-hidden="true"></div>
     <div class="container text-center" style="position: relative; z-index: 1;">
       <h1 class="text-hero" data-animate="slide-up" data-delay="100" data-i18n="about.hero.title">
-        10 Years. One Platform.<br><span class="text-gradient">Now Investment-Ready.</span>
+        One Platform<br><span class="text-gradient">Designed for All Clinicians</span>
       </h1>
       <p class="text-secondary" style="font-size: var(--fs-body-lg); max-width: 640px; margin: var(--space-lg) auto 0; line-height: var(--lh-relaxed);" data-animate="blur-in" data-delay="200" data-i18n="about.hero.subtitle">
-        From CUHK laboratory to completed clinical trial — EndoR has done what no competitor has: proved robotic ESD works in humans, and built the team to bring it to market.
+        CUHK-born robotic ESD platform — clinically validated in humans, engineered to scale therapeutic endoscopy.
       </p>
     </div>
   </section>
 
-  <section id="story" style="background: var(--color-bg-secondary);">
-    <div class="container container--narrow">
-      <div class="text-center" style="margin-bottom: var(--space-md);">
-        <p class="eyebrow" data-i18n="about.story.eyebrow">Our Story</p>
-        <h2 data-animate="slide-up" data-delay="100" data-i18n="about.story.title">Ten Years of Research —<span class="text-gradient"> One Platform</span></h2>
-      </div>
-      <p class="text-secondary" style="font-size: var(--fs-body-lg); line-height: var(--lh-relaxed); margin-bottom: var(--space-md);" data-animate="slide-up" data-delay="200" data-i18n="about.story.p1">
-        3.4 million new GI cancer cases arise every year — yet the gold-standard curative procedure, Endoscopic Submucosal Dissection (ESD), reaches only a fraction of eligible patients. The bottleneck is not technology in the lab: it is the absence of a commercial robotic platform that makes ESD safe, fast, and teachable at scale. That is the market EndoR is built to capture.
-      </p>
-      <p class="text-secondary" style="font-size: var(--fs-body-lg); line-height: var(--lh-relaxed); margin-bottom: var(--space-md);" data-animate="slide-up" data-delay="300" data-i18n="about.story.p2">
-        Since 2015, our founders at CUHK have invested a decade and HKD 34M in government grants to build that platform. The result: a clinically validated, patent-protected system that has completed the world's first robotic colorectal ESD trial and secured HKD 36.2M in RAISe+ government funding — now entering first-in-human commercialisation in 2026.
-      </p>
-    </div>
-  </section>
-
-  <section>
+  <section class="about-principles">
     <div class="container">
       <div class="text-center" style="margin-bottom: var(--space-2xl);">
         <p class="eyebrow" data-animate="fade-in" data-i18n="about.vision.eyebrow">Clinical &amp; Technical Principles</p>
         <h2 data-animate="slide-up" data-delay="100" style="margin-bottom: var(--space-md);" data-i18n="about.vision.title">
-          Why EndoR<span class="text-gradient"> Wins in the Market</span>
+          EndoR<span class="text-gradient"> Wins in the Market</span>
         </h2>
+        <p class="text-secondary" style="font-size: var(--fs-body-lg); line-height: var(--lh-relaxed); max-width: 720px; margin: var(--space-md) auto 0;" data-animate="blur-in" data-delay="150" data-i18n="about.principles.lead">
+          EndoR is engineered around <span class="text-gradient">safety, ease of use, and adoption</span> — the three levers that turn advanced ESD from specialist craft into repeatable hospital volume. The cards below spell out how we execute on each.
+        </p>
       </div>
       <div class="grid grid--3">
           <div class="card" data-animate="slide-up" data-delay="100">
@@ -102,13 +88,12 @@
             <p class="card__text" data-i18n="about.v3.text">Designed for AI integration — with research-stage capabilities in tissue recognition, instrument guidance and decision support aimed at extending high-quality ESD to more patients globally.</p>
           </div>
         </div>
-      </div>
     </div>
   </section>
 
-  <!-- Mission Sticky -->
-  <div class="sticky-section sticky-section--pull-up" style="height: 190vh;">
-    <div class="sticky-section__sticky" style="background: var(--color-bg-secondary);">
+  <!-- Mission Sticky (white band — alternates with grey .about-principles above) -->
+  <div class="sticky-section sticky-section--pull-up sticky-section--scroll-dwell about-page--mission-band">
+    <div class="sticky-section__sticky">
       <div class="sticky-section__content sticky-section__content--mission">
         <p class="eyebrow mission-sticky__eyebrow" data-i18n="home.mission.eyebrow">Our Mission</p>
         <h2 class="mission-sticky__headline">
@@ -121,9 +106,9 @@
     </div>
   </div>
 
-  <!-- Vision Sticky -->
-  <div class="sticky-section sticky-section--pull-up sticky-section--vision" style="height: 190vh;">
-    <div class="sticky-section__sticky" style="background: var(--color-bg-primary);">
+  <!-- Vision Sticky (grey band — alternates with white mission above) -->
+  <div class="sticky-section sticky-section--pull-up sticky-section--vision sticky-section--scroll-dwell about-page--vision-band">
+    <div class="sticky-section__sticky">
       <div class="sticky-section__content sticky-section__content--vision">
         <p class="eyebrow vision-sticky__eyebrow" data-animate="fade-in" data-i18n="home.vision.eyebrow">Where we're headed</p>
         <p class="vision-sticky__lines" data-animate="slide-up" data-delay="100">
