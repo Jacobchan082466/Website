@@ -624,6 +624,14 @@ section {
   z-index: -1;
 }
 
+/* Home: alternate band after Strategy & Structure (white) — team intro on gray */
+.page-hero--bg-secondary {
+  background: var(--color-bg-secondary);
+}
+.page-hero--bg-secondary .page-hero__bg {
+  background: var(--color-bg-secondary);
+}
+
 /* ── 8. Buttons ──────────────────────────────────────────── */
 .btn {
   display: inline-flex;
@@ -764,7 +772,8 @@ section {
 
 /* ── 11. Timeline — vertical centre-line style ────────── */
 .timeline-section {
-  background: var(--bg);
+  /* Band alternation: set per page (e.g. index) via inline --color-bg-secondary, or inherits */
+  background: var(--color-bg-secondary);
 }
 
 .timeline {
