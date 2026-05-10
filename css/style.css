@@ -1010,6 +1010,9 @@ section {
   max-width: var(--max-w);
   margin: 0 auto;
 }
+.chairman-hero__duo--single {
+  grid-template-columns: 1fr;
+}
 .chairman-hero__inner {
   display: flex;
   flex-direction: column;
@@ -1130,6 +1133,28 @@ section {
 .advisor-card__pubstat { font-size: var(--f-h4); font-weight: 800; line-height: 1; }
 .advisor-card__publabel { font-size: var(--f-xs); color: var(--txt-2); }
 .advisor-card__note   { font-size: var(--f-sm); color: var(--txt-2); line-height: 1.6; margin-top: var(--s16); }
+
+.advisor-card__accordion--nested {
+  margin-top: var(--s8);
+}
+.advisor-card__subhead {
+  font-size: var(--f-xs);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--txt-2);
+  margin: var(--s20) 0 var(--s8);
+}
+.advisor-card__milestones {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.advisor-card__research {
+  margin-top: var(--s16);
+}
+.advisor-card__accordion {
+  margin-top: var(--s16);
+}
 
 /* Team card */
 .team-card { text-align: center; align-items: center; }
