@@ -52,11 +52,10 @@ const TRANSLATIONS = {
     'home.cta.btn':           'Get in Touch',
     'home.cta.btn2':          'View Clinical Data',
 
-    /* ── Homepage: Market Opportunity ── */
-    'home.mkt.eyebrow':       'Market Opportunity',
-    'home.mkt.title':         'Burden,<span class="text-gradient"> Evidence &amp; Market Access</span>',
-    'home.mkt.desc':          '3.4 million new GI cancer cases annually (stomach, colorectum &amp; esophagus combined). For many early lesions, ESD is the gold standard for early-stage GI cancers. It is organ-preserving and incisionless — yet most patients still lack dependable access to endoscopic programmes at specialist quality and volume.',
-    'home.mkt.source':        'Source: GLOBOCAN 2020',
+    /* ── Homepage: Market / burden section ── */
+    'home.mkt.title':         '<span class="text-gradient">Market Access</span>',
+    'home.mkt.desc':          'Endoscopic submucosal dissection (ESD) can target early gastrointestinal cancers and superficial lesions with curative intent — organ-preserving and without open surgery, and a key option when disease is still early-stage. In multicentre data on early gastric cancer, curative resection was achieved in ~90% of patients, with at least five years of follow-up and favourable gastric cancer–specific survival across age groups (<a href="https://doi.org/10.3390/cancers14143311" style="color:var(--color-accent);">Yoshikawa et al., <em>Cancers</em> 2022</a>). An estimated 3.4 million new GI cancer cases arise each year (stomach, colorectum &amp; esophagus combined).',
+    'home.mkt.source':        'Sources: Yoshikawa et al., <em>Cancers</em> 2022 (ESD outcomes); GLOBOCAN 2020 (incidence).',
     'home.mkt.c1.title':      'Market of GI Cancer',
     'home.mkt.c1.text':       'Early gastrointestinal cancers are often still superficial when detected—so screening and diagnostic endoscopy can find them early and many lesions can be removed endoscopically before deep invasion or spread.',
     'home.mkt.c1.src':        'Screening &amp; therapeutic endoscopy literature',
@@ -71,13 +70,13 @@ const TRANSLATIONS = {
     'home.timeline.eyebrow':  'Milestones',
     'home.timeline.title':    'Pioneering<span class="text-gradient"> Endoluminal Robotics</span>',
     'home.tm2015': 'Government funding awarded — endoluminal robotics programme launched at CUHK.',
-    'home.tm2019': 'First prototype of dual-arm flexible endoscopic robotic system completed. US patent US10,111,722 granted.',
+    'home.tm2019': 'First prototype of dual-arm flexible endoscopic robotic system completed.',
     'home.tm2020': 'Multi-Scale Medical Robotics Center (MRC) Programme 1.1 — endoluminal robotics programme funded for 2020–2024.',
-    'home.tm2022': '2 patents granted (US10,111,722; ZL201320240576.6); 7 provisional patents filed; 4 in preparation; major system refinements in robotic arms, ESD knife and actuation mechanism.',
-    'home.tm2023': 'World-first robotic colorectal ESD clinical trial completed. Full clinical outcomes published — <a href="platform.html#clinical-evidence" style="color:var(--color-accent);">see Platform for details</a>.',
+    'home.tm2022': '7 provisional patents filed; additional patent applications ongoing.',
+    'home.tm2023': 'Received the Karl-Storz Harold Hopkins Golden Telescope Award at The Hamlyn Symposium on Medical Robotics, Imperial College London (2023). Received the Gold Medal with Congratulations of the Jury, a Gold Medal, and 2 Silver Medals at the International Exhibition of Inventions of Geneva (2023).',
     'home.tm2024': '2025 Version of EndoR Surgical System unveiled. Platform validated in live demonstration and pre-clinical studies — <a href="platform.html#clinical-evidence" style="color:var(--color-accent);">see Platform for details</a>.',
-    'home.tm2025': 'Company incorporated. Advanced RAISe+ Stage II public–private financing and seed financing toward first-in-human trial execution and regulatory preparation.',
-    'home.tm2026': 'First-in-human clinical trial (target: mid-2026). Robotic platform refinement and manufacturing partner engagement ongoing.',
+    'home.tm2025': 'Successful application for RAISe+ Stage II public–private financing. Clinical trial approved.',
+    'home.tm2026': 'First-in-human clinical trial (target: mid-2026). CUHK Shenzhen Qianhai office inaugurated.',
 
     /* ── Homepage: Strategy & Structure ── */
     'home.str.eyebrow':       'Strategy &amp; Structure',
@@ -377,11 +376,10 @@ const TRANSLATIONS = {
     'home.cta.btn':           '聯絡我們',
     'home.cta.btn2':          '查看臨床數據',
 
-    /* ── Homepage: Market Opportunity ── */
-    'home.mkt.eyebrow':       '市場機遇',
-    'home.mkt.title':         '疾病負擔、<span class="text-gradient">實證與市場准入</span>',
-    'home.mkt.desc':          '每年新增340萬例消化道癌症病例（胃癌、結直腸癌及食道癌合計）。對許多早期病灶，ESD 是早期消化道癌症的金標準治療之一。它能保留器官、且多數情況下無需外科切口——但大多數患者仍難獲得具專科品質與吞吐量的穩定內鏡服務。',
-    'home.mkt.source':        '資料來源：GLOBOCAN 2020',
+    /* ── Homepage: Market / burden section ── */
+    'home.mkt.title':         '<span class="text-gradient">市場准入</span>',
+    'home.mkt.desc':          '內鏡黏膜下剝離術（ESD）可針對早期胃腸道癌與表淺病灶，以根治為目標——保留器官、無需開腹，亦是早期階段的重要選項之一。多中心早期胃癌研究顯示，約九成可達根治性切除，並以至少五年追蹤，胃癌專屬存活表現良好且各年齡層相當（<a href="https://doi.org/10.3390/cancers14143311" style="color:var(--color-accent);">Yoshikawa 等，《Cancers》2022</a>）。全球每年估計新增約340 萬例消化道癌症（胃、結直腸與食道癌合計）。',
+    'home.mkt.source':        '資料來源：Yoshikawa 等，《Cancers》2022（ESD 成果）；GLOBOCAN 2020（發病數）。',
     'home.mkt.c1.title':      '消化道癌症市場',
     'home.mkt.c1.text':       '不少消化道癌在發現時仍屬表淺期——篩查與診斷內鏡可及早偵測，許多病變亦可在深部侵襲或轉移前以內鏡方式切除。',
     'home.mkt.c1.src':        '篩查與治療性內鏡文獻',
@@ -396,13 +394,13 @@ const TRANSLATIONS = {
     'home.timeline.eyebrow':  '里程碑',
     'home.timeline.title':    '內腔機器人<span class="text-gradient">技術先驅之路</span>',
     'home.tm2015': '獲政府資助——在中文大學正式啟動內腔機器人研發計劃。',
-    'home.tm2019': '完成雙臂柔性內鏡機器人系統首個原型，獲得美國專利 US10,111,722。',
+    'home.tm2019': '完成雙臂柔性內鏡機器人系統首個原型。',
     'home.tm2020': '多尺度醫療機器人中心（MRC）1.1 計畫——內腔機器人獲批多年期資助（2020–2024）。',
-    'home.tm2022': '2 項專利已獲授權（US10,111,722；ZL201320240576.6）；7 項臨時專利已提交；4 項備案中；完成機器人臂、ESD 刀具和驅動機構的重大系統升級。',
-    'home.tm2023': '世界首個機器人結直腸 ESD 臨床試驗完成，臨床數據已正式發表。<a href="platform.html#clinical-evidence" style="color:var(--color-accent);">詳見 Platform 頁面</a>。',
+    'home.tm2022': '7 項臨時專利已提交；更多專利申請持續進行。',
+    'home.tm2023': '於倫敦帝國理工舉辦之 Hamlyn 醫療機器人研討會（2023）獲頒 Karl-Storz Harold Hopkins 黃金望遠鏡獎；同年於日內瓦國際發明展獲評審團特別嘉許金獎，並另獲金獎及銀獎 2 項。',
     'home.tm2024': '發布 EndoR 手術系統 2025 版本。平台完成現場演示及臨床前實驗驗證——<a href="platform.html#clinical-evidence" style="color:var(--color-accent);">詳見 Platform 頁面</a>。',
-    'home.tm2025': '公司正式成立。推進 RAISe+ 第二期公帑與私人共同投資安排，並推動種子輪融資，以支援首次人體試驗執行與監管準備。',
-    'home.tm2026': '首次人體臨床試驗（目標：2026 年中）。機器人平台持續優化，製造合作夥伴接洽進行中。',
+    'home.tm2025': '成功申請 RAISe+ 第二期公帑與私人共同投資安排；臨床試驗已獲批准。',
+    'home.tm2026': '首次人體臨床試驗（目標：2026 年中）。香港中文大學深圳前海辦公室落成。',
 
     /* ── Homepage: Strategy & Structure ── */
     'home.str.eyebrow':       '戰略與架構',
@@ -695,11 +693,10 @@ const TRANSLATIONS = {
     'home.cta.btn':           '联系我们',
     'home.cta.btn2':          '查看临床数据',
 
-    /* ── Homepage: Market Opportunity ── */
-    'home.mkt.eyebrow':       '市场机遇',
-    'home.mkt.title':         '疾病负担、<span class="text-gradient">实证与市场准入</span>',
-    'home.mkt.desc':          '每年新增340万例消化道癌症病例（胃癌、结直肠癌及食道癌合计）。对许多早期病灶，ESD是早期消化道癌症的金标准治疗之一。它能保留器官，且多数情况下无需外科切口——但大多数患者仍难获得具专科质量与吞吐量的稳定内镜服务。',
-    'home.mkt.source':        '数据来源：GLOBOCAN 2020',
+    /* ── Homepage: Market / burden section ── */
+    'home.mkt.title':         '<span class="text-gradient">市场准入</span>',
+    'home.mkt.desc':          '内镜黏膜下剥离术（ESD）可针对早期胃肠道癌与表浅病灶，以根治为目标——保留器官、无需开腹，亦是早期阶段的重要选项之一。多中心早期胃癌研究显示，约九成可达根治性切除，并以至少五年随访，胃癌专属存活表现良好且各年龄层相当（<a href="https://doi.org/10.3390/cancers14143311" style="color:var(--color-accent);">Yoshikawa 等，《Cancers》2022</a>）。全球每年估计新增约340 万例消化道癌症（胃、结直肠与食道癌合计）。',
+    'home.mkt.source':        '数据来源：Yoshikawa 等，《Cancers》2022（ESD 成果）；GLOBOCAN 2020（发病数）。',
     'home.mkt.c1.title':      '消化道癌症市场',
     'home.mkt.c1.text':       '不少消化道癌在发现时仍属表浅期——筛查与诊断内镜可及早发现，许多病变亦可在深部侵袭或转移前以内镜方式切除。',
     'home.mkt.c1.src':        '筛查与治疗性内镜文献',
@@ -714,13 +711,13 @@ const TRANSLATIONS = {
     'home.timeline.eyebrow':  '里程碑',
     'home.timeline.title':    '腔内机器人<span class="text-gradient">技术先驱之路</span>',
     'home.tm2015': '获政府资助——在中文大学正式启动内腔机器人研发计划。',
-    'home.tm2019': '完成双臂柔性内镜机器人系统首个原型，获得美国专利 US10,111,722。',
+    'home.tm2019': '完成双臂柔性内镜机器人系统首个原型。',
     'home.tm2020': '多尺度医疗机器人中心（MRC）1.1计划——内腔机器人获批多年期资助（2020–2024）。',
-    'home.tm2022': '2项专利已获授权（US10,111,722；ZL201320240576.6）；7项临时专利已提交；4项备案中；完成机器人臂、ESD刀具和驱动机构的重大系统升级。',
-    'home.tm2023': '世界首个机器人结直肠 ESD 临床试验完成，临床数据已正式发表。<a href="platform.html#clinical-evidence" style="color:var(--color-accent);">详见 Platform 页面</a>。',
+    'home.tm2022': '7项临时专利已提交；更多专利申请持续推进。',
+    'home.tm2023': '于伦敦帝国理工举办的 Hamlyn 医疗机器人研讨会（2023）荣获 Karl-Storz Harold Hopkins 黄金望远镜奖；同年于日内瓦国际发明展获评审团特别嘉许金奖，并另获金奖及银奖 2 项。',
     'home.tm2024': '发布EndoR手术系统2025版本。平台完成现场演示及临床前实验验证——<a href="platform.html#clinical-evidence" style="color:var(--color-accent);">详见Platform页面</a>。',
-    'home.tm2025': '公司正式成立。推进RAISe+第二期政府与私人共同投资安排，并推动种子轮融资，以支持首次人体试验执行与监管准备。',
-    'home.tm2026': '首次人体临床试验（目标：2026年中）。机器人平台持续优化，制造合作伙伴接洽进行中。',
+    'home.tm2025': '成功申请RAISe+第二期政府与私人共同投资安排；临床试验已获批准。',
+    'home.tm2026': '首次人体临床试验（目标：2026年中）。香港中文大学深圳前海办公室落成。',
 
     /* ── Homepage: Strategy & Structure ── */
     'home.str.eyebrow':       '战略与架构',
