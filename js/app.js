@@ -214,8 +214,27 @@
     }
   }
 
+  /* --- SAB cards: surname A–Z --- */
+  function initAdvisorySort() {
+    const grid = document.querySelector('#advisory .grid--2');
+    if (!grid) return;
+
+    const cards = [...grid.querySelectorAll('.advisor-card[data-surname]')];
+    if (cards.length < 2) return;
+
+    cards.sort((a, b) =>
+      a.dataset.surname.localeCompare(b.dataset.surname, 'en', { sensitivity: 'base' })
+    );
+
+    cards.forEach((card, i) => {
+      grid.appendChild(card);
+      card.setAttribute('data-delay', String(100 + i * 50));
+    });
+  }
+
   /* --- Initialize --- */
   function init() {
+    initAdvisorySort();
     initPageTransition();
     initNav();
     initMobileMenu();

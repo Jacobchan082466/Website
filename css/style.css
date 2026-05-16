@@ -549,27 +549,45 @@ section {
   display: block;
 }
 
-/* Vignette: transparent top-left → dark bottom-right (text on right) */
+/* Vignette: centre readout for awards + darker bottom-right for caption */
 .hero__photo-vignette {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    135deg,
-    transparent 25%,
-    rgba(6,10,22,0.45) 60%,
-    rgba(6,10,22,0.85) 100%
-  );
+  background:
+    radial-gradient(ellipse 75% 55% at 50% 48%, rgba(6, 10, 22, 0.62) 0%, transparent 72%),
+    linear-gradient(
+      135deg,
+      transparent 25%,
+      rgba(6, 10, 22, 0.45) 60%,
+      rgba(6, 10, 22, 0.85) 100%
+    );
   pointer-events: none;
 }
 
-/* Text block — bottom-right corner */
+/* Awards — centred on hero image */
+.hero__awards-center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: min(98vw, 960px);
+  max-width: 100%;
+  text-align: center;
+  padding: 0 var(--s8);
+  pointer-events: none;
+}
+
+/* Text block — bottom-right corner (slightly scaled to privilege centre awards) */
 .hero__photo-caption {
   position: absolute;
-  bottom: 8%;
+  bottom: 7%;
   right: 5%;
-  max-width: 480px;
+  max-width: 460px;
   text-align: right;
   padding: 0 var(--px);
+  transform: scale(0.94);
+  transform-origin: bottom right;
 }
 
 .hero__photo-brand {
@@ -582,28 +600,48 @@ section {
 }
 
 .hero__photo-title {
-  font-size: clamp(1.8rem, 3.5vw, 3rem);
+  font-size: clamp(1.55rem, 3vw, 2.65rem);
   font-weight: 700;
   color: #fff;
   line-height: 1.15;
   letter-spacing: -0.02em;
   text-shadow: 0 2px 16px rgba(0,0,0,0.4);
-  margin-bottom: var(--s16);
+  margin-bottom: var(--s14);
 }
 
 .hero__photo-sub {
   font-size: var(--f-sm);
   color: rgba(255,255,255,0.78);
-  line-height: 1.65;
+  line-height: 1.6;
   text-shadow: 0 1px 8px rgba(0,0,0,0.35);
-  margin-bottom: var(--s24);
+  margin-bottom: var(--s20);
+}
+
+.hero__awards-center .hero__award-headline {
+  font-size: clamp(1.15rem, 3.2vw, 2rem);
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+  color: #fff;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.55);
+  margin: 0 0 var(--s14);
+  white-space: nowrap;
+}
+
+.hero__awards-center .hero__award-headline:last-child {
+  margin-bottom: 0;
 }
 
 .hero__photo-cta {
   display: flex;
-  gap: var(--s12);
+  gap: var(--s8);
   flex-wrap: wrap;
   justify-content: flex-end;
+}
+
+.hero__photo-cta .btn {
+  padding: 9px 18px;
+  font-size: 14px;
 }
 
 /* Page hero (inner pages) */
@@ -725,13 +763,19 @@ section {
   margin-top: var(--s12);
 }
 
-/* About — principles band (hero gradient ends on --bg-secondary; same here avoids a muddy seam and lets white cards read clearly) */
+/* About — principles band (grey; alternates with white hero above and mission sticky below) */
 .about-principles {
-  background: var(--bg-secondary);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: var(--space-3xl) 0;
+  background: var(--color-bg-secondary);
+  box-sizing: border-box;
 }
 
 [data-theme="dark"] .about-principles {
-  background: var(--bg);
+  background: var(--color-bg-secondary);
 }
 
 .about-principles .card {
@@ -1510,18 +1554,25 @@ main { flex: 1; }
   /* Contact single column */
   #contact-main .grid--2 { grid-template-columns: 1fr !important; gap: var(--s40); }
 
-  /* Hero — keep same right-aligned style as desktop, just scale down */
-  .hero__photo-caption { 
-    bottom: 5%; 
-    right: 5%; 
-    max-width: 60%;
-    padding: 0 var(--s16);
+  /* Hero — right caption slightly smaller; centre awards at full scale */
+  .hero__photo-caption {
+    bottom: 5%;
+    right: 4%;
+    max-width: 56%;
+    padding: 0 var(--s12);
+    transform: scale(0.86);
+    transform-origin: bottom right;
   }
   .hero__photo-brand { font-size: 9px; margin-bottom: var(--s4); letter-spacing: 0.08em; }
-  .hero__photo-title { font-size: clamp(1.1rem, 4vw, 1.6rem); margin-bottom: var(--s10); }
+  .hero__photo-title { font-size: clamp(1.15rem, 3.8vw, 1.55rem); margin-bottom: var(--s10); }
   .hero__photo-sub { font-size: 11px; line-height: 1.5; margin-bottom: var(--s12); }
+  .hero__awards-center {
+    top: 44%;
+    width: min(98vw, 100%);
+  }
+  .hero__awards-center .hero__award-headline { margin-bottom: var(--s10); }
   .hero__photo-cta { gap: var(--s8); }
-  .hero__photo-cta .btn { padding: 4px 12px; font-size: 10px; }
+  .hero__photo-cta .btn { padding: 6px 13px; font-size: 11px; }
 }
 
 /* ─ Mobile portrait (≤430px) ─ */
@@ -1574,12 +1625,18 @@ main { flex: 1; }
   .hero__photo-cta { flex-direction: column; }
   .hero__photo-cta .btn { width: 100%; justify-content: center; }
   
-  /* Hero — even smaller on portrait */
-  .hero__photo-caption { max-width: 80%; bottom: 4%; }
+  /* Hero — right caption on portrait */
+  .hero__photo-caption {
+    max-width: 62%;
+    bottom: 4%;
+    transform: scale(0.82);
+  }
   .hero__photo-brand { font-size: 8px; }
-  .hero__photo-title { font-size: clamp(1rem, 4.5vw, 1.3rem); }
-  .hero__photo-sub { font-size: 10px; line-height: 1.45; }
-  .hero__photo-cta .btn { font-size: 9px; padding: 3px 11px; }
+  .hero__photo-title { font-size: clamp(1rem, 4.2vw, 1.25rem); }
+  .hero__photo-sub { font-size: 10px; line-height: 1.45; margin-bottom: var(--s10); }
+  .hero__awards-center { top: 40%; }
+  .hero__awards-center .hero__award-headline { margin-bottom: var(--s8); }
+  .hero__photo-cta .btn { font-size: 10px; padding: 5px 12px; }
   
   .home-cta-sticky__actions { flex-direction: column; }
   .home-cta-sticky__btn { width: 100%; justify-content: center; }
