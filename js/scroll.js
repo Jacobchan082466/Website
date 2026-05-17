@@ -106,11 +106,12 @@
 
         const lines = section.querySelectorAll('.sticky-text-line');
         if (lines.length) {
-          const step = 1 / lines.length;
+          /* Cumulative reveal: scroll down fills each line; earlier lines stay active */
+          const n = lines.length;
+          const fillProgress = Math.min(1, Math.max(0, progress));
           lines.forEach((line, i) => {
-            const lineStart = i * step;
-            const lineEnd = lineStart + step;
-            if (progress >= lineStart && progress < lineEnd + 0.1) {
+            const revealAt = i / n;
+            if (fillProgress >= revealAt) {
               line.classList.add('is-active');
             } else {
               line.classList.remove('is-active');

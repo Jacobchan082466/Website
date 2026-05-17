@@ -40,7 +40,7 @@ const TRANSLATIONS = {
 
     /* ── Homepage ── */
     'home.hero.title':      '<span class="text-gradient">The Robotic Platform That<br>Makes ESD Accessible</span>',
-    'home.hero.subtitle':   '— A dual-arm flexible endoscopic robot built to unlock the global ESD market.',
+    'home.hero.subtitle':   '— A dual-arm flexible endoscopic robot platform built to unlock the global ESD market.',
     'home.hero.cta1':       'Explore the System',
     'home.hero.cta2':       'Clinical Evidence',
     'home.hero.awards.hamlyn': 'Hamlyn Golden Telescope Award',
@@ -207,6 +207,7 @@ const TRANSLATIONS = {
     'cases.trial.eyebrow': 'Published Clinical Trial',
     'cases.trial.title':   'World\'s First Robotic<span class="text-gradient"> Colorectal ESD Trial</span>',
     'cases.trial.pub':     'Publication',
+    'cases.trial.citation': 'Chiu PW et al. <span class="text-gradient">Endoscopy</span> 2024',
     'cases.trial.pi':      'Prof. Philip Chiu, Prince of Wales Hospital, CUHK',
     'cases.trial.site':    'Endoscopy Centre, Prince of Wales Hospital, The Chinese University of Hong Kong',
     'cases.trial.design':  'Prospective single-arm study — the peer-reviewed publication reports technical success, resection completeness, safety events, and dissection time; key figures are summarised above.',
@@ -333,7 +334,6 @@ const TRANSLATIONS = {
     'contact.info.hk.value': '05-15, 13A/F South Tower, World Finance Center, Harbour City, 17 Canton Road, Tsim Sha Tsui, Kowloon, Hong Kong',
     'contact.info.qh.label': 'Shenzhen Qianhai',
     'contact.info.qh.value': 'Room 502C6, Building B, North District, Qianhai Shenzhen-Hong Kong Youth Innovation and Entrepreneur Hub, 5188 Menghai Avenue, Nanshan District, Shenzhen, Guangdong Province, China',
-    'contact.info.phone.label':'Phone',
   },
 
   /* ── Traditional Chinese ──────────────────── */
@@ -364,7 +364,7 @@ const TRANSLATIONS = {
     'footer.terms':     '使用條款',
     'footer.copyright': '© 2026 EndoR. All rights reserved.',
     'home.hero.title':      '<span class="text-gradient">讓 ESD 觸手可及<br>的機器人平台</span>',
-    'home.hero.subtitle':   '——專為打開全球 ESD 市場而生的雙臂柔性內鏡機器人。',
+    'home.hero.subtitle':   '——專為打開全球 ESD 市場而生的雙臂柔性內鏡機器人平台。',
     'home.hero.cta1':       '探索系統',
     'home.hero.cta2':       '臨床實證',
     'home.hero.awards.hamlyn': 'Hamlyn 黃金望遠鏡獎',
@@ -527,6 +527,7 @@ const TRANSLATIONS = {
     'cases.trial.eyebrow': '已發表臨床試驗',
     'cases.trial.title':   '全球首個機器人<span class="text-gradient">大腸 ESD 試驗</span>',
     'cases.trial.pub':     '發表',
+    'cases.trial.citation': 'Chiu PW 等 <span class="text-gradient">Endoscopy</span> 2024',
     'cases.trial.pi':      'Prof. Philip Chiu，香港中文大學威爾斯親王醫院',
     'cases.trial.site':    '香港中文大學威爾斯親王醫院內鏡中心',
     'cases.trial.design':  '前瞻性單臂研究——已發表論文載有技術成功、切除完整性、安全性事件與剝離時間等；本頁上方為重點摘要。',
@@ -650,7 +651,6 @@ const TRANSLATIONS = {
     'contact.info.hk.value': '香港九龍尖沙咀廣東道17號海港城環球金融中心南座13A樓05-15室',
     'contact.info.qh.label': '深圳前海',
     'contact.info.qh.value': '深圳前海夢海大道5188號深港青年夢工廠北區B棟502C6',
-    'contact.info.phone.label':'電話',
   },
 
   /* ── Simplified Chinese ───────────────────── */
@@ -681,7 +681,7 @@ const TRANSLATIONS = {
     'footer.terms':     '使用条款',
     'footer.copyright': '© 2026 EndoR. All rights reserved.',
     'home.hero.title':      '<span class="text-gradient">让 ESD 触手可及<br>的机器人平台</span>',
-    'home.hero.subtitle':   '——专为打开全球 ESD 市场而生的双臂柔性内镜机器人。',
+    'home.hero.subtitle':   '——专为打开全球 ESD 市场而生的双臂柔性内镜机器人平台。',
     'home.hero.cta1':       '探索系统',
     'home.hero.cta2':       '临床实证',
     'home.hero.awards.hamlyn': 'Hamlyn 黄金望远镜奖',
@@ -844,6 +844,7 @@ const TRANSLATIONS = {
     'cases.trial.eyebrow': '已发表临床试验',
     'cases.trial.title':   '全球首个机器人<span class="text-gradient">大肠ESD试验</span>',
     'cases.trial.pub':     '发表',
+    'cases.trial.citation': 'Chiu PW等 <span class="text-gradient">Endoscopy</span> 2024',
     'cases.trial.pi':      'Prof. Philip Chiu，香港中文大学威尔士亲王医院',
     'cases.trial.site':    '香港中文大学威尔士亲王医院内镜中心',
     'cases.trial.design':  '前瞻性单臂研究——已发表论文载有技术成功、切除完整性、安全性事件与剥离时间等；本页上方为重点摘要。',
@@ -967,6 +968,5 @@ const TRANSLATIONS = {
     'contact.info.hk.value': '香港九龙尖沙咀广东道17号海港城环球金融中心南座13A楼05-15室',
     'contact.info.qh.label': '深圳前海',
     'contact.info.qh.value': '深圳前海梦海大道5188号深港青年梦工厂北区B栋502C6',
-    'contact.info.phone.label':'电话',
   }
 };
