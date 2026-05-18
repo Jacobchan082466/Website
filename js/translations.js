@@ -57,11 +57,10 @@ const TRANSLATIONS = {
 
     /* ── Homepage: Market / burden section ── */
     'home.mkt.title':         '<span class="text-gradient">Market Access</span>',
-    'home.mkt.desc':          'Endoscopic submucosal dissection (ESD) can target early gastrointestinal cancers and superficial lesions with curative intent — organ-preserving and without open surgery, and a key option when disease is still early-stage. In multicentre data on early gastric cancer, curative resection was achieved in ~90% of patients, with at least five years of follow-up and favourable gastric cancer–specific survival across age groups (<a href="https://doi.org/10.3390/cancers14143311" style="color:var(--color-accent);">Yoshikawa et al., <em>Cancers</em> 2022</a>). An estimated 3.4 million new GI cancer cases arise each year (stomach, colorectum &amp; esophagus combined).',
-    'home.mkt.source':        'Sources: Yoshikawa et al., <em>Cancers</em> 2022 (ESD outcomes); GLOBOCAN 2020 (incidence).',
+    'home.mkt.desc':          'Endoscopic submucosal dissection (ESD) offers curative, organ-preserving treatment for early gastrointestinal cancers and superficial lesions—without open surgery, when disease is still early-stage.',
     'home.mkt.c1.title':      'Market of GI Cancer',
-    'home.mkt.c1.text':       'Early gastrointestinal cancers are often still superficial when detected—so screening and diagnostic endoscopy can find them early and many lesions can be removed endoscopically before deep invasion or spread.',
-    'home.mkt.c1.src':        'Screening &amp; therapeutic endoscopy literature',
+    'home.mkt.c1.text':       'An estimated 3.4 million new GI cancer cases arise each year (stomach, colorectum &amp; esophagus combined; GLOBOCAN 2020). In multicentre early gastric cancer data, curative resection was achieved in ~90% of patients, with at least five years of follow-up and favourable cancer-specific survival (<a href="https://doi.org/10.3390/cancers14143311" style="color:var(--color-accent);">Yoshikawa et al., <em>Cancers</em> 2022</a>).',
+    'home.mkt.c1.src':        'GLOBOCAN 2020; Yoshikawa et al., <em>Cancers</em> 2022',
     'home.mkt.c2.title':      'US Push for ESD Reimbursement Code',
     'home.mkt.c2.text':       'CMS established dedicated hospital reimbursement (HCPCS C9779) for ESD in 2024, averaging USD 3,649 per case. USPSTF lowered screening age from 50 to 45 in 2021 — adding millions to the eligible population overnight.',
     'home.mkt.c2.src':        'USPSTF 2021 Final Recommendation &amp; CMS 2024 Payment Policy',
@@ -384,11 +383,10 @@ const TRANSLATIONS = {
 
     /* ── Homepage: Market / burden section ── */
     'home.mkt.title':         '<span class="text-gradient">市場准入</span>',
-    'home.mkt.desc':          '內鏡黏膜下剝離術（ESD）可針對早期胃腸道癌與表淺病灶，以根治為目標——保留器官、無需開腹，亦是早期階段的重要選項之一。多中心早期胃癌研究顯示，約九成可達根治性切除，並以至少五年追蹤，胃癌專屬存活表現良好且各年齡層相當（<a href="https://doi.org/10.3390/cancers14143311" style="color:var(--color-accent);">Yoshikawa 等，《Cancers》2022</a>）。全球每年估計新增約340 萬例消化道癌症（胃、結直腸與食道癌合計）。',
-    'home.mkt.source':        '資料來源：Yoshikawa 等，《Cancers》2022（ESD 成果）；GLOBOCAN 2020（發病數）。',
+    'home.mkt.desc':          '內鏡黏膜下剝離術（ESD）可針對早期胃腸道癌與表淺病灶，以根治為目標——保留器官、無需開腹，適用於仍屬早期階段的病變。',
     'home.mkt.c1.title':      '消化道癌症市場',
-    'home.mkt.c1.text':       '不少消化道癌在發現時仍屬表淺期——篩查與診斷內鏡可及早偵測，許多病變亦可在深部侵襲或轉移前以內鏡方式切除。',
-    'home.mkt.c1.src':        '篩查與治療性內鏡文獻',
+    'home.mkt.c1.text':       '全球每年估計新增約 340 萬例消化道癌症（胃、結直腸與食道癌合計；GLOBOCAN 2020）。多中心早期胃癌研究顯示，約九成可達根治性切除，並以至少五年追蹤，胃癌專屬存活表現良好（<a href="https://doi.org/10.3390/cancers14143311" style="color:var(--color-accent);">Yoshikawa 等，《Cancers》2022</a>）。',
+    'home.mkt.c1.src':        'GLOBOCAN 2020；Yoshikawa 等，《Cancers》2022',
     'home.mkt.c2.title':      '美國力推ESD專用報銷代碼',
     'home.mkt.c2.text':       'CMS於2024年為ESD設立專項住院報銷（HCPCS C9779），平均每例3,649美元。USPSTF於2021年將篩查起始年齡由50歲降至45歲，一夜之間新增數百萬潛在患者。',
     'home.mkt.c2.src':        'USPSTF 2021年最終建議書及CMS 2024年支付政策',
@@ -704,11 +702,10 @@ const TRANSLATIONS = {
 
     /* ── Homepage: Market / burden section ── */
     'home.mkt.title':         '<span class="text-gradient">市场准入</span>',
-    'home.mkt.desc':          '内镜黏膜下剥离术（ESD）可针对早期胃肠道癌与表浅病灶，以根治为目标——保留器官、无需开腹，亦是早期阶段的重要选项之一。多中心早期胃癌研究显示，约九成可达根治性切除，并以至少五年随访，胃癌专属存活表现良好且各年龄层相当（<a href="https://doi.org/10.3390/cancers14143311" style="color:var(--color-accent);">Yoshikawa 等，《Cancers》2022</a>）。全球每年估计新增约340 万例消化道癌症（胃、结直肠与食道癌合计）。',
-    'home.mkt.source':        '数据来源：Yoshikawa 等，《Cancers》2022（ESD 成果）；GLOBOCAN 2020（发病数）。',
+    'home.mkt.desc':          '内镜黏膜下剥离术（ESD）可针对早期胃肠道癌与表浅病灶，以根治为目标——保留器官、无需开腹，适用于仍属早期阶段的病变。',
     'home.mkt.c1.title':      '消化道癌症市场',
-    'home.mkt.c1.text':       '不少消化道癌在发现时仍属表浅期——筛查与诊断内镜可及早发现，许多病变亦可在深部侵袭或转移前以内镜方式切除。',
-    'home.mkt.c1.src':        '筛查与治疗性内镜文献',
+    'home.mkt.c1.text':       '全球每年估计新增约 340 万例消化道癌症（胃、结直肠与食道癌合计；GLOBOCAN 2020）。多中心早期胃癌研究显示，约九成可达根治性切除，并以至少五年随访，胃癌专属存活表现良好（<a href="https://doi.org/10.3390/cancers14143311" style="color:var(--color-accent);">Yoshikawa 等，《Cancers》2022</a>）。',
+    'home.mkt.c1.src':        'GLOBOCAN 2020；Yoshikawa 等，《Cancers》2022',
     'home.mkt.c2.title':      '美国力推ESD专用报销代码',
     'home.mkt.c2.text':       'CMS于2024年为ESD设立专项住院报销（HCPCS C9779），平均每例3,649美元。USPSTF于2021年将筛查起始年龄由50岁降至45岁，一夜之间新增数百万潜在患者。',
     'home.mkt.c2.src':        'USPSTF 2021年最终建议书及CMS 2024年支付政策',

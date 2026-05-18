@@ -1554,13 +1554,12 @@ main { flex: 1; }
   /* Contact single column */
   #contact-main .grid--2 { grid-template-columns: 1fr !important; gap: var(--s40); }
 
-  /* Hero — stack awards above caption (no absolute overlap on narrow screens) */
+  /* Hero — awards vertically centred in space above caption */
   .hero__photo-wrap {
     aspect-ratio: auto;
     min-height: clamp(520px, 100svh, 760px);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    display: grid;
+    grid-template-rows: 1fr auto;
   }
   .hero__photo-img,
   .hero__photo-vignette {
@@ -1580,15 +1579,18 @@ main { flex: 1; }
     left: auto;
     top: auto;
     transform: none;
+    grid-row: 1;
+    align-self: center;
+    justify-self: center;
     width: 100%;
-    margin-top: calc(var(--nav-safe) + var(--s8));
-    padding: 0 var(--px) var(--s12);
+    margin: 0;
+    padding: var(--nav-safe) var(--px) var(--s12);
     z-index: 2;
-    flex-shrink: 0;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
   }
   .hero__awards-center .hero__award-headline {
     white-space: normal;
@@ -1604,13 +1606,13 @@ main { flex: 1; }
     bottom: auto;
     right: auto;
     transform: none;
+    grid-row: 2;
     max-width: 100%;
     width: 100%;
     text-align: center;
     padding: var(--s12) var(--px) var(--s24);
     z-index: 2;
-    flex-shrink: 0;
-    margin-top: auto;
+    margin: 0;
   }
   .hero__photo-brand { font-size: 9px; margin-bottom: var(--s4); letter-spacing: 0.08em; }
   .hero__photo-title { font-size: clamp(1.15rem, 3.8vw, 1.55rem); margin-bottom: var(--s10); }
