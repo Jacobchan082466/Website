@@ -6,18 +6,42 @@
 (function () {
   'use strict';
 
-  /* --- Intersection Observer: animate elements on scroll --- */
+  const revealPending = new WeakMap();
+  const counterRuns = new WeakMap();
+
+  function prefersReducedMotion() {
+    return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  }
+
+  /* --- Intersection Observer: animate elements on scroll (replays when re-entering viewport) --- */
   function initScrollAnimations() {
     const elements = document.querySelectorAll('[data-animate]');
     if (!elements.length) return;
 
     function reveal(target) {
+      if (prefersReducedMotion()) {
+        target.classList.add('is-visible');
+        return;
+      }
+
+      const token = { cancelled: false };
+      revealPending.set(target, token);
+
       /* Two rAFs: ensure the browser has painted opacity/transform “off” state before we add .is-visible, so CSS transitions actually run. */
       requestAnimationFrame(() => {
         requestAnimationFrame(() => {
+          if (token.cancelled) return;
           target.classList.add('is-visible');
+          revealPending.delete(target);
         });
       });
+    }
+
+    function hide(target) {
+      const token = revealPending.get(target);
+      if (token) token.cancelled = true;
+      revealPending.delete(target);
+      target.classList.remove('is-visible');
     }
 
     const observer = new IntersectionObserver(
@@ -25,7 +49,8 @@
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             reveal(entry.target);
-            observer.unobserve(entry.target);
+          } else {
+            hide(entry.target);
           }
         });
       },
@@ -156,7 +181,7 @@
     updateSticky();
   }
 
-  /* --- Counter animation --- */
+  /* --- Counter animation (replays when re-entering viewport) --- */
   function initCounters() {
     const counters = document.querySelectorAll('[data-counter]');
     if (!counters.length) return;
@@ -166,21 +191,49 @@
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             animateCounter(entry.target);
-            observer.unobserve(entry.target);
+          } else {
+            resetCounter(entry.target);
           }
         });
       },
-      { threshold: 0.5 }
+      { threshold: 0.35 }
     );
 
-    counters.forEach((el) => observer.observe(el));
+    counters.forEach((el) => {
+      resetCounter(el);
+      observer.observe(el);
+    });
+  }
+
+  function formatCounterValue(el, value) {
+    const suffix = el.dataset.suffix || '';
+    const prefix = el.dataset.prefix || '';
+    return prefix + value.toLocaleString() + suffix;
+  }
+
+  function resetCounter(el) {
+    const run = counterRuns.get(el);
+    if (run) {
+      run.cancelled = true;
+      if (run.rafId) cancelAnimationFrame(run.rafId);
+      counterRuns.delete(el);
+    }
+    el.textContent = formatCounterValue(el, 0);
   }
 
   function animateCounter(el) {
     const target = parseInt(el.dataset.counter, 10);
-    const suffix = el.dataset.suffix || '';
-    const prefix = el.dataset.prefix || '';
     const duration = parseInt(el.dataset.duration, 10) || 2000;
+
+    resetCounter(el);
+
+    if (prefersReducedMotion()) {
+      el.textContent = formatCounterValue(el, target);
+      return;
+    }
+
+    const run = { cancelled: false, rafId: null };
+    counterRuns.set(el, run);
     const start = performance.now();
 
     function easeOutQuart(t) {
@@ -188,19 +241,23 @@
     }
 
     function update(now) {
+      if (run.cancelled) return;
+
       const elapsed = now - start;
       const rawProgress = Math.min(elapsed / duration, 1);
       const progress = easeOutQuart(rawProgress);
       const current = Math.round(progress * target);
 
-      el.textContent = prefix + current.toLocaleString() + suffix;
+      el.textContent = formatCounterValue(el, current);
 
       if (rawProgress < 1) {
-        requestAnimationFrame(update);
+        run.rafId = requestAnimationFrame(update);
+      } else {
+        counterRuns.delete(el);
       }
     }
 
-    requestAnimationFrame(update);
+    run.rafId = requestAnimationFrame(update);
   }
 
   /* --- 3D card tilt --- */

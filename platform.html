@@ -193,11 +193,17 @@
       <div class="text-center" style="margin-bottom: var(--space-2xl);">
         <h2 data-animate="slide-up" data-delay="100" data-i18n="cases.trial.title">World's First Robotic<span class="text-gradient"> Colorectal ESD Trial</span></h2>
       </div>
-      <div class="grid grid--2" style="align-items: stretch;">
+      <div class="grid" style="grid-template-columns: 1fr; gap: var(--space-xl); max-width: 56rem; margin-inline: auto;">
         <div class="card" data-animate="slide-up" data-delay="100">
+          <figure style="margin: 0 0 var(--space-md); border-radius: var(--r-md); overflow: hidden;">
+            <img src="pictures/图片_20260518090621_1_2.png"
+                 alt="Hong Kong Live Endoscopy, December 2024 — live demonstration in theatre with endoscopic view"
+                 style="display: block; width: 100%; height: auto;"
+                 loading="lazy">
+          </figure>
           <p class="eyebrow" style="margin-bottom: var(--space-sm);" data-i18n="cases.trial.demo">Live Demonstration</p>
           <h3 class="card__title" data-i18n="cases.trial.demo.title">Hong Kong Live Endoscopy — December 2024</h3>
-          <p class="card__text" data-i18n="cases.trial.demo.text">Demonstrated live to an international audience at Hong Kong Live Endoscopy, December 2024 — a major public milestone for the platform.</p>
+          <p class="card__text" data-i18n="cases.trial.demo.text">At Hong Kong Live Endoscopy in December 2024, the EndoR Surgical System was demonstrated live on site — part of an international workshop that draws 600+ delegates from more than 20 countries and regions each year, marking a major public milestone for the platform.</p>
         </div>
         <div class="card" data-animate="slide-up" data-delay="200">
           <p class="eyebrow" style="margin-bottom: var(--space-sm);" data-i18n="cases.trial.preclinical">Pre-clinical Validation</p>
@@ -299,8 +305,37 @@
     </div>
   </section>
 
+  <!-- Robotic Workstation -->
+  <section id="robotic-control">
+    <div class="container">
+      <div class="text-center" style="margin-bottom: var(--space-2xl);">
+        <p class="eyebrow" data-animate="fade-in" data-i18n="plat.control.eyebrow">Robotic Workstation</p>
+        <h2 data-animate="slide-up" data-delay="100" data-i18n="plat.control.title">Fully Robotized Control<span class="text-gradient"> — Intuitive by Design</span></h2>
+        <p class="text-secondary" style="max-width: 720px; margin: var(--space-md) auto 0; font-size: var(--fs-body);" data-animate="blur-in" data-delay="150" data-i18n="plat.control.lead">How the master console, haptic controls, and workflow design make robotized ESD intuitive in daily practice.</p>
+      </div>
+      <div class="grid grid--2" style="gap: var(--space-xl);">
+        <div class="card" data-animate="slide-up" data-delay="100">
+          <p style="font-size: var(--fs-h4); font-weight: var(--fw-bold); color: var(--color-accent); margin: 0 0 var(--space-sm);" data-i18n="plat.control.c1.value">Console-Mapped Control</p>
+          <p class="card__text" data-i18n="plat.control.c1.desc">Building on the dual-arm platform above, each instrument arm is driven from the master console — not by manual instrument hand-offs through a single endoscope channel.</p>
+        </div>
+        <div class="card" data-animate="slide-up" data-delay="150">
+          <p style="font-size: var(--fs-h4); font-weight: var(--fw-bold); color: var(--color-accent); margin: 0 0 var(--space-sm);" data-i18n="plat.control.c2.value">Intuitive Arm Control</p>
+          <p class="card__text" data-i18n="plat.control.c2.desc">Medical-grade haptic master controllers map familiar two-handed ESD gestures to both arms — supporting precise submucosal work with less cognitive load.</p>
+        </div>
+        <div class="card" data-animate="slide-up" data-delay="200">
+          <p style="font-size: var(--fs-h4); font-weight: var(--fw-bold); color: var(--color-accent); margin: 0 0 var(--space-sm);" data-i18n="plat.control.c3.value">Integrated Master Console</p>
+          <p class="card__text" data-i18n="plat.control.c3.desc">Surgeons operate from one workstation: endoscopic vision and both arm controls in a single field of view, switching between traction and dissection without resetting hand position.</p>
+        </div>
+        <div class="card" data-animate="slide-up" data-delay="250">
+          <p style="font-size: var(--fs-h4); font-weight: var(--fw-bold); color: var(--color-accent); margin: 0 0 var(--space-sm);" data-i18n="plat.control.c4.value">Standardized Workflow</p>
+          <p class="card__text" data-i18n="plat.control.c4.desc">Console layouts and step sequences are designed to turn specialist craft into a repeatable, teachable robotic ESD workflow — so expert technique can be adopted across more centres.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Transport System Architecture -->
-  <section id="technical-specs">
+  <section id="technical-specs" style="background: var(--color-bg-secondary);">
     <div class="container">
       <div class="text-center" style="margin-bottom: var(--space-2xl);">
         <p class="eyebrow" data-animate="fade-in" data-i18n="plat.spec.eyebrow">Technical Specifications</p>
@@ -329,35 +364,6 @@
           <div class="tech-specs-number">+1</div>
           <h3 class="card__title tech-specs-title" data-i18n="plat.spec.c4.title">Auxiliary Channel</h3>
           <p class="card__text tech-specs-text" data-i18n="plat.spec.c4.text">Spare channel for suction, irrigation and CO&#x2082; insufflation.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Robotic Workstation -->
-  <section id="robotic-control" style="background: var(--color-bg-secondary);">
-    <div class="container">
-      <div class="text-center" style="margin-bottom: var(--space-2xl);">
-        <p class="eyebrow" data-animate="fade-in" data-i18n="plat.control.eyebrow">Robotic Workstation</p>
-        <h2 data-animate="slide-up" data-delay="100" data-i18n="plat.control.title">Fully Robotized Control<span class="text-gradient"> — Intuitive by Design</span></h2>
-        <p class="text-secondary" style="max-width: 720px; margin: var(--space-md) auto 0; font-size: var(--fs-body);" data-animate="blur-in" data-delay="150" data-i18n="plat.control.lead">From dual-arm robotization and haptic control to a standardized ESD workflow.</p>
-      </div>
-      <div class="grid grid--2" style="gap: var(--space-xl);">
-        <div class="card" data-animate="slide-up" data-delay="100">
-          <p style="font-size: var(--fs-h4); font-weight: var(--fw-bold); color: var(--color-accent); margin: 0 0 var(--space-sm);" data-i18n="plat.control.c1.value">Dual-Arm Robotization</p>
-          <p class="card__text" data-i18n="plat.control.c1.desc">Independent robotic traction and dissection — not manual instrument sharing through a conventional scope. Built for full-GI ESD from the ground up.</p>
-        </div>
-        <div class="card" data-animate="slide-up" data-delay="150">
-          <p style="font-size: var(--fs-h4); font-weight: var(--fw-bold); color: var(--color-accent); margin: 0 0 var(--space-sm);" data-i18n="plat.control.c2.value">Intuitive Arm Control</p>
-          <p class="card__text" data-i18n="plat.control.c2.desc">Medical-grade haptic master controllers map familiar two-handed ESD gestures to both arms — supporting precise submucosal work with less cognitive load.</p>
-        </div>
-        <div class="card" data-animate="slide-up" data-delay="200">
-          <p style="font-size: var(--fs-h4); font-weight: var(--fw-bold); color: var(--color-accent); margin: 0 0 var(--space-sm);" data-i18n="plat.control.c3.value">Integrated Master Console</p>
-          <p class="card__text" data-i18n="plat.control.c3.desc">One workstation orchestrates vision, the Lifter, and the Dissector through a single endoluminal interface — coordinating traction and energy-based dissection in one place.</p>
-        </div>
-        <div class="card" data-animate="slide-up" data-delay="250">
-          <p style="font-size: var(--fs-h4); font-weight: var(--fw-bold); color: var(--color-accent); margin: 0 0 var(--space-sm);" data-i18n="plat.control.c4.value">Standardized Workflow</p>
-          <p class="card__text" data-i18n="plat.control.c4.desc">Designed to turn specialist craft into a repeatable, teachable robotic ESD workflow — so expert technique can be adopted across more centres.</p>
         </div>
       </div>
     </div>
@@ -412,7 +418,7 @@
   <script src="js/translations.js"></script>
   <script src="js/i18n.js"></script>
   <script src="js/app.js"></script>
-  <script src="js/scroll.js?v=2"></script>
+  <script src="js/scroll.js?v=3"></script>
 </body>
 </html>
 
