@@ -160,15 +160,6 @@
   }
 }
 
-@keyframes heroIntroKenBurns {
-  from { transform: scale(1.02); }
-  to   { transform: scale(1.05); }
-}
-
-.hero--intro .hero__photo-img {
-  animation: heroIntroKenBurns 20s ease-out forwards;
-}
-
 .hero--intro .hero__award-headline,
 .hero--intro .hero__photo-brand,
 .hero--intro .hero__photo-title,
@@ -562,7 +553,6 @@
     transition: none;
   }
 
-  .hero--intro .hero__photo-img,
   .hero--intro .hero__award-headline,
   .hero--intro .hero__photo-brand,
   .hero--intro .hero__photo-title,
