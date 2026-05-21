@@ -1655,14 +1655,9 @@ main { flex: 1; }
   }
   .hero__award-logo {
     --hero-award-logo-h: clamp(1.5rem, 5.5vw, 2rem);
-    --hero-award-logo-gap: clamp(14px, 4.5vw, 22px);
   }
   .hero__award-logo--geneva {
     max-width: min(5.75rem, 28vw);
-  }
-  .hero__awards-center {
-    padding-left: max(var(--px), 4vw);
-    padding-right: max(var(--px), 4vw);
   }
   .hero__photo-caption {
     position: relative;
@@ -1748,7 +1743,6 @@ main { flex: 1; }
   }
   .hero__award-logo {
     --hero-award-logo-h: clamp(1.4rem, 5vw, 1.8rem);
-    --hero-award-logo-gap: clamp(16px, 5vw, 24px);
   }
   .hero__award-logo--geneva {
     max-width: min(5rem, 26vw);
