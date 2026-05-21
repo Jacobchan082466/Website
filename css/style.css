@@ -1675,9 +1675,6 @@ main { flex: 1; }
     white-space: normal;
     text-align: left;
   }
-  .hero__awards-center .hero__award-headline:first-child {
-    font-size: clamp(0.86rem, 3.4vw, 1.08rem);
-  }
   .hero__awards-center .hero__award-headline:first-child .hero__award-text {
     white-space: nowrap;
   }
@@ -1769,9 +1766,6 @@ main { flex: 1; }
   .hero__award-link {
     gap: var(--s6);
     max-width: 18rem;
-  }
-  .hero__awards-center .hero__award-headline:first-child {
-    font-size: clamp(0.78rem, 3.35vw, 0.95rem);
   }
   .hero__awards-center .hero__award-headline:first-child .hero__award-logo--geneva {
     max-width: min(3.75rem, 16vw);
