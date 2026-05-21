@@ -645,8 +645,9 @@ section {
 }
 .hero__award-logo {
   --hero-award-logo-h: clamp(1.65rem, 4.5vw, 2.15rem);
+  --hero-award-logo-gap: var(--s12);
   position: absolute;
-  right: calc(100% + var(--s12));
+  right: calc(100% + var(--hero-award-logo-gap));
   top: 50%;
   transform: translateY(-50%);
   display: block;
@@ -1654,9 +1655,14 @@ main { flex: 1; }
   }
   .hero__award-logo {
     --hero-award-logo-h: clamp(1.5rem, 5.5vw, 2rem);
+    --hero-award-logo-gap: clamp(14px, 4.5vw, 22px);
   }
   .hero__award-logo--geneva {
     max-width: min(5.75rem, 28vw);
+  }
+  .hero__awards-center {
+    padding-left: max(var(--px), 4vw);
+    padding-right: max(var(--px), 4vw);
   }
   .hero__photo-caption {
     position: relative;
@@ -1742,6 +1748,7 @@ main { flex: 1; }
   }
   .hero__award-logo {
     --hero-award-logo-h: clamp(1.4rem, 5vw, 1.8rem);
+    --hero-award-logo-gap: clamp(16px, 5vw, 24px);
   }
   .hero__award-logo--geneva {
     max-width: min(5rem, 26vw);
