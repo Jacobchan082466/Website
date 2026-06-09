@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap">
-  <link rel="stylesheet" href="css/style.css?v=18">
+  <link rel="stylesheet" href="css/style.css?v=20">
   <link rel="stylesheet" href="css/animations.css?v=3">
 </head>
 <body>
@@ -182,18 +182,18 @@
       <div class="grid grid--3" style="gap: var(--space-lg); align-items: stretch;">
         <div class="card" data-animate="slide-up" data-delay="100">
           <p class="eyebrow" style="margin-bottom: var(--space-sm);" data-i18n="home.str.c1.eyebrow">Corporate Structure</p>
-          <h3 class="card__title" data-i18n="home.str.c1.title">Hong Kong HQ &middot; Shenzhen Qianhai</h3>
-          <p class="card__text" data-i18n="home.str.c1.text">Headquartered in Hong Kong, with a Shenzhen Qianhai office to support Greater Bay Area clinical collaboration and regional supply-chain and manufacturing engagement. Corporate structure supports international investment and capital markets access.</p>
+          <h3 class="card__title" data-i18n="home.str.c1.title">Shenzhen Qianhai</h3>
+          <p class="card__text" data-i18n="home.str.c1.text">A Shenzhen Qianhai office supports Greater Bay Area clinical collaboration and regional supply-chain and manufacturing engagement. Corporate structure supports international investment and capital markets access.</p>
         </div>
         <div class="card" data-animate="slide-up" data-delay="200">
           <p class="eyebrow" style="margin-bottom: var(--space-sm);" data-i18n="home.str.c2.eyebrow">GBA Advantage</p>
           <h3 class="card__title" data-i18n="home.str.c2.title">Access to the World's Largest ESD Market</h3>
-          <p class="card__text" data-i18n="home.str.c2.text">The Greater Bay Area is one of the world&apos;s largest integrated hubs for medical technology and advanced manufacturing. Direct access to mainland China&apos;s hospital network supports clinical collaboration and adoption at scale.</p>
+          <p class="card__text" data-i18n="home.str.c2.text">The Greater Bay Area is one of the world&apos;s largest integrated hubs for medical technology and advanced manufacturing. Direct access to mainland China and APEC hospital networks supports clinical collaboration and adoption at scale.</p>
         </div>
         <div class="card" data-animate="slide-up" data-delay="300">
           <p class="eyebrow" style="margin-bottom: var(--space-sm);" data-i18n="home.str.c3.eyebrow">Policy &amp; Funding</p>
           <h3 class="card__title" data-i18n="home.str.c3.title">Hong Kong Innovation Support</h3>
-          <p class="card__text" data-i18n="home.str.c3.text">The endoluminal robotics programme is supported by multi-year Hong Kong government research and innovation funding. RAISe+ Stage II programme financing totals HKD 76.2M — a HKD 36.2M government grant plus HKD 40M private co-investment — to accelerate first-in-human readiness and platform maturation.</p>
+          <p class="card__text" data-i18n="home.str.c3.text">The endoluminal robotics programme is supported by multi-year Hong Kong government research and innovation funding. RAISe+ Stage II programme financing totals HKD 76.2M — a HKD 36.2M government grant plus USD 5M private co-investment — to accelerate first-in-human readiness and platform maturation.</p>
         </div>
       </div>
     </div>
@@ -201,15 +201,13 @@
 
   <!-- Team (from former Team page) — above CTA -->
   <div id="team">
-    <section class="page-hero page-hero--bg-secondary">
-      <div class="page-hero__bg" aria-hidden="true"></div>
-      <div class="container text-center" style="position: relative; z-index: 1;">
-        <h1 class="text-hero text-gradient" data-animate="slide-up" data-delay="100" data-i18n="team.hero.title">World-Leading Surgeons &amp; Engineers</h1>
-      </div>
-    </section>
-
     <!-- CEO — Philip Chiu profile appears under Scientific Advisory Board below -->
-    <section id="ceo-leadership" class="chairman-hero" style="background: var(--color-bg-primary);">
+    <section id="ceo-leadership" class="chairman-hero" style="background: var(--color-bg-secondary);">
+      <div class="container">
+        <div class="text-center" style="margin-bottom: var(--space-3xl);">
+          <p class="eyebrow" data-animate="fade-in" data-i18n="team.hero.eyebrow">Our Team</p>
+          <h2 data-animate="slide-up" data-delay="100" data-i18n="team.hero.title"><span class="text-gradient">World-Class Surgeons &amp; Biomedical Engineers</span></h2>
+        </div>
       <div class="chairman-hero__duo chairman-hero__duo--single">
 
         <!-- CEO -->
@@ -228,6 +226,7 @@
         </div>
 
       </div>
+      </div>
     </section>
 
     <!-- EndoR Team -->
@@ -241,12 +240,12 @@
           <div class="card team-card" data-animate="slide-up" data-delay="100">
             <div class="team-card__avatar" style="padding: 0; overflow: hidden; background: none;" aria-hidden="true">
               <img src="pictures/Professor CHIU Wai Yan Philip.webp"
-                   alt="Prof. Philip Chiu"
+                   alt="Prof. Philip Wai Yan Chiu"
                    style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%; display: block;"
                    loading="lazy"
                    width="180" height="180">
             </div>
-            <h3 class="team-card__name">Prof. Philip Chiu <span class="name-zh" data-i18n="team.chairman.name.zh"></span></h3>
+            <h3 class="team-card__name">Prof. Philip Wai Yan Chiu <span class="name-zh" data-i18n="team.chairman.name.zh"></span></h3>
             <p class="team-card__role" data-i18n="team.philip.role">Founding Chairman</p>
           </div>
           <div class="card team-card" data-animate="slide-up" data-delay="125">
@@ -312,6 +311,8 @@
           </div>
         </div>
 
+        <p class="text-center text-tertiary" style="font-size: var(--fs-caption); margin: 0 0 var(--space-xl);" data-i18n="team.advisory.sortnote">Listed alphabetically by surname</p>
+
         <!-- Advisor cards (surname A–Z) -->
         <div class="grid grid--2" style="gap: var(--space-xl);">
 
@@ -319,12 +320,12 @@
           <div class="card advisor-card" data-surname="Chiu" data-animate="slide-up" data-delay="100">
             <div class="team-card__avatar" style="padding: 0; overflow: hidden; background: none;" aria-hidden="true">
               <img src="pictures/Professor CHIU Wai Yan Philip.webp"
-                   alt="Prof. Philip Chiu"
+                   alt="Prof. Philip Wai Yan Chiu"
                    style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%; display: block;"
                    loading="lazy"
                    width="140" height="140">
             </div>
-            <h3 class="advisor-card__name">Prof. Philip Chiu<span class="name-zh" data-i18n="team.chairman.name.zh"></span></h3>
+            <h3 class="advisor-card__name">Prof. Philip Wai Yan Chiu <span class="name-zh" data-i18n="team.chairman.name.zh"></span></h3>
             <p class="advisor-card__title" data-i18n="team.chiuadvisor.title">Founding Chairman · Dean, Faculty of Medicine</p>
             <p class="advisor-card__inst" data-i18n="team.chiuadvisor.role">The Chinese University of Hong Kong</p>
             <div class="advisor-card__pubrow">
@@ -426,7 +427,7 @@
                    loading="lazy"
                    width="140" height="140">
             </div>
-            <h3 class="advisor-card__name">Prof. Haruhiro Inoue<span class="name-zh" data-i18n="team.inoue.name.zh"></span></h3>
+            <h3 class="advisor-card__name">Prof. Haruhiro Inoue <span class="name-zh" data-i18n="team.inoue.name.zh"></span></h3>
             <p class="advisor-card__title" data-i18n="team.inoue.title">Director, Digestive Disease Centre</p>
             <p class="advisor-card__inst" data-i18n="team.inoue.role">Showa University Koto-Toyosu Hospital, Tokyo</p>
             <div class="advisor-card__pubrow">
@@ -489,7 +490,7 @@
                    loading="lazy"
                    width="140" height="140">
             </div>
-            <h3 class="advisor-card__name">Prof. Pinghong Zhou<span class="name-zh" data-i18n="team.zhou.name.zh"></span></h3>
+            <h3 class="advisor-card__name">Prof. Pinghong Zhou <span class="name-zh" data-i18n="team.zhou.name.zh"></span></h3>
             <p class="advisor-card__title" data-i18n="team.zhou.title">Chief, Endoscopy Center · Vice President, CSDE</p>
             <p class="advisor-card__inst" data-i18n="team.zhou.role">Zhongshan Hospital, Fudan University, Shanghai</p>
             <div class="advisor-card__pubrow">
