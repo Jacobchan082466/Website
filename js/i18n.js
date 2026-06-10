@@ -63,6 +63,14 @@
       }
     });
 
+    /* alt attributes */
+    document.querySelectorAll('[data-i18n-alt]').forEach(el => {
+      const key = el.dataset.i18nAlt;
+      if (dict[key] !== undefined) {
+        el.alt = dict[key];
+      }
+    });
+
     /* Page <title> */
     const pageKey = getPageKey();
     const titleKey = 'title.' + pageKey;
