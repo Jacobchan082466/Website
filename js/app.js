@@ -219,7 +219,7 @@
     const grid = document.querySelector('#advisory .grid--2');
     if (!grid) return;
 
-    const cards = [...grid.querySelectorAll('.advisor-card[data-surname]')];
+    const cards = [...grid.querySelectorAll('.advisor-card[data-surname]:not([hidden])')];
     if (cards.length < 2) return;
 
     cards.sort((a, b) =>

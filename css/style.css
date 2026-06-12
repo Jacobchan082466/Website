@@ -3,6 +3,10 @@
    Clean rewrite. Apple-inspired design system.
    ============================================================ */
 
+[hidden] {
+  display: none !important;
+}
+
 /* ── 1. Design Tokens ─────────────────────────────────────── */
 :root {
   /* Colors – light */
