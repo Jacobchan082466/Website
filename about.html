@@ -8,10 +8,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap">
-  <link rel="stylesheet" href="css/style.css?v=2">
+  <link rel="stylesheet" href="css/style.css?v=26">
   <link rel="stylesheet" href="css/animations.css">
 </head>
-<body>
+<body class="about-page">
 
   <nav class="nav">
     <div class="nav__inner">
@@ -60,6 +60,21 @@
     </div>
   </section>
 
+  <section id="gba" class="about-gba">
+    <div class="container">
+      <div class="text-center" style="max-width: 760px; margin: 0 auto;">
+        <p class="eyebrow" data-animate="fade-in" data-i18n="about.gba.eyebrow">Greater Bay Area Company</p>
+        <h2 data-animate="slide-up" data-delay="100" data-i18n="about.gba.title">Dual-Hub Strategy — <span class="text-gradient">Hong Kong × Shenzhen</span></h2>
+        <p class="about-gba__narrative" data-animate="blur-in" data-delay="125" data-i18n="about.gba.narrative">
+          A Greater Bay Area medtech company — <span class="text-gradient">Hong Kong-led research, clinical translation and global access</span>; Shenzhen-backed manufacturing scale and China market reach.
+        </p>
+      </div>
+      <p class="text-center text-secondary" style="font-size: var(--fs-body); line-height: var(--lh-relaxed); max-width: 720px; margin: var(--space-2xl) auto 0;" data-animate="blur-in" data-delay="200" data-i18n="about.gba.outro">
+        Together, Hong Kong and Shenzhen give EndoR a path from laboratory innovation to clinical adoption in the world&apos;s largest therapeutic endoscopy market.
+      </p>
+    </div>
+  </section>
+
   <section class="about-principles">
     <div class="container">
       <div class="text-center" style="margin-bottom: var(--space-2xl);">
@@ -90,7 +105,7 @@
     </div>
   </section>
 
-  <!-- Mission Sticky (white band — alternates with grey .about-principles above) -->
+  <!-- Mission Sticky (grey band — alternates with white principles above) -->
   <div class="sticky-section sticky-section--pull-up sticky-section--scroll-dwell about-page--mission-band">
     <div class="sticky-section__sticky">
       <div class="sticky-section__content sticky-section__content--mission">

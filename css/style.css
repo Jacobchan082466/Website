@@ -24,11 +24,10 @@
   --grad-start:   #0071e3;
   --grad-end:     #34aadc;
 
-  /* Typography */
-  --font: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text',
-          'Helvetica Neue', Arial, sans-serif;
-  --font-tc: 'PingFang TC', 'Noto Sans TC', -apple-system, sans-serif;
-  --font-sc: 'PingFang SC', 'Noto Sans SC', -apple-system, sans-serif;
+  /* Typography — Inter / Noto loaded via Google Fonts on each page */
+  --font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  --font-tc: 'Noto Sans TC', 'PingFang TC', -apple-system, sans-serif;
+  --font-sc: 'Noto Sans SC', 'PingFang SC', -apple-system, sans-serif;
 
   --f-hero:  clamp(2.2rem, 6vw, 5rem);
   --f-h1:    clamp(1.8rem, 4vw, 3.25rem);
@@ -36,8 +35,8 @@
   --f-h3:    clamp(1.2rem, 2vw, 1.75rem);
   --f-h4:    clamp(1rem, 1.5vw, 1.25rem);
   --f-body:  1.0625rem;   /* 17px */
-  --f-sm:    0.9375rem;   /* 15px */
-  --f-xs:    0.8125rem;   /* 13px */
+  --f-sm:    1rem;        /* 16px */
+  --f-xs:    0.875rem;    /* 14px */
 
   /* Spacing (8-pt grid) */
   --s4:   4px;
@@ -323,7 +322,7 @@ section {
 }
 
 .nav__logo { display: flex; align-items: center; flex-shrink: 0; }
-.nav__logo-img { height: 30px; width: auto; }
+.nav__logo-img { height: 44px; width: auto; }
 
 /* Desktop links — centered absolutely */
 .nav__links {
@@ -821,19 +820,30 @@ section {
   margin-top: var(--s12);
 }
 
-/* About — principles band (grey; alternates with white hero above and mission sticky below) */
+/* About — principles band (full-viewport; band colour from .about-page nth-of-type) */
 .about-principles {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding: var(--space-3xl) 0;
-  background: var(--color-bg-secondary);
   box-sizing: border-box;
 }
 
-[data-theme="dark"] .about-principles {
+/* About page — auto alternate white / grey section bands */
+.about-page main > section:nth-of-type(odd) {
+  background: var(--color-bg-primary);
+}
+.about-page main > section:nth-of-type(even) {
   background: var(--color-bg-secondary);
+}
+
+.about-gba {
+  padding: var(--section-py) 0;
+}
+
+[data-theme="dark"] .about-principles {
+  background: transparent;
 }
 
 .about-principles .card {
@@ -842,6 +852,16 @@ section {
 
 [data-theme="dark"] .about-principles .card {
   box-shadow: 0 2px 24px rgba(0, 0, 0, 0.5);
+}
+
+.about-gba__narrative {
+  font-size: clamp(1.05rem, 2vw, 1.25rem);
+  font-weight: 600;
+  line-height: 1.55;
+  letter-spacing: var(--ls-normal);
+  color: var(--txt);
+  margin: var(--space-lg) auto 0;
+  max-width: 680px;
 }
 
 /* ── 10. Stats ───────────────────────────────────────────── */
@@ -1007,15 +1027,15 @@ section {
   background: var(--bg-secondary);
 }
 
-/* About page only: grey principles → white mission → grey vision */
+/* About page only: white hero → grey GBA → white principles → grey mission */
 .about-page--mission-band .sticky-section__sticky {
-  background: var(--color-bg-primary);
-}
-.about-page--vision-band .sticky-section__sticky {
   background: var(--color-bg-secondary);
 }
+.about-page--vision-band .sticky-section__sticky {
+  background: var(--color-bg-primary);
+}
 [data-theme="dark"] .about-page--mission-band .sticky-section__sticky {
-  background: var(--color-bg-card);
+  background: var(--color-bg-secondary);
 }
 [data-theme="dark"] .about-page--vision-band .sticky-section__sticky {
   background: var(--bg);
