@@ -540,7 +540,7 @@ section {
   width: 100%;
   aspect-ratio: 2 / 1;
   overflow: hidden;
-  /* Ensure the vignette / caption can overlay absolutely */
+  /* Ensure caption can overlay absolutely */
   display: block;
 }
 
@@ -550,21 +550,6 @@ section {
   object-fit: cover;
   object-position: top center;
   display: block;
-}
-
-/* Vignette: centre readout for awards + darker bottom-right for caption */
-.hero__photo-vignette {
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(ellipse 75% 55% at 50% 48%, rgba(6, 10, 22, 0.62) 0%, transparent 72%),
-    linear-gradient(
-      135deg,
-      transparent 25%,
-      rgba(6, 10, 22, 0.45) 60%,
-      rgba(6, 10, 22, 0.85) 100%
-    );
-  pointer-events: none;
 }
 
 /* Awards — centred on hero image */
@@ -596,7 +581,7 @@ section {
 .hero__photo-brand {
   font-size: var(--f-xs);
   font-weight: 600;
-  color: rgba(255,255,255,0.55);
+  color: var(--txt-3);
   letter-spacing: 0.1em;
   text-transform: uppercase;
   margin-bottom: var(--s8);
@@ -605,18 +590,16 @@ section {
 .hero__photo-title {
   font-size: clamp(1.55rem, 3vw, 2.65rem);
   font-weight: 700;
-  color: #fff;
   line-height: 1.15;
   letter-spacing: -0.02em;
-  text-shadow: 0 2px 16px rgba(0,0,0,0.4);
   margin-bottom: var(--s14);
 }
 
 .hero__photo-sub {
   font-size: var(--f-sm);
-  color: rgba(255,255,255,0.78);
+  color: #fff;
   line-height: 1.6;
-  text-shadow: 0 1px 8px rgba(0,0,0,0.35);
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
   margin-bottom: var(--s20);
 }
 
@@ -629,7 +612,9 @@ section {
   line-height: 1.2;
   letter-spacing: -0.03em;
   color: #fff;
-  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.55);
+  text-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.8),
+    0 2px 10px rgba(0, 0, 0, 0.45);
   margin: 0 0 var(--s14);
 }
 
@@ -659,7 +644,7 @@ section {
   max-height: var(--hero-award-logo-h);
   object-fit: contain;
   object-position: center;
-  filter: drop-shadow(0 2px 14px rgba(0, 0, 0, 0.5));
+  filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.65));
 }
 .hero__award-logo--geneva {
   max-width: clamp(4.25rem, 15vw, 6rem);
@@ -677,7 +662,7 @@ section {
 }
 .hero__award-link:hover {
   color: #fff;
-  opacity: 0.92;
+  opacity: 0.9;
 }
 .hero__award-link:hover .hero__award-text {
   text-decoration: underline;
@@ -699,6 +684,51 @@ section {
 .hero__photo-cta .btn {
   padding: 9px 18px;
   font-size: 14px;
+}
+
+.hero__photo-cta .btn--ghost-white {
+  background: rgba(255, 255, 255, 0.72);
+  color: var(--txt);
+  border: 1.5px solid rgba(0, 0, 0, 0.22);
+  backdrop-filter: blur(8px);
+}
+
+.hero__photo-cta .btn--ghost-white:hover {
+  background: rgba(255, 255, 255, 0.92);
+  color: var(--txt);
+  border-color: rgba(0, 0, 0, 0.35);
+}
+
+/* Photo hero — overlay colours fixed (image bg doesn't follow theme) */
+.hero--photo .text-gradient {
+  background: linear-gradient(135deg, #0071e3, #34aadc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero--photo .hero__photo-brand {
+  color: #86868b;
+}
+
+.hero--photo .hero__photo-sub {
+  color: #fff;
+}
+
+.hero--photo .hero__awards-center .hero__award-headline,
+.hero--photo .hero__award-link:hover {
+  color: #fff;
+}
+
+.hero--photo .hero__photo-cta .btn--ghost-white,
+.hero--photo .hero__photo-cta .btn--ghost-white:hover {
+  color: #1d1d1f;
+}
+
+.hero--photo .hero__photo-cta .btn--primary,
+.hero--photo .hero__photo-cta .btn--primary:hover {
+  background: linear-gradient(135deg, #0071e3, #34aadc);
+  color: #fff;
 }
 
 /* Page hero (inner pages) */
@@ -1639,18 +1669,12 @@ main { flex: 1; }
     display: grid;
     grid-template-rows: 1fr auto;
   }
-  .hero__photo-img,
-  .hero__photo-vignette {
+  .hero__photo-img {
     position: absolute;
     inset: 0;
     width: 100%;
     height: 100%;
-  }
-  .hero__photo-img { z-index: 0; }
-  .hero__photo-vignette {
-    z-index: 1;
-    background:
-      linear-gradient(180deg, rgba(6, 10, 22, 0.72) 0%, rgba(6, 10, 22, 0.35) 42%, rgba(6, 10, 22, 0.82) 100%);
+    z-index: 0;
   }
   .hero__awards-center {
     position: relative;
