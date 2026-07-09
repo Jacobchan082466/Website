@@ -868,6 +868,20 @@ section {
   background: var(--color-bg-secondary);
 }
 
+/* Home page — same odd/even bands (hero photo excluded) */
+.home-page main > section:nth-of-type(odd):not(.hero--photo) {
+  background: var(--color-bg-primary);
+}
+.home-page main > section:nth-of-type(even) {
+  background: var(--color-bg-secondary);
+}
+.home-page #team > section:nth-of-type(odd) {
+  background: var(--color-bg-primary);
+}
+.home-page #team > section:nth-of-type(even) {
+  background: var(--color-bg-secondary);
+}
+
 .about-gba {
   padding: var(--section-py) 0;
 }
@@ -923,11 +937,6 @@ section {
 }
 
 /* ── 11. Timeline — vertical centre-line style ────────── */
-.timeline-section {
-  /* Band alternation: set per page (e.g. index) via inline --color-bg-secondary, or inherits */
-  background: var(--color-bg-secondary);
-}
-
 .timeline {
   position: relative;
   max-width: 800px;
