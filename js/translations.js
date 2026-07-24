@@ -106,7 +106,7 @@ const TRANSLATIONS = {
     'about.v3.text':  'A stable robotic workflow lowers reliance on assistant-held traction and accessory juggling, so experienced teams can onboard colleagues and run advanced ESD more consistently across sites.',
     'about.gba.eyebrow':    'Greater Bay Area Company',
     'about.gba.title':      'Dual-Hub Strategy — <span class="text-gradient">Hong Kong × Shenzhen</span>',
-    'about.gba.narrative':  'A Greater Bay Area medtech company — <span class="text-gradient">Hong Kong-led research, clinical translation and global access</span>; Shenzhen-backed manufacturing scale and China market reach.',
+    'about.gba.narrative':  'A Greater Bay Area medtech company — <span class="text-gradient">Hong Kong-led research, clinical translation and global access</span>; Shenzhen-backed manufacturing scale, China and global market reach.',
     'about.gba.outro':      'Together, Hong Kong and Shenzhen give EndoR a path from laboratory innovation to clinical adoption in the world\'s largest therapeutic endoscopy market.',
 
     /* ── Services ── */
@@ -432,7 +432,7 @@ const TRANSLATIONS = {
     'about.v3.text':  '穩定的機器人流程減少對助手牽引與多種配件協調的依賴，讓有經驗的團隊能更易帶教同事，並在更多院區較一致地開展進階 ESD。',
     'about.gba.eyebrow':    '大灣區企業',
     'about.gba.title':      '雙城布局——<span class="text-gradient">香港 × 深圳前海</span>',
-    'about.gba.narrative':  '立足大灣區的醫療科技公司——<span class="text-gradient">香港主導研發與臨床轉化，連接國際資本與監管路徑</span>；深圳支撐製造落地與內地市場拓展。',
+    'about.gba.narrative':  '立足大灣區的醫療科技公司——<span class="text-gradient">香港主導研發與臨床轉化，連接國際資本與監管路徑</span>；深圳支撐製造落地與中國及全球市場拓展。',
     'about.gba.outro':      '香港與深圳雙城協同，為 EndoR 打通從實驗室創新到全球最大治療性內鏡市場臨床應用的路徑。',
     'services.hero.title':    '雙臂全機器人化<br><span class="text-gradient">柔性內鏡平台</span>',
     'services.hero.subtitle': '已準備好人體臨床試驗的腔內機器人——獨立牽引臂與能量型剝離臂協同，強化視野、牽引與黏膜下剝離的穩定與效率。',
@@ -752,7 +752,7 @@ const TRANSLATIONS = {
     'about.v3.text':  '稳定的机器人流程减少对助手牵引与多种配件协调的依赖，让有经验的团队能更易带教同事，并在更多院区较一致地开展进阶 ESD。',
     'about.gba.eyebrow':    '大湾区企业',
     'about.gba.title':      '双城布局——<span class="text-gradient">香港 × 深圳前海</span>',
-    'about.gba.narrative':  '立足大湾区的医疗科技公司——<span class="text-gradient">香港主导研发与临床转化，连接国际资本与监管路径</span>；深圳支撑制造落地与内地市场拓展。',
+    'about.gba.narrative':  '立足大湾区的医疗科技公司——<span class="text-gradient">香港主导研发与临床转化，连接国际资本与监管路径</span>；深圳支撑制造落地与中国及全球市场拓展。',
     'about.gba.outro':      '香港与深圳双城协同，为 EndoR 打通从实验室创新到全球最大治疗性内镜市场临床应用的路径。',
     'services.hero.title':    '双臂全机器人化<br><span class="text-gradient">柔性内镜平台</span>',
     'services.hero.subtitle': '已准备好人体临床试验的腔内机器人——独立牵引臂与能量型剥离臂协同，强化视野、牵引与黏膜下剥离的稳定与效率。',
