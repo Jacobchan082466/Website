@@ -82,13 +82,13 @@ const TRANSLATIONS = {
 
     /* ── Homepage: Strategy & Structure ── */
     'home.str.eyebrow':       'Strategy &amp; Structure',
-    'home.str.title':         'Hong Kong Base,<span class="text-gradient"> Greater Bay Area Reach</span>',
+    'home.str.title':         'Hong Kong Base,<span class="text-gradient"> China and Global Reach</span>',
     'home.str.c1.eyebrow':    'Corporate Structure',
     'home.str.c1.title':      'Shenzhen Qianhai',
     'home.str.c1.text':       'A Shenzhen Qianhai office supports Greater Bay Area clinical collaboration and regional supply-chain and manufacturing engagement. Corporate structure supports international investment and capital markets access.',
     'home.str.c2.eyebrow':    'GBA Advantage',
     'home.str.c2.title':      'Access to the World\'s Largest ESD Market',
-    'home.str.c2.text':       'The Greater Bay Area is one of the world\'s largest integrated hubs for medical technology and advanced manufacturing. Direct access to mainland China and APEC hospital networks supports clinical collaboration and adoption at scale.',
+    'home.str.c2.text':       'The Greater Bay Area is one of the world\'s largest integrated hubs for medical technology and advanced manufacturing. Direct access to mainland China and APEC hospital networks supports clinical collaboration and adoption at scale, and provides the base from which the platform reaches global markets.',
     'home.str.c3.eyebrow':    'Policy &amp; Funding',
     'home.str.c3.title':      'Hong Kong Innovation Support',
     'home.str.c3.text':       'The endoluminal robotics programme is supported by multi-year Hong Kong government research and innovation funding. RAISe+ Stage II programme financing totals HKD 76.2M — a HKD 36.2M government grant plus USD 5M private co-investment — which supported delivery of the first-in-human trial and continues to fund platform maturation and scale-up.',
@@ -409,13 +409,13 @@ const TRANSLATIONS = {
 
     /* ── Homepage: Strategy & Structure ── */
     'home.str.eyebrow':       '戰略與架構',
-    'home.str.title':         '總部香港，<span class="text-gradient">覆蓋大灣區</span>',
+    'home.str.title':         '總部香港，<span class="text-gradient">覆蓋中國及全球</span>',
     'home.str.c1.eyebrow':    '公司架構',
     'home.str.c1.title':      '深圳前海',
     'home.str.c1.text':       '深圳前海設有辦公室，支援大灣區臨床協同，以及區內供應鏈與製造對接。公司架構有利於國際投資及資本市場通道。',
     'home.str.c2.eyebrow':    '大灣區優勢',
     'home.str.c2.title':      '直達全球最大ESD市場',
-    'home.str.c2.text':       '大灣區為全球最大規模的醫療科技與先進製造產業集聚之一。直接接入中國內地及 APEC 醫院網絡，支持臨床合作與規模化落地。',
+    'home.str.c2.text':       '大灣區為全球最大規模的醫療科技與先進製造產業集聚之一。直接接入中國內地及 APEC 醫院網絡，支持臨床合作與規模化落地，並以此為基礎拓展全球市場。',
     'home.str.c3.eyebrow':    '政策與資助',
     'home.str.c3.title':      '香港創新支持',
     'home.str.c3.text':       '內腔機器人研發獲香港政府多年科研與創新資助支持。RAISe+ 第二期之整體融資框架為港幣 7,620 萬元：政府資助港幣 3,620 萬元、私人共同投資美金 500 萬元，支持首次人體臨床試驗落地，並持續推進平台成熟化與量產準備。',
@@ -729,13 +729,13 @@ const TRANSLATIONS = {
 
     /* ── Homepage: Strategy & Structure ── */
     'home.str.eyebrow':       '战略与架构',
-    'home.str.title':         '总部香港，<span class="text-gradient">覆盖大湾区</span>',
+    'home.str.title':         '总部香港，<span class="text-gradient">覆盖中国及全球</span>',
     'home.str.c1.eyebrow':    '公司架构',
     'home.str.c1.title':      '深圳前海',
     'home.str.c1.text':       '深圳前海设有办公室，支持大湾区临床协同，以及区内供应链与制造对接。公司架构有利于国际投资及资本市场通道。',
     'home.str.c2.eyebrow':    '大湾区优势',
     'home.str.c2.title':      '直达全球最大ESD市场',
-    'home.str.c2.text':       '大湾区为全球最大规模的医疗科技与先进制造产业集聚之一。直接接入中国内地及 APEC 医院网络，支持临床合作与规模化落地。',
+    'home.str.c2.text':       '大湾区为全球最大规模的医疗科技与先进制造产业集聚之一。直接接入中国内地及 APEC 医院网络，支持临床合作与规模化落地，并以此为基础拓展全球市场。',
     'home.str.c3.eyebrow':    '政策与资助',
     'home.str.c3.title':      '香港创新支持',
     'home.str.c3.text':       '腔内机器人研发获香港政府多年科研与创新资助支持。RAISe+第二期之整体融资框架为港币7,620万元：政府资助港币3,620万元、私人共同投资美金500万元，支持首次人体临床试验落地，并持续推进平台成熟化与量产准备。',
