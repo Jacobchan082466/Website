@@ -78,7 +78,7 @@ const TRANSLATIONS = {
     'home.tm2023': 'Received a Gold Medal with Congratulations of the Jury at the 48th International Exhibition of Inventions of Geneva, and the Red Dot Design Concept Award.',
     'home.tm2024': '2025 Version of EndoR Surgical System unveiled. Platform validated in live demonstration and pre-clinical studies — <a href="platform.html#clinical-evidence" style="color:var(--color-accent);">see Platform for details</a>.',
     'home.tm2025': 'Successful application for RAISe+ Stage II public–private financing. Clinical trial approved.',
-    'home.tm2026': 'First-in-human clinical trial (target: mid-2026). CUHK Shenzhen Qianhai office inaugurated.',
+    'home.tm2026': 'First-in-human clinical trial completed (July 2026). CUHK Shenzhen Qianhai office inaugurated.',
 
     /* ── Homepage: Strategy & Structure ── */
     'home.str.eyebrow':       'Strategy &amp; Structure',
@@ -91,7 +91,7 @@ const TRANSLATIONS = {
     'home.str.c2.text':       'The Greater Bay Area is one of the world\'s largest integrated hubs for medical technology and advanced manufacturing. Direct access to mainland China and APEC hospital networks supports clinical collaboration and adoption at scale.',
     'home.str.c3.eyebrow':    'Policy &amp; Funding',
     'home.str.c3.title':      'Hong Kong Innovation Support',
-    'home.str.c3.text':       'The endoluminal robotics programme is supported by multi-year Hong Kong government research and innovation funding. RAISe+ Stage II programme financing totals HKD 76.2M — a HKD 36.2M government grant plus USD 5M private co-investment — to accelerate first-in-human readiness and platform maturation.',
+    'home.str.c3.text':       'The endoluminal robotics programme is supported by multi-year Hong Kong government research and innovation funding. RAISe+ Stage II programme financing totals HKD 76.2M — a HKD 36.2M government grant plus USD 5M private co-investment — which supported delivery of the first-in-human trial and continues to fund platform maturation and scale-up.',
 
     /* ── About ── */
     'about.hero.title':     '<span class="text-gradient">One Platform</span>',
@@ -111,7 +111,7 @@ const TRANSLATIONS = {
 
     /* ── Services ── */
     'services.hero.title':    'Dual-Arm Fully Robotized<br><span class="text-gradient">Flexible Endoscopic Platform</span>',
-    'services.hero.subtitle': 'An endoluminal robot ready for human clinical trial — coordinating independent traction and energy-based dissection for clearer vision, steadier exposure, and faster, more controlled submucosal dissection.',
+    'services.hero.subtitle': 'An endoluminal robot that has completed its first-in-human clinical trial (July 2026) — coordinating independent traction and energy-based dissection for clearer vision, steadier exposure, and faster, more controlled submucosal dissection.',
     'services.hero.cta2':     'Request Information',
     'services.prod.eyebrow':  'System Components',
     'services.prod.title':    'Three Components,<span class="text-gradient"> One Integrated Platform</span>',
@@ -405,7 +405,7 @@ const TRANSLATIONS = {
     'home.tm2023': '於第 48 屆日內瓦國際發明展獲評審嘉許金獎，並獲 Red Dot 設計概念獎。',
     'home.tm2024': '發布華陀外科手術系統 2025 版本。平台完成現場演示及臨床前實驗驗證——<a href="platform.html#clinical-evidence" style="color:var(--color-accent);">詳見 Platform 頁面</a>。',
     'home.tm2025': '成功申請 RAISe+ 第二期公帑與私人共同投資安排；臨床試驗已獲批准。',
-    'home.tm2026': '首次人體臨床試驗（目標：2026 年中）。香港中文大學深圳前海辦公室落成。',
+    'home.tm2026': '完成首次人體臨床試驗（2026 年 7 月）。香港中文大學深圳前海辦公室落成。',
 
     /* ── Homepage: Strategy & Structure ── */
     'home.str.eyebrow':       '戰略與架構',
@@ -418,7 +418,7 @@ const TRANSLATIONS = {
     'home.str.c2.text':       '大灣區為全球最大規模的醫療科技與先進製造產業集聚之一。直接接入中國內地及 APEC 醫院網絡，支持臨床合作與規模化落地。',
     'home.str.c3.eyebrow':    '政策與資助',
     'home.str.c3.title':      '香港創新支持',
-    'home.str.c3.text':       '內腔機器人研發獲香港政府多年科研與創新資助支持。RAISe+ 第二期之整體融資框架為港幣 7,620 萬元：政府資助港幣 3,620 萬元、私人共同投資美金 500 萬元，以加快首次人體準備與平台成熟化。',
+    'home.str.c3.text':       '內腔機器人研發獲香港政府多年科研與創新資助支持。RAISe+ 第二期之整體融資框架為港幣 7,620 萬元：政府資助港幣 3,620 萬元、私人共同投資美金 500 萬元，支持首次人體臨床試驗落地，並持續推進平台成熟化與量產準備。',
 
     'about.hero.title':     '<span class="text-gradient">一個平台</span>',
     'about.hero.subtitle':  '機械人 ESD 平台——已於人體研究中驗證，旨在推廣治療性內窺鏡並擴大消化道癌症治療的可及性——<span class="text-gradient">為所有臨床醫師</span>。',
@@ -435,7 +435,7 @@ const TRANSLATIONS = {
     'about.gba.narrative':  '立足大灣區的醫療科技公司——<span class="text-gradient">香港主導研發與臨床轉化，連接國際資本與監管路徑</span>；深圳支撐製造落地與中國及全球市場拓展。',
     'about.gba.outro':      '香港與深圳雙城協同，為 EndoR 打通從實驗室創新到全球最大治療性內鏡市場臨床應用的路徑。',
     'services.hero.title':    '雙臂全機器人化<br><span class="text-gradient">柔性內鏡平台</span>',
-    'services.hero.subtitle': '已準備好人體臨床試驗的腔內機器人——獨立牽引臂與能量型剝離臂協同，強化視野、牽引與黏膜下剝離的穩定與效率。',
+    'services.hero.subtitle': '已完成首次人體臨床試驗（2026 年 7 月）的腔內機器人——獨立牽引臂與能量型剝離臂協同，強化視野、牽引與黏膜下剝離的穩定與效率。',
     'services.hero.cta2':     '索取資料',
     'services.prod.eyebrow':  '系統組件',
     'services.prod.title':    '三大組件，<span class="text-gradient">一體化集成平台</span>',
@@ -725,7 +725,7 @@ const TRANSLATIONS = {
     'home.tm2023': '于第 48 届日内瓦国际发明展获评审嘉许金奖，并获 Red Dot 设计概念奖。',
     'home.tm2024': '发布华陀外科手术系统2025版本。平台完成现场演示及临床前实验验证——<a href="platform.html#clinical-evidence" style="color:var(--color-accent);">详见Platform页面</a>。',
     'home.tm2025': '成功申请RAISe+第二期政府与私人共同投资安排；临床试验已获批准。',
-    'home.tm2026': '首次人体临床试验（目标：2026年中）。香港中文大学深圳前海办公室落成。',
+    'home.tm2026': '完成首次人体临床试验（2026年7月）。香港中文大学深圳前海办公室落成。',
 
     /* ── Homepage: Strategy & Structure ── */
     'home.str.eyebrow':       '战略与架构',
@@ -738,7 +738,7 @@ const TRANSLATIONS = {
     'home.str.c2.text':       '大湾区为全球最大规模的医疗科技与先进制造产业集聚之一。直接接入中国内地及 APEC 医院网络，支持临床合作与规模化落地。',
     'home.str.c3.eyebrow':    '政策与资助',
     'home.str.c3.title':      '香港创新支持',
-    'home.str.c3.text':       '腔内机器人研发获香港政府多年科研与创新资助支持。RAISe+第二期之整体融资框架为港币7,620万元：政府资助港币3,620万元、私人共同投资美金500万元，以加快首次人体准备与平台成熟化。',
+    'home.str.c3.text':       '腔内机器人研发获香港政府多年科研与创新资助支持。RAISe+第二期之整体融资框架为港币7,620万元：政府资助港币3,620万元、私人共同投资美金500万元，支持首次人体临床试验落地，并持续推进平台成熟化与量产准备。',
 
     'about.hero.title':     '<span class="text-gradient">一个平台</span>',
     'about.hero.subtitle':  '机器人ESD平台——已于人体研究中验证，旨在推广治疗性内镜并扩大消化道癌症治疗的可及性——<span class="text-gradient">为所有临床医师</span>。',
@@ -755,7 +755,7 @@ const TRANSLATIONS = {
     'about.gba.narrative':  '立足大湾区的医疗科技公司——<span class="text-gradient">香港主导研发与临床转化，连接国际资本与监管路径</span>；深圳支撑制造落地与中国及全球市场拓展。',
     'about.gba.outro':      '香港与深圳双城协同，为 EndoR 打通从实验室创新到全球最大治疗性内镜市场临床应用的路径。',
     'services.hero.title':    '双臂全机器人化<br><span class="text-gradient">柔性内镜平台</span>',
-    'services.hero.subtitle': '已准备好人体临床试验的腔内机器人——独立牵引臂与能量型剥离臂协同，强化视野、牵引与黏膜下剥离的稳定与效率。',
+    'services.hero.subtitle': '已完成首次人体临床试验（2026年7月）的腔内机器人——独立牵引臂与能量型剥离臂协同，强化视野、牵引与黏膜下剥离的稳定与效率。',
     'services.hero.cta2':     '索取资料',
     'services.prod.eyebrow':  '系统组件',
     'services.prod.title':    '三大组件，<span class="text-gradient">一体化集成平台</span>',
