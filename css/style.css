@@ -1606,6 +1606,12 @@ main { flex: 1; }
   .nav__links { display: none; }
   .nav__hamburger { display: flex; }
 
+  /* Logo is a wide 7:1 wordmark — must be able to shrink, or it pushes the
+     hamburger and language buttons outside a fixed-position nav (unreachable). */
+  .nav__logo { min-width: 0; flex-shrink: 1; }
+  .nav__logo-img { width: 210px; height: auto; max-width: 100%; }
+  .nav__controls { flex-shrink: 0; }
+
   /* Hamburger back in flow, snug to the right of controls */
   .nav__controls {
     margin-right: 0;
@@ -1759,9 +1765,8 @@ main { flex: 1; }
   .hero__award-text {
     white-space: normal;
     text-align: left;
-  }
-  .hero__awards-center .hero__award-headline:first-child .hero__award-text {
-    white-space: nowrap;
+    min-width: 0;
+    overflow-wrap: break-word;
   }
   .hero__photo-caption {
     position: relative;
@@ -1798,7 +1803,8 @@ main { flex: 1; }
   h3 { font-size: clamp(1.1rem, 5vw, 1.4rem); }
 
   /* Nav: even on very small screens keep 44px touch targets */
-  .nav__controls  { gap: var(--s2); padding-left: var(--s12); }
+  .nav__logo-img  { width: 190px; }
+  .nav__controls  { gap: var(--s2); padding-left: var(--s8); }
   .nav__hamburger { margin-left: var(--s2); }
   .lang-btn       { padding: 4px 6px; font-size: 11px; }
   .theme-toggle   { width: 32px; height: 32px; }
